@@ -23,4 +23,5 @@ public class AtencionInicial {
     private String telefono;
     private String email;
     private String idPoliza;
+    private String uniqueId;
 }

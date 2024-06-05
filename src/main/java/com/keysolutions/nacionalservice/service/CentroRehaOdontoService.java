@@ -81,7 +81,7 @@ public class CentroRehaOdontoService {
                 ticketRequest.setServiceDeskId(manageJiraInMemory.getServiceDeskInfo(Constant.CONFIG_CENTRO_REHA_ODONTOLOGICA).getServiceDeskId());
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(), issue.getIssueKey(),issue.getRequestTypeId(), issue.getServiceDeskId(), Constant.CONFIG_CENTRO_REHA_ODONTOLOGICA,fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(), issue.getIssueKey(),issue.getRequestTypeId(), issue.getServiceDeskId(), Constant.CONFIG_CENTRO_REHA_ODONTOLOGICA,fileName,centroRehaOdonto.getUniqueId()));
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());
                 log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());
@@ -160,7 +160,7 @@ public class CentroRehaOdontoService {
                     customFields.setField47("NA");
                     customFields.setField48("NA");
                     customFields.setField49(data.getTelefonoAdicional() != null ? data.getTelefonoAdicional() : "NA");
-                    customFields.setField50("NA");
+                    customFields.setField50(data.getUniqueId());
                     contact.setCustomFields(customFields);
                     contactsList.add(contact);
                 }
@@ -193,10 +193,22 @@ public class CentroRehaOdontoService {
             RecipientRequestList recipientRequestList = new RecipientRequestList();
             recipientRequestList.setContact_list_ids(list_contacts);
             for (Contact contact : contactList) {
+                contact.setUniqueId(contact.getCustomFields().getField50());
                 contacts_ids.add(contact.getId());
                 manageLog.recordContactLog(Utils.fromContactToContactLog(contact,Constant.CONFIG_CENTRO_REHA_ODONTOLOGICA,fileName));
             }
-
+            try{
+                for (Contact contact : succeeded.getExisting()) {
+                    contact.setUniqueId(contact.getCustomFields().getField50());
+                    manageLog.recordInvalidRepetedContactLog(Utils.fromContactToInvalidRepetedContactLog(contact,Constant.CONFIG_ATENCION_INICIAL,fileName,Constant.EMAIL_REPETED));
+                }
+                for (Contact contact : succeeded.getInvalid()) {
+                    contact.setUniqueId(contact.getCustomFields().getField50());
+                    manageLog.recordInvalidRepetedContactLog(Utils.fromContactToInvalidRepetedContactLog(contact,Constant.CONFIG_ATENCION_INICIAL,fileName,Constant.EMAIL_INVALID));
+                }
+            }catch (Exception ex){
+                log.error("Email Existing/Invalid: {}",ex.getMessage());
+            }
             recipientRequestList.setContact_list_ids(contacts_ids);
 
             RecipientRequest recipientRequest = new RecipientRequest();

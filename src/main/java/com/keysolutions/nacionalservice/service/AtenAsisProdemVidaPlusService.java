@@ -71,7 +71,7 @@ public class AtenAsisProdemVidaPlusService {
 
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_ATEN_ASIS_PROD_VIDA_PLUS,fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_ATEN_ASIS_PROD_VIDA_PLUS,fileName,atenAsisProdemVidaPlus.getUniqueId()));
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());
                 log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());

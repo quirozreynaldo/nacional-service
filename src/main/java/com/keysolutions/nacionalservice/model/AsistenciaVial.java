@@ -23,4 +23,5 @@ public class AsistenciaVial {
     private String telefono;
     private String telefonoAlternativo;
     private String placa;
+    private String uniqueId;
 }

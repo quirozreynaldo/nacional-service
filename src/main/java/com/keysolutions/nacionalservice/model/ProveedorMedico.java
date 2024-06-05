@@ -27,4 +27,5 @@ public class ProveedorMedico {
     private String poliza;
     private String dignostico;
     private String intermediario;
+    private String uniqueId;
 }

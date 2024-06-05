@@ -23,4 +23,5 @@ public class AtenAsisProdemVidaPlus {
     private String telefono;
     private String idDocumento;
     private String especialidad;
+    private String uniqueId;
 }

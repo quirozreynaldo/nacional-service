@@ -66,7 +66,7 @@ public class CallCenterNspfService {
                 ticketRequest.setServiceDeskId(manageJiraInMemory.getServiceDeskInfo(Constant.CONFIG_CALLCENTER_NSPF).getServiceDeskId());
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_CALLCENTER_NSPF,fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_CALLCENTER_NSPF,fileName,callCenterNspf.getUniqueId()));
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());
                 log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());

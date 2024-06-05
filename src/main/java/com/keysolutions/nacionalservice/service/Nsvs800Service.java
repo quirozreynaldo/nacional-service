@@ -71,8 +71,7 @@ public class Nsvs800Service {
         } else {
             if (surveyList.size() > 0) {
                 log.info("======NO TIENE RECOPILADOR PARA SEND-SURVEY==========");
-                manageLog.recorErrorlog(Utils.createErrorLog(Constant.GENERAL_ERROR_CODE,
-                        Constant.GENERAL_ERROR_DESCRIPTION, "sendSurvey", fileName + " NO TIENE RECOPILADOR PARA SEND-SURVEY"));
+                manageLog.recorErrorlog(Utils.createErrorLog(Constant.GENERAL_ERROR_CODE,Constant.GENERAL_ERROR_DESCRIPTION, "sendSurvey", fileName + " NO TIENE RECOPILADOR PARA SEND-SURVEY"));
                 //sendSurvey(surveyList);
             }
         }
@@ -91,7 +90,7 @@ public class Nsvs800Service {
                 ticketRequest.setServiceDeskId(manageJiraInMemory.getServiceDeskInfo(Constant.CONFIG_NSVS_800).getServiceDeskId());
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(), issue.getIssueKey(), issue.getRequestTypeId(), issue.getServiceDeskId(), Constant.CONFIG_NSVS_800, fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(), issue.getIssueKey(), issue.getRequestTypeId(), issue.getServiceDeskId(), Constant.CONFIG_NSVS_800, fileName,nsvs800.getUniqueId()));
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());
                 log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());

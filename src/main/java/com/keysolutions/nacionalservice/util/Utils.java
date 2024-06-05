@@ -10,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.keysolutions.nacionalservice.model.*;
@@ -21,6 +22,9 @@ import com.keysolutions.nacionalservice.model.survey.Contact;
 public class Utils {
     public static AsistenciaVialDb convertAsistenciaVialDb(AsistenciaVial asistenciaVial, String nombreArchivo) {
         AsistenciaVialDb asistenciaVialDb = new AsistenciaVialDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        asistenciaVial.setUniqueId(uniqueId);
+        asistenciaVialDb.setAsistenciaVialId(uniqueId);
         asistenciaVialDb.setIdProceso(asistenciaVial.getIdProceso());
         asistenciaVialDb.setIdRubro(asistenciaVial.getIdRubro());
         asistenciaVialDb.setIdCiudad(asistenciaVial.getIdCiudad());
@@ -38,6 +42,9 @@ public class Utils {
 
     public static Nsvs800Db convertNsvs800Db(Nsvs800 nsvs800, String nombreArchivo) {
         Nsvs800Db nsvs800Db = new Nsvs800Db();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        nsvs800.setUniqueId(uniqueId);
+        nsvs800Db.setNSvs800Id(uniqueId);
         nsvs800Db.setIdProceso(nsvs800.getIdProceso());
         nsvs800Db.setIdRubro(nsvs800.getIdRubro());
         nsvs800Db.setIdCiudad(nsvs800.getIdCiudad());
@@ -56,6 +63,9 @@ public class Utils {
 
     public static ConsultasReclamosDb convertConsultaReclamo(ConsultasReclamos consultasReclamos,String nombreArchivo) {
         ConsultasReclamosDb consultasReclamosDb = new ConsultasReclamosDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        consultasReclamos.setUniqueId(uniqueId);
+        consultasReclamosDb.setConsultaReclamoId(uniqueId);
         consultasReclamosDb.setIdProceso(consultasReclamos.getIdProceso());
         consultasReclamosDb.setIdRubro(consultasReclamos.getIdRubro());
         consultasReclamosDb.setIdCiudad(consultasReclamos.getIdCiudad());
@@ -73,9 +83,31 @@ public class Utils {
         consultasReclamosDb.setNombreArchivo(nombreArchivo);
         return consultasReclamosDb;
     }
+    public static ConsultasReclamos convertConsultaReclamoReminder(ConsultasReclamosDb consultasReclamosDb) {
+        ConsultasReclamos consultasReclamos = new ConsultasReclamos();
+        consultasReclamos.setUniqueId(consultasReclamosDb.getConsultaReclamoId());
+        consultasReclamos.setIdProceso(consultasReclamosDb.getIdProceso());
+        consultasReclamos.setIdRubro(consultasReclamosDb.getIdRubro());
+        consultasReclamos.setIdCiudad(consultasReclamosDb.getIdCiudad());
+        consultasReclamos.setIdOperador(convertCharset(consultasReclamosDb.getIdOperador()));
+        consultasReclamos.setServicio(convertCharset(consultasReclamosDb.getServicio()));
+        consultasReclamos.setFechaContacto(consultasReclamosDb.getFechaContacto());
+        consultasReclamos.setFechaCierreFreshDesk(consultasReclamosDb.getFechaCierreFreshDesk());
+        consultasReclamos.setIdObjeto(consultasReclamosDb.getIdObjeto());
+        consultasReclamos.setNombreTitular(convertCharset(consultasReclamosDb.getNombreTitular()));
+        consultasReclamos.setNombreSolicitante(convertCharset(consultasReclamosDb.getNombreSolicitante()));
+        consultasReclamos.setTelefono(consultasReclamosDb.getTelefono());
+        consultasReclamos.setEmail(consultasReclamosDb.getEmail());
+        consultasReclamos.setIdPoliza(consultasReclamosDb.getIdPoliza());
+        consultasReclamos.setAsunto(convertCharset(consultasReclamosDb.getAsunto()));
+        return consultasReclamos;
+    }
 
     public static AtencionInicialDb convertAtencionInicialDb(AtencionInicial atencionInicial, String nombreArchivo) {
         AtencionInicialDb atencionInicialDb = new AtencionInicialDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        atencionInicial.setUniqueId(uniqueId);
+        atencionInicialDb.setAtencionInicialId(uniqueId);
         atencionInicialDb.setIdProceso(atencionInicial.getIdProceso());
         atencionInicialDb.setIdRubro(atencionInicial.getIdRubro());
         atencionInicialDb.setIdCiudad(atencionInicial.getIdCiudad());
@@ -91,10 +123,30 @@ public class Utils {
         atencionInicialDb.setNombreArchivo(nombreArchivo);
         return atencionInicialDb;
     }
+    public static AtencionInicial convertAtencionInicialReminder(AtencionInicialDb atencionInicialDb) {
+        AtencionInicial atencionInicial = new AtencionInicial();
+        atencionInicial.setUniqueId(atencionInicialDb.getUniqueId());
+        atencionInicial.setIdProceso(atencionInicialDb.getIdProceso());
+        atencionInicial.setIdRubro(atencionInicialDb.getIdRubro());
+        atencionInicial.setIdCiudad(atencionInicialDb.getIdCiudad());
+        atencionInicial.setIdOperador(convertCharset(atencionInicialDb.getIdOperador()));
+        atencionInicial.setIdEjecutivo(convertCharset(atencionInicialDb.getIdEjecutivo()));
+        atencionInicial.setFechaContacto(atencionInicialDb.getFechaContacto());
+        atencionInicial.setPlaca(atencionInicialDb.getPlaca());
+        atencionInicial.setNombreTitular(convertCharset(atencionInicialDb.getNombreTitular()));
+        atencionInicial.setNombreSolicitante(atencionInicialDb.getNombreSolicitante());
+        atencionInicial.setTelefono(atencionInicialDb.getTelefono());
+        atencionInicial.setEmail(atencionInicialDb.getEmail());
+        atencionInicial.setIdPoliza(atencionInicialDb.getIdPoliza());
+        return atencionInicial;
+    }
 
     public static AccidentesPersonalesDb convertAccidentePersonalDB(AccidentesPersonales accidentesPersonales,
             String nombreArchivo) {
         AccidentesPersonalesDb accidentesPersonalesDb = new AccidentesPersonalesDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        accidentesPersonales.setUniqueId(uniqueId);
+        accidentesPersonalesDb.setAccidentePersonalId(uniqueId);
         accidentesPersonalesDb.setIdProceso(accidentesPersonales.getIdProceso());
         accidentesPersonalesDb.setIdRubro(accidentesPersonales.getIdRubro());
         accidentesPersonalesDb.setIdCiudad(accidentesPersonales.getIdCiudad());
@@ -112,6 +164,9 @@ public class Utils {
 
     public static CallCenterNspfDb convertCallCenterNspfDb(CallCenterNspf callCenterNspf, String nombreArchivo) {
         CallCenterNspfDb callCenterNspfDb = new CallCenterNspfDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        callCenterNspf.setUniqueId(uniqueId);
+        callCenterNspfDb.setCallCenterNspfId(uniqueId);
         callCenterNspfDb.setIdProceso(callCenterNspf.getIdProceso());
         callCenterNspfDb.setIdRubro(callCenterNspf.getIdRubro());
         callCenterNspfDb.setIdCiudad(callCenterNspf.getIdCiudad());
@@ -124,6 +179,9 @@ public class Utils {
     }
     public static InmedicalAtuMedidaDb convertInmedicalAtuMedidaDb(InmedicalAtuMedida inmedicalAtuMedida, String nombreArchivo) {
         InmedicalAtuMedidaDb inmedicalAtuMedidaDb = new InmedicalAtuMedidaDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        inmedicalAtuMedida.setUniqueId(uniqueId);
+        inmedicalAtuMedidaDb.setInmediacalAtuId(uniqueId);
         inmedicalAtuMedidaDb.setIdProceso(inmedicalAtuMedida.getIdProceso());
         inmedicalAtuMedidaDb.setIdRubro(inmedicalAtuMedida.getIdRubro());
         inmedicalAtuMedidaDb.setIdCiudad(inmedicalAtuMedida.getIdCiudad());
@@ -142,6 +200,9 @@ public class Utils {
 
     public static InmedicalBancoGanaderoDb convertInmedicalBancoGanaderoDb(InmedicalBancoGanadero inmedicalBancoGanadero, String nombreArchivo) {
         InmedicalBancoGanaderoDb inmedicalBancoGanaderoDb = new InmedicalBancoGanaderoDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        inmedicalBancoGanadero.setUniqueId(uniqueId);
+        inmedicalBancoGanaderoDb.setInmediacalBancoId(uniqueId);
         inmedicalBancoGanaderoDb.setIdProceso(inmedicalBancoGanadero.getIdProceso());
         inmedicalBancoGanaderoDb.setIdRubro(inmedicalBancoGanadero.getIdRubro());
         inmedicalBancoGanaderoDb.setIdCiudad(inmedicalBancoGanadero.getIdCiudad());
@@ -159,6 +220,9 @@ public class Utils {
     }
     public static TallersE2eDb convertTallersE2eDb(TallersE2e tallersE2e, String nombreArchivo) {
         TallersE2eDb tallersE2eDb = new TallersE2eDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        tallersE2e.setUniqueId(uniqueId);
+        tallersE2eDb.setTalleresE2eId(uniqueId);
         tallersE2eDb.setIdProceso(tallersE2e.getIdProceso());
         tallersE2eDb.setIdRubro(tallersE2e.getIdRubro());
         tallersE2eDb.setIdCiudad(tallersE2e.getIdCiudad());
@@ -182,6 +246,9 @@ public class Utils {
 
     public static CentroRehaOdontoDb convertCentroRehaOdontoDb(CentroRehaOdonto centroRehaOdonto, String nombreArchivo) {
         CentroRehaOdontoDb centroRehaOdontoDb = new CentroRehaOdontoDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        centroRehaOdonto.setUniqueId(uniqueId);
+        centroRehaOdontoDb.setCentroRehaOdontoId(uniqueId);
         centroRehaOdontoDb.setIdProceso(centroRehaOdonto.getIdProceso());
         centroRehaOdontoDb.setIdRubro(centroRehaOdonto.getIdRubro());
         centroRehaOdontoDb.setIdCiudad(centroRehaOdonto.getIdCiudad());
@@ -199,6 +266,9 @@ public class Utils {
     }
     public static ProvServicioMedicoDb convertProvServMedicoDb(ProvServicioMedico provServicioMedico, String nombreArchivo) {
         ProvServicioMedicoDb provServicioMedicoDb = new ProvServicioMedicoDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        provServicioMedico.setUniqueId(uniqueId);
+        provServicioMedicoDb.setProvSerMedId(uniqueId);
         provServicioMedicoDb.setIdProveedor(provServicioMedico.getIdProveedor());
         provServicioMedicoDb.setIdRubro(provServicioMedico.getIdRubro());
         provServicioMedicoDb.setIdCiudad(provServicioMedico.getIdCiudad());
@@ -219,6 +289,9 @@ public class Utils {
     }
     public static ProveedorMedicoDb convertProveedorMedicoDb(ProveedorMedico proveedorMedico, String nombreArchivo) {
         ProveedorMedicoDb proveedorMedicoDb = new ProveedorMedicoDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        proveedorMedico.setUniqueId(uniqueId);
+        proveedorMedicoDb.setProvMedId(uniqueId);
         proveedorMedicoDb.setIdProveedor(proveedorMedico.getIdProveedor());
         proveedorMedicoDb.setIdRubro(proveedorMedico.getIdRubro());
         proveedorMedicoDb.setIdCiudad(proveedorMedico.getIdCiudad());
@@ -239,6 +312,9 @@ public class Utils {
     }
     public static ProveedorFarmaDb convertProveedorFarmaDb(ProveedorFarma proveedorFarma, String nombreArchivo) {
         ProveedorFarmaDb proveedorFarmaDb = new ProveedorFarmaDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        proveedorFarma.setUniqueId(uniqueId);
+        proveedorFarmaDb.setProvFarId(uniqueId);
         proveedorFarmaDb.setIdProveedor(proveedorFarma.getIdProveedor());
         proveedorFarmaDb.setIdRubro(proveedorFarma.getIdRubro());
         proveedorFarmaDb.setIdCiudad(proveedorFarma.getIdCiudad());
@@ -259,6 +335,9 @@ public class Utils {
     }
     public static AsistenciaMedDomiDb convertAsistenciaMedDomiDb(AsistenciaMedDomi asistenciaMedDomi, String nombreArchivo) {
         AsistenciaMedDomiDb asistenciaMedDomiDb = new AsistenciaMedDomiDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        asistenciaMedDomi.setUniqueId(uniqueId);
+        asistenciaMedDomiDb.setAsisMedDoId(uniqueId);
         asistenciaMedDomiDb.setIdProceso(asistenciaMedDomi.getIdProceso());
         asistenciaMedDomiDb.setIdRubro(asistenciaMedDomi.getIdRubro());
         asistenciaMedDomiDb.setIdCiudad(asistenciaMedDomi.getIdCiudad());
@@ -281,6 +360,9 @@ public class Utils {
     }
     public static AsistenciaMedDomiAmbuDb convertAsistenciaMedDomiAmbuDb(AsistenciaMedDomiAmbu asistenciaMedDomiAmbu, String nombreArchivo) {
         AsistenciaMedDomiAmbuDb asistenciaMedDomiAmbuDb = new AsistenciaMedDomiAmbuDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        asistenciaMedDomiAmbu.setUniqueId(uniqueId);
+        asistenciaMedDomiAmbuDb.setAsisMedDoAmbuId(uniqueId);
         asistenciaMedDomiAmbuDb.setIdProceso(asistenciaMedDomiAmbu.getIdProceso());
         asistenciaMedDomiAmbuDb.setIdRubro(asistenciaMedDomiAmbu.getIdRubro());
         asistenciaMedDomiAmbuDb.setIdCiudad(asistenciaMedDomiAmbu.getIdCiudad());
@@ -304,6 +386,9 @@ public class Utils {
 
     public static OrientacionMedTelefDb convertOrientacionMedTelefDb(OrientacionMedTelef orientacionMedTelef, String nombreArchivo) {
         OrientacionMedTelefDb orientacionMedTelefDb = new OrientacionMedTelefDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        orientacionMedTelef.setUniqueId(uniqueId);
+        orientacionMedTelefDb.setOrienMedTelId(uniqueId);
         orientacionMedTelefDb.setIdProceso(orientacionMedTelef.getIdProceso());
         orientacionMedTelefDb.setIdRubro(orientacionMedTelef.getIdRubro());
         orientacionMedTelefDb.setIdCiudad(orientacionMedTelef.getIdCiudad());
@@ -326,6 +411,9 @@ public class Utils {
 
     public static AtenAsisProdemVidaPlusDb convertAtenAsisProdemVidaPlusDb(AtenAsisProdemVidaPlus atenAsisProdemVidaPlus, String nombreArchivo) {
         AtenAsisProdemVidaPlusDb atenAsisProdemVidaPlusDb = new AtenAsisProdemVidaPlusDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        atenAsisProdemVidaPlus.setUniqueId(uniqueId);
+        atenAsisProdemVidaPlusDb.setAtenAsisProId(uniqueId);
         atenAsisProdemVidaPlusDb.setIdProceso(atenAsisProdemVidaPlus.getIdProceso());
         atenAsisProdemVidaPlusDb.setProveedor(atenAsisProdemVidaPlus.getProveedor());
         atenAsisProdemVidaPlusDb.setIdRubro(atenAsisProdemVidaPlus.getIdRubro());
@@ -343,6 +431,9 @@ public class Utils {
 
     public static VagonetaSeguraDb convertVagonetaSegura(VagonetaSegura vagonetaSegura,String nombreArchivo) {
         VagonetaSeguraDb vagonetaSeguraDb = new VagonetaSeguraDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        vagonetaSegura.setUniqueId(uniqueId);
+        vagonetaSeguraDb.setVagonetaSeguraId(uniqueId);
         vagonetaSeguraDb.setIdProceso(vagonetaSegura.getIdProceso());
         vagonetaSeguraDb.setIdRubro(vagonetaSegura.getIdRubro());
         vagonetaSeguraDb.setIdCiudad(vagonetaSegura.getIdCiudad());
@@ -583,12 +674,81 @@ public class Utils {
             contactLog.setServiceComplain(serviceComplain);
             contactLog.setStatus(Constant.ACTIVE_STATUS);
             contactLog.setNombreArchivo(fileName);
+            contactLog.setUniqueId(contact.getUniqueId());
         } catch (Exception ex) {
             System.out.println("Error: " + ex.getMessage());
         }
         return contactLog;
     }
- 
+    public static ContactLog fromContactToInvalidRepetedContactLog(Contact contact, String serviceComplain,String fileName,String emailStatus) {
+        ContactLog contactLog = new ContactLog();
+        try {
+            contactLog.setFirstName(contact.getFirstName());
+            contactLog.setLastName(contact.getLastName());
+            contactLog.setEmail(contact.getEmail());
+            contactLog.setCustomField1(contact.getCustomFields().getField1());
+            contactLog.setCustomField2(contact.getCustomFields().getField2());
+            contactLog.setCustomField3(contact.getCustomFields().getField3());
+            contactLog.setCustomField4(contact.getCustomFields().getField4());
+            contactLog.setCustomField5(contact.getCustomFields().getField5());
+            contactLog.setCustomField6(contact.getCustomFields().getField6());
+            contactLog.setCustomField7(contact.getCustomFields().getField7());
+            contactLog.setCustomField8(contact.getCustomFields().getField8());
+            contactLog.setCustomField9(contact.getCustomFields().getField9());
+            contactLog.setCustomField10(contact.getCustomFields().getField10());
+            contactLog.setCustomField11(contact.getCustomFields().getField11());
+            contactLog.setCustomField12(contact.getCustomFields().getField12());
+            contactLog.setCustomField13(contact.getCustomFields().getField13());
+            contactLog.setCustomField14(contact.getCustomFields().getField14());
+            contactLog.setCustomField15(contact.getCustomFields().getField15());
+            contactLog.setCustomField16(contact.getCustomFields().getField16());
+            contactLog.setCustomField17(contact.getCustomFields().getField17());
+            contactLog.setCustomField18(contact.getCustomFields().getField18());
+            contactLog.setCustomField19(contact.getCustomFields().getField19());
+            contactLog.setCustomField20(contact.getCustomFields().getField20());
+            contactLog.setCustomField21(contact.getCustomFields().getField21());
+            contactLog.setCustomField22(contact.getCustomFields().getField22());
+            contactLog.setCustomField23(contact.getCustomFields().getField23());
+            contactLog.setCustomField24(contact.getCustomFields().getField24());
+            contactLog.setCustomField25(contact.getCustomFields().getField25());
+            contactLog.setCustomField26(contact.getCustomFields().getField26());
+            contactLog.setCustomField27(contact.getCustomFields().getField27());
+            contactLog.setCustomField28(contact.getCustomFields().getField28());
+            contactLog.setCustomField29(contact.getCustomFields().getField29());
+            contactLog.setCustomField30(contact.getCustomFields().getField30());
+            contactLog.setCustomField31(contact.getCustomFields().getField31());
+            contactLog.setCustomField32(contact.getCustomFields().getField32());
+            contactLog.setCustomField33(contact.getCustomFields().getField33());
+            contactLog.setCustomField34(contact.getCustomFields().getField34());
+            contactLog.setCustomField35(contact.getCustomFields().getField35());
+            contactLog.setCustomField36(contact.getCustomFields().getField36());
+            contactLog.setCustomField37(contact.getCustomFields().getField37());
+            contactLog.setCustomField38(contact.getCustomFields().getField38());
+            contactLog.setCustomField39(contact.getCustomFields().getField39());
+            contactLog.setCustomField40(contact.getCustomFields().getField40());
+            contactLog.setCustomField41(contact.getCustomFields().getField41());
+            contactLog.setCustomField42(contact.getCustomFields().getField42());
+            contactLog.setCustomField43(contact.getCustomFields().getField43());
+            contactLog.setCustomField44(contact.getCustomFields().getField44());
+            contactLog.setCustomField45(contact.getCustomFields().getField45());
+            contactLog.setCustomField46(contact.getCustomFields().getField46());
+            contactLog.setCustomField47(contact.getCustomFields().getField47());
+            contactLog.setCustomField48(contact.getCustomFields().getField48());
+            contactLog.setCustomField49(contact.getCustomFields().getField49());
+            contactLog.setCustomField50(contact.getCustomFields().getField50());
+            contactLog.setContactStatus(contact.getStatus());
+            contactLog.setContactId(contact.getId());
+            contactLog.setContactHref(contact.getHref());
+            contactLog.setServiceComplain(serviceComplain);
+            contactLog.setStatus(Constant.ACTIVE_STATUS);
+            contactLog.setNombreArchivo(fileName);
+            contactLog.setUniqueId(contact.getUniqueId());
+            contactLog.setEmailStatus(emailStatus);
+        } catch (Exception ex) {
+            System.out.println("fromContactToInvalidRepetedContactLog Error: " + ex.getMessage());
+        }
+        return contactLog;
+    }
     public static ErrorLog createErrorLog(String errorCode,String errorDescription,String remarks, String errorDetail ){
         ErrorLog errorLog = new ErrorLog();
         errorLog.setErrorCode(errorCode);
@@ -598,7 +758,7 @@ public class Utils {
         return errorLog;
     }
 
-    public static JiraLog createJiraLog(String issueId,String issueKey,String requestTypeId, String serviceDeskId,String serviceComplain,String fileName ){
+    public static JiraLog createJiraLog(String issueId,String issueKey,String requestTypeId, String serviceDeskId,String serviceComplain,String fileName,String uniqueId ){
         JiraLog jiraLog = new JiraLog();
         jiraLog.setIssueId(issueId);
         jiraLog.setIssueKey(issueKey);
@@ -606,6 +766,7 @@ public class Utils {
         jiraLog.setServiceDeskId(serviceDeskId);
         jiraLog.setServiceComplain(serviceComplain);
         jiraLog.setNombreArchivo(fileName);
+        jiraLog.setUniqueId(uniqueId);
         return jiraLog;
     }
 

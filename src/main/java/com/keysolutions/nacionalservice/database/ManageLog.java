@@ -26,8 +26,8 @@ public class ManageLog {
     private JdbcTemplate jdbcTemplate;
 
     public void recordAstenciaVial(AsistenciaVialDb asistenciaVialDb) {
-        String asistenciaVialId = UUID.randomUUID().toString().replace("-", "");
-        asistenciaVialDb.setAsistenciaVialId(asistenciaVialId);
+        //String asistenciaVialId = UUID.randomUUID().toString().replace("-", "");
+        //asistenciaVialDb.setAsistenciaVialId(asistenciaVialId);
         log.debug(">>>>>>>: {}", asistenciaVialDb);
         String insert = "INSERT INTO deaxs_record.ns_asistencia_vial (asistencia_vial_id, id_proceso, id_rubro, id_ciudad, id_operador, id_siniestro,"
                 +
@@ -48,8 +48,8 @@ public class ManageLog {
     }
 
     public void recordNsvs800(Nsvs800Db nsvs800Db) {
-        String nSvs800Id = UUID.randomUUID().toString().replace("-", "");
-        nsvs800Db.setNSvs800Id(nSvs800Id);
+       // String nSvs800Id = UUID.randomUUID().toString().replace("-", "");
+       // nsvs800Db.setNSvs800Id(nSvs800Id);
         log.debug(">>>>>>>: {}", nsvs800Db);
         String insert = "INSERT INTO deaxs_record.ns_nsvs_800 (nsvs_800_id, id_proceso, id_rubro, id_ciudad, id_operador, "
                 +
@@ -69,8 +69,8 @@ public class ManageLog {
     }
 
     public void recordConsutasReclamos(ConsultasReclamosDb consultasReclamosDb) {
-        String consultaReclamoId = UUID.randomUUID().toString().replace("-", "");
-        consultasReclamosDb.setConsultaReclamoId(consultaReclamoId);
+       // String consultaReclamoId = UUID.randomUUID().toString().replace("-", "");
+       // consultasReclamosDb.setConsultaReclamoId(consultaReclamoId);
         log.debug(">>>>>>>: {}", consultasReclamosDb);
         String insert = "INSERT INTO deaxs_record.ns_consulta_reclamo (consulta_reclamo_id, id_proceso, id_rubro, id_ciudad, id_operador, servicio, fecha_contacto, "
                 +
@@ -93,8 +93,8 @@ public class ManageLog {
     }
 
     public void recordAtencionInicial(AtencionInicialDb atencionInicialDb) {
-        String atencionInicialId = UUID.randomUUID().toString().replace("-", "");
-        atencionInicialDb.setAtencionInicialId(atencionInicialId);
+      //  String atencionInicialId = UUID.randomUUID().toString().replace("-", "");
+      //  atencionInicialDb.setAtencionInicialId(atencionInicialId);
         log.debug(">>>>>>>: {}", atencionInicialDb);
         String insert = "INSERT INTO deaxs_record.ns_atencion_inicial (atencion_inicial_id, id_proceso, id_rubro, id_ciudad, id_operador, id_ejecutivo, fecha_contacto, "
                 +
@@ -114,8 +114,8 @@ public class ManageLog {
     }
 
     public void recordAccidentePersonal(AccidentesPersonalesDb accidentesPersonalesDb) {
-        String accidentePersonalId = UUID.randomUUID().toString().replace("-", "");
-        accidentesPersonalesDb.setAccidentePersonalId(accidentePersonalId);
+     //   String accidentePersonalId = UUID.randomUUID().toString().replace("-", "");
+      //  accidentesPersonalesDb.setAccidentePersonalId(accidentePersonalId);
         log.debug(">>>>>>>: {}", accidentesPersonalesDb);
         String insert = "INSERT INTO deaxs_record.ns_accidente_personal (accidente_personal_id, id_proceso, id_rubro, id_ciudad, id_operador, "
                 +
@@ -137,8 +137,8 @@ public class ManageLog {
     }
 
     public void recordCallCenterNspf(CallCenterNspfDb callCenterNspfDb) {
-        String callCenterNpsfId = UUID.randomUUID().toString().replace("-", "");
-        callCenterNspfDb.setCallCenterNspfId(callCenterNpsfId);
+      //  String callCenterNpsfId = UUID.randomUUID().toString().replace("-", "");
+      //  callCenterNspfDb.setCallCenterNspfId(callCenterNpsfId);
         log.debug(">>>>>>>: {}", callCenterNspfDb);
         String insert = "INSERT INTO deaxs_record.ns_callcenter_nspf (callcenter_nspf_id, id_proceso, id_rubro, id_ciudad, "+
         " id_siniestro, id_operador, fecha_contacto, id_cliente, nombre_archivo) "+
@@ -154,8 +154,8 @@ public class ManageLog {
         }
     }
     public void recordInmedicalAtuMedida(InmedicalAtuMedidaDb inmedicalAtuMedidaDb) {
-        String inmediacalAtuId = UUID.randomUUID().toString().replace("-", "");
-        inmedicalAtuMedidaDb.setInmediacalAtuId(inmediacalAtuId);
+      //  String inmediacalAtuId = UUID.randomUUID().toString().replace("-", "");
+       // inmedicalAtuMedidaDb.setInmediacalAtuId(inmediacalAtuId);
         log.debug(">>>>>>>: {}", inmedicalAtuMedidaDb);
         String insert = "INSERT INTO deaxs_record.ns_inmedical_atu_medida (inmediacal_atu_id, id_proceso, id_rubro, id_ciudad, proveedor, "+
         " id_centro, servicio, fecha_contacto, id_documento, nombre_titular, nombre_solicitante, telefono, email, nombre_archivo) "+
@@ -170,8 +170,8 @@ public class ManageLog {
         }
     }
     public void recordInmedicalBancoGanadero(InmedicalBancoGanaderoDb inmedicalBancoGanaderoDb) {
-        String inmediacalBancoId = UUID.randomUUID().toString().replace("-", "");
-        inmedicalBancoGanaderoDb.setInmediacalBancoId(inmediacalBancoId);
+      //  String inmediacalBancoId = UUID.randomUUID().toString().replace("-", "");
+      //  inmedicalBancoGanaderoDb.setInmediacalBancoId(inmediacalBancoId);
         log.debug(">>>>>>>: {}", inmedicalBancoGanaderoDb);
         String insert = "INSERT INTO deaxs_record.ns_inmedical_banco_ganadero (inmediacal_banco_id, id_proceso, id_rubro, id_ciudad, proveedor, "+
                 " id_centro, servicio, fecha_contacto, id_documento, nombre_titular, nombre_solicitante, telefono, email, nombre_archivo) "+
@@ -186,8 +186,8 @@ public class ManageLog {
         }
     }
     public void recordTalleresE2e(TallersE2eDb tallersE2eDb) {
-        String talleresE2eId = UUID.randomUUID().toString().replace("-", "");
-        tallersE2eDb.setTalleresE2eId(talleresE2eId);
+      //  String talleresE2eId = UUID.randomUUID().toString().replace("-", "");
+      //  tallersE2eDb.setTalleresE2eId(talleresE2eId);
         log.debug(">>>>>>>: {}", tallersE2eDb);
         String insert = "INSERT INTO deaxs_record.ns_talleres_e2e (talleres_e2e_id, id_proceso, id_rubro, id_ciudad, "+
         "id_operador, servicio, fecha_contacto, periodo, nombre_titular, nombre_solicitante, telefono, marca, modelo, placa, "+
@@ -204,8 +204,8 @@ public class ManageLog {
     }
 
     public void recordCentroRehaOdonto(CentroRehaOdontoDb centroRehaOdontoDb) {
-        String centroRehaOdontoId = UUID.randomUUID().toString().replace("-", "");
-        centroRehaOdontoDb.setCentroRehaOdontoId(centroRehaOdontoId);
+       // String centroRehaOdontoId = UUID.randomUUID().toString().replace("-", "");
+       // centroRehaOdontoDb.setCentroRehaOdontoId(centroRehaOdontoId);
         log.debug(">>>>>>>: {}", centroRehaOdontoDb);
         String insert = "INSERT INTO deaxs_record.ns_centro_reha_odontologia (centro_reha_odonto_id, id_proceso, "+
         " id_rubro, id_ciudad, id_operador, centro_medico, fecha_contacto, fecha_salida, paciente, plan, "+
@@ -222,8 +222,8 @@ public class ManageLog {
         }
     }
     public void recordProvServMedico(ProvServicioMedicoDb provServicioMedicoDb) {
-        String provServMedId = UUID.randomUUID().toString().replace("-", "");
-        provServicioMedicoDb.setProvSerMedId(provServMedId);
+      //  String provServMedId = UUID.randomUUID().toString().replace("-", "");
+      //  provServicioMedicoDb.setProvSerMedId(provServMedId);
         log.debug(">>>>>>>: {}", provServicioMedicoDb);
         String insert = "INSERT INTO deaxs_record.ns_prov_servicio_medico (prov_ser_med_id, id_proveedor, "+
         " id_rubro, id_ciudad, producto, servicio, fecha_denuncia, fecha_contacto, id_ejecutivo, nombre_asegurado, "+
@@ -242,8 +242,8 @@ public class ManageLog {
     }
 
     public void recordProveedorMedico(ProveedorMedicoDb proveedorMedicoDb) {
-        String provMedId = UUID.randomUUID().toString().replace("-", "");
-        proveedorMedicoDb.setProvMedId(provMedId);
+      //  String provMedId = UUID.randomUUID().toString().replace("-", "");
+      //  proveedorMedicoDb.setProvMedId(provMedId);
         log.debug(">>>>>>>: {}", proveedorMedicoDb);
         String insert = "INSERT INTO deaxs_record.ns_proveedor_medico (prov_med_id, id_proveedor, "+
                 " id_rubro, id_ciudad, producto, servicio, fecha_denuncia, fecha_contacto, id_ejecutivo, nombre_asegurado, "+
@@ -261,8 +261,8 @@ public class ManageLog {
         }
     }
     public void recordProveedorFarma(ProveedorFarmaDb proveedorFarmaDb) {
-        String provFarId = UUID.randomUUID().toString().replace("-", "");
-        proveedorFarmaDb.setProvFarId(provFarId);
+     //   String provFarId = UUID.randomUUID().toString().replace("-", "");
+     //   proveedorFarmaDb.setProvFarId(provFarId);
         log.debug(">>>>>>>: {}", proveedorFarmaDb);
         String insert = "INSERT INTO deaxs_record.ns_proveedor_farmaceutica (prov_far_id, id_proveedor, "+
                 " id_rubro, id_ciudad, producto, servicio, fecha_denuncia, fecha_contacto, id_ejecutivo, nombre_asegurado, "+
@@ -280,8 +280,8 @@ public class ManageLog {
         }
     }
     public void recordAsistenciaMedDormi(AsistenciaMedDomiDb asistenciaMedDomiDb) {
-        String asistenciaMedId = UUID.randomUUID().toString().replace("-", "");
-        asistenciaMedDomiDb.setAsisMedDoId(asistenciaMedId);
+      //  String asistenciaMedId = UUID.randomUUID().toString().replace("-", "");
+      //  asistenciaMedDomiDb.setAsisMedDoId(asistenciaMedId);
         log.debug(">>>>>>>: {}", asistenciaMedDomiDb);
         String insert = "INSERT INTO deaxs_record.ns_asistencia_med_dom (asistencia_med_id, id_proceso, id_rubro, id_ciudad, "+
         " edad, motivo_llamada, producto, servicio, desenlace, fecha_contacto, fecha_arribo, incidencia, unidad_asignada, paciente, "+
@@ -298,8 +298,8 @@ public class ManageLog {
         }
     }
     public void recordAsistenciaMedDormiAmbu(AsistenciaMedDomiAmbuDb asistenciaMedDomiAmbuDb) {
-        String asistenciaMedAmbuId = UUID.randomUUID().toString().replace("-", "");
-        asistenciaMedDomiAmbuDb.setAsisMedDoAmbuId(asistenciaMedAmbuId);
+      //  String asistenciaMedAmbuId = UUID.randomUUID().toString().replace("-", "");
+      //  asistenciaMedDomiAmbuDb.setAsisMedDoAmbuId(asistenciaMedAmbuId);
         log.debug(">>>>>>>: {}", asistenciaMedDomiAmbuDb);
         String insert = "INSERT INTO deaxs_record.ns_asistencia_med_dom_ambu (asistencia_med_ambu_id, id_proceso, id_rubro, id_ciudad, "+
                 " edad, motivo_llamada, producto, servicio, desenlace, fecha_contacto, fecha_arribo, incidencia, unidad_asignada, paciente, "+
@@ -316,8 +316,8 @@ public class ManageLog {
         }
     }
     public void recordOrientaMedicaTelf(OrientacionMedTelefDb orientacionMedTelefDb) {
-        String orienMedTelId = UUID.randomUUID().toString().replace("-", "");
-        orientacionMedTelefDb.setOrienMedTelId(orienMedTelId);
+      //  String orienMedTelId = UUID.randomUUID().toString().replace("-", "");
+      //  orientacionMedTelefDb.setOrienMedTelId(orienMedTelId);
         log.debug(">>>>>>>: {}", orientacionMedTelefDb);
         String insert = "INSERT INTO deaxs_record.ns_orienta_medica_telefono (orien_med_tel_id, id_proceso, id_rubro, id_ciudad, "+
         " edad, motivo_llamada, contacto_covid, diagnostico_presuntivo, conducta, fecha_contacto, medico, paciente, telefono, "+
@@ -335,8 +335,8 @@ public class ManageLog {
     }
 
     public void recordAtenAsisProdemVidaPlus(AtenAsisProdemVidaPlusDb atenAsisProdemVidaPlusDb) {
-        String atenAsisProId = UUID.randomUUID().toString().replace("-", "");
-        atenAsisProdemVidaPlusDb.setAtenAsisProId(atenAsisProId);
+      //  String atenAsisProId = UUID.randomUUID().toString().replace("-", "");
+      //  atenAsisProdemVidaPlusDb.setAtenAsisProId(atenAsisProId);
         log.debug(">>>>>>>: {}", atenAsisProdemVidaPlusDb);
         String insert = "INSERT INTO deaxs_record.ns_aten_asiten_prodem_vida (aten_asis_pro_id, id_proceso, proveedor, id_rubro, "+
         " id_ciudad, id_operador, servicio, fecha_contacto, nombre_titular, telefono, id_documento, especialidad, nombre_archivo) "+
@@ -352,8 +352,8 @@ public class ManageLog {
     }
 
     public void recordVagonetaSegura(VagonetaSeguraDb vagonetaSeguraDb) {
-        String vagonataSeguraId = UUID.randomUUID().toString().replace("-", "");
-        vagonetaSeguraDb.setVagonetaSeguraId(vagonataSeguraId);
+      //  String vagonataSeguraId = UUID.randomUUID().toString().replace("-", "");
+      //  vagonetaSeguraDb.setVagonetaSeguraId(vagonataSeguraId);
         log.debug(">>>>>>>: {}", vagonetaSeguraDb);
         String insert = "INSERT INTO deaxs_record.ns_vagoneta_segura (vagoneta_segura_id, id_proceso, id_rubro, id_ciudad, "+
         "id_operador, servicio, fecha_contacto, fecha_servicio, nombre_titular, telefono, telefono_alternativo, placa,"+
@@ -423,9 +423,9 @@ public class ManageLog {
                         "custom_field_37, custom_field_38, custom_field_39, custom_field_40, custom_field_41, custom_field_42,"+
                         "custom_field_43, custom_field_44, custom_field_45, custom_field_46, custom_field_47, custom_field_48,"+
                         "custom_field_49, custom_field_50,  contact_status, contact_id, contact_href, service_complain"+
-                        ",recipient_id,collector_id,message_id ,status, nombre_archivo) "+
+                        ",recipient_id,collector_id,message_id ,status, nombre_archivo, unique_id) "+
                "  VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ? "+
-               ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)";
+               ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?)";
         try {
             jdbcTemplate.update(insert, contactLog.getFirstName(),contactLog.getLastName(),contactLog.getEmail(),contactLog.getCustomField1()
             ,contactLog.getCustomField2(),contactLog.getCustomField3(),contactLog.getCustomField4(),contactLog.getCustomField5(),contactLog.getCustomField6()
@@ -439,11 +439,45 @@ public class ManageLog {
             ,contactLog.getCustomField41(),contactLog.getCustomField42(),contactLog.getCustomField43(),contactLog.getCustomField44(),contactLog.getCustomField45()
             ,contactLog.getCustomField46(),contactLog.getCustomField47(),contactLog.getCustomField48(),contactLog.getCustomField49(),contactLog.getCustomField50()
             , contactLog.getContactStatus(),contactLog.getContactId(),contactLog.getContactHref(),contactLog.getServiceComplain()
-            ,contactLog.getRecipientId(),contactLog.getCollectorId(),contactLog.getMessageId(),contactLog.getStatus(),contactLog.getNombreArchivo());
+            ,contactLog.getRecipientId(),contactLog.getCollectorId(),contactLog.getMessageId(),contactLog.getStatus(),contactLog.getNombreArchivo(),contactLog.getUniqueId());
         } catch (Exception ex){
             log.error("recordContactLog log exception", ex);
         }
     }
+    public void recordInvalidRepetedContactLog(ContactLog  contactLog){
+        log.debug(">>>>>>>: {}", contactLog);
+        String insert = "INSERT INTO deaxs_record.ns_invalid_repeted_contact_log ( first_name, last_name, email, custom_field_1, "+
+                "custom_field_2, custom_field_3, custom_field_4, custom_field_5, custom_field_6, custom_field_7, "+
+                "custom_field_8, custom_field_9, custom_field_10, custom_field_11, custom_field_12, custom_field_13,"+
+                "custom_field_14, custom_field_15, custom_field_16, custom_field_17, custom_field_18, custom_field_19,"+
+                "custom_field_20, custom_field_21, custom_field_22, custom_field_23, custom_field_24, custom_field_25,"+
+                "custom_field_26, custom_field_27, custom_field_28, custom_field_29, custom_field_30, "+
+                "custom_field_31, custom_field_32, custom_field_33, custom_field_34, custom_field_35, custom_field_36,"+
+                "custom_field_37, custom_field_38, custom_field_39, custom_field_40, custom_field_41, custom_field_42,"+
+                "custom_field_43, custom_field_44, custom_field_45, custom_field_46, custom_field_47, custom_field_48,"+
+                "custom_field_49, custom_field_50,  contact_status, contact_id, contact_href, service_complain"+
+                ",recipient_id,collector_id,message_id ,status, nombre_archivo, unique_id,email_status) "+
+                "  VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ? "+
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?)";
+        try {
+            jdbcTemplate.update(insert, contactLog.getFirstName(),contactLog.getLastName(),contactLog.getEmail(),contactLog.getCustomField1()
+                    ,contactLog.getCustomField2(),contactLog.getCustomField3(),contactLog.getCustomField4(),contactLog.getCustomField5(),contactLog.getCustomField6()
+                    ,contactLog.getCustomField7(),contactLog.getCustomField8(),contactLog.getCustomField9(),contactLog.getCustomField10(),contactLog.getCustomField11()
+                    ,contactLog.getCustomField12(),contactLog.getCustomField13(),contactLog.getCustomField14(),contactLog.getCustomField15(),contactLog.getCustomField16()
+                    ,contactLog.getCustomField17(),contactLog.getCustomField18(),contactLog.getCustomField19(),contactLog.getCustomField20(),contactLog.getCustomField21()
+                    ,contactLog.getCustomField22(),contactLog.getCustomField23(),contactLog.getCustomField24(),contactLog.getCustomField25(),contactLog.getCustomField26()
+                    ,contactLog.getCustomField27(),contactLog.getCustomField28(),contactLog.getCustomField29(),contactLog.getCustomField30()
+                    ,contactLog.getCustomField31(),contactLog.getCustomField32(),contactLog.getCustomField33(),contactLog.getCustomField34(),contactLog.getCustomField35()
+                    ,contactLog.getCustomField36(),contactLog.getCustomField37(),contactLog.getCustomField38(),contactLog.getCustomField39(),contactLog.getCustomField40()
+                    ,contactLog.getCustomField41(),contactLog.getCustomField42(),contactLog.getCustomField43(),contactLog.getCustomField44(),contactLog.getCustomField45()
+                    ,contactLog.getCustomField46(),contactLog.getCustomField47(),contactLog.getCustomField48(),contactLog.getCustomField49(),contactLog.getCustomField50()
+                    , contactLog.getContactStatus(),contactLog.getContactId(),contactLog.getContactHref(),contactLog.getServiceComplain()
+                    ,contactLog.getRecipientId(),contactLog.getCollectorId(),contactLog.getMessageId(),contactLog.getStatus(),contactLog.getNombreArchivo(),contactLog.getUniqueId(),contactLog.getEmailStatus());
+        } catch (Exception ex){
+            log.error("recordInvalidRepetedContactLog log exception", ex);
+        }
+    }
+
 
     public void recorErrorlog(ErrorLog errorLog) {
         log.debug("{}", errorLog);
@@ -457,10 +491,10 @@ public class ManageLog {
     }
     public void recorJiralog(JiraLog jiraLog) {
         log.debug("{}", jiraLog);
-        String insert = "INSERT INTO deaxs_record.ns_jira_log (issue_id, issue_key, request_type_id, service_desk_Id,service_complain, nombre_archivo) "+
-        " VALUES( ?, ?, ?, ?,?,?)";
+        String insert = "INSERT INTO deaxs_record.ns_jira_log (issue_id, issue_key, request_type_id, service_desk_Id,service_complain, nombre_archivo, unique_id) "+
+        " VALUES( ?, ?, ?, ?,?,?,?)";
         try {
-            jdbcTemplate.update(insert, jiraLog.getIssueId(),jiraLog.getIssueKey(),jiraLog.getRequestTypeId(),jiraLog.getServiceDeskId(),jiraLog.getServiceComplain(),jiraLog.getNombreArchivo());
+            jdbcTemplate.update(insert, jiraLog.getIssueId(),jiraLog.getIssueKey(),jiraLog.getRequestTypeId(),jiraLog.getServiceDeskId(),jiraLog.getServiceComplain(),jiraLog.getNombreArchivo(),jiraLog.getUniqueId());
         } catch (Exception ex) {
             log.error("recorJiralog db exception", ex);
         }

@@ -1,5 +1,6 @@
 package com.keysolutions.nacionalservice.service;
 
+import java.rmi.server.ExportException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -82,7 +83,7 @@ public class ConsultasReclamosService {
         consultaReclamosList.clear();
     }
 
-    private void sendJira(List<ConsultasReclamos> consultaReclamosList) {
+    public void sendJira(List<ConsultasReclamos> consultaReclamosList) {
         for (ConsultasReclamos consultasReclamos : consultaReclamosList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();
@@ -94,7 +95,7 @@ public class ConsultasReclamosService {
                 ticketRequest.setServiceDeskId(manageJiraInMemory.getServiceDeskInfo(Constant.CONFIG_CONSULTAS_RECLAMOS).getServiceDeskId());
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_CONSULTAS_RECLAMOS,fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_CONSULTAS_RECLAMOS,fileName,consultasReclamos.getUniqueId()));
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());
                 log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());
@@ -173,7 +174,7 @@ public class ConsultasReclamosService {
                     customFields.setField47("NA");
                     customFields.setField48("NA");
                     customFields.setField49("NA");
-                    customFields.setField50("NA");
+                    customFields.setField50(data.getUniqueId());
                     contact.setCustomFields(customFields);
                     contactsList.add(contact);
                 }
@@ -206,8 +207,21 @@ public class ConsultasReclamosService {
             RecipientRequestList recipientRequestList = new RecipientRequestList();
             recipientRequestList.setContact_list_ids(list_contacts);
             for (Contact contact : contactList) {
+                contact.setUniqueId(contact.getCustomFields().getField50());
                 contacts_ids.add(contact.getId());
                 manageLog.recordContactLog(Utils.fromContactToContactLog(contact,Constant.CONFIG_CONSULTAS_RECLAMOS,fileName));
+            }
+            try{
+                for (Contact contact : succeeded.getExisting()) {
+                    contact.setUniqueId(contact.getCustomFields().getField50());
+                    manageLog.recordInvalidRepetedContactLog(Utils.fromContactToInvalidRepetedContactLog(contact,Constant.CONFIG_CONSULTAS_RECLAMOS,fileName,Constant.EMAIL_REPETED));
+                }
+                for (Contact contact : succeeded.getInvalid()) {
+                    contact.setUniqueId(contact.getCustomFields().getField50());
+                    manageLog.recordInvalidRepetedContactLog(Utils.fromContactToInvalidRepetedContactLog(contact,Constant.CONFIG_CONSULTAS_RECLAMOS,fileName,Constant.EMAIL_INVALID));
+                }
+            }catch (Exception ex){
+                log.error("Email Existing/Invalid: {}",ex.getMessage());
             }
 
             recipientRequestList.setContact_list_ids(contacts_ids);
@@ -220,14 +234,14 @@ public class ConsultasReclamosService {
             manageLog.recordRecipientLog(recipientResponse,collectorId,messageId,Constant.CONFIG_CONSULTAS_RECLAMOS);
 
             ////////////////////////////////////////////////////////////////////////
-            
+
             SendSurveyRequest sendSurveyRequest = new SendSurveyRequest();
             sendSurveyRequest.setScheduled_date(Utils.getCurrentDateTimeString());
             SendSurveyResponse sendSurveyResponse =
             surveyMonkeyService.sendSurvey(sendSurveyRequest, collectorId,messageId);
             log.info("{}", sendSurveyResponse);
             Utils.waitMilliSeconds(500);
-             
+
 
         } catch (WebClientResponseException e) {
             // Capturar errores relacionados con la respuesta del servidor

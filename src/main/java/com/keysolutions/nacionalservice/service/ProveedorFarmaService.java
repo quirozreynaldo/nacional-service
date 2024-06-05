@@ -82,7 +82,7 @@ public class ProveedorFarmaService {
                 ticketRequest.setServiceDeskId(manageJiraInMemory.getServiceDeskInfo(Constant.CONFIG_PROVEEDOR_FARMA).getServiceDeskId());
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_PROVEEDOR_FARMA,fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(),issue.getIssueKey(),issue.getRequestTypeId(),issue.getServiceDeskId(),Constant.CONFIG_PROVEEDOR_FARMA,fileName,proveedorFarma.getUniqueId()));
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());
                 log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());
@@ -161,7 +161,7 @@ public class ProveedorFarmaService {
                     customFields.setField47("NA");
                     customFields.setField48("NA");
                     customFields.setField49("NA");
-                    customFields.setField50("NA");
+                    customFields.setField50(data.getUniqueId());
                     contact.setCustomFields(customFields);
                     contactsList.add(contact);
                 }
@@ -199,19 +199,30 @@ public class ProveedorFarmaService {
                     RecipientRequestList recipientRequestList = new RecipientRequestList();
                     recipientRequestList.setContact_list_ids(list_contacts);
                     for (Contact contact : contactList) {
+                        contact.setUniqueId(contact.getCustomFields().getField50());
                         contacts_ids.add(contact.getId());
                         manageLog.recordContactLog(Utils.fromContactToContactLog(contact, Constant.CONFIG_PROVEEDOR_FARMA, fileName));
                     }
+                    try{
+                        for (Contact contact : succeeded.getExisting()) {
+                            contact.setUniqueId(contact.getCustomFields().getField50());
+                            manageLog.recordInvalidRepetedContactLog(Utils.fromContactToInvalidRepetedContactLog(contact,Constant.CONFIG_ATENCION_INICIAL,fileName,Constant.EMAIL_REPETED));
+                        }
+                        for (Contact contact : succeeded.getInvalid()) {
+                            contact.setUniqueId(contact.getCustomFields().getField50());
+                            manageLog.recordInvalidRepetedContactLog(Utils.fromContactToInvalidRepetedContactLog(contact,Constant.CONFIG_ATENCION_INICIAL,fileName,Constant.EMAIL_INVALID));
+                        }
+                    }catch (Exception ex){
+                        log.error("Email Existing/Invalid: {}",ex.getMessage());
+                    }
 
                     recipientRequestList.setContact_list_ids(contacts_ids);
-
                     RecipientRequest recipientRequest = new RecipientRequest();
                     recipientRequest.setContact_list_ids(list_contacts.toArray(new String[list_contacts.size()]));
                     recipientRequest.setContact_ids(contacts_ids.toArray(new String[contacts_ids.size()]));
                     RecipientResponse recipientResponse = surveyMonkeyService.addRecipientBulk(recipientRequest, collectorId, messageId);
                     log.info("{}", recipientResponse);
                     manageLog.recordRecipientLog(recipientResponse, collectorId, messageId, Constant.CONFIG_PROVEEDOR_FARMA);
-
                     ////////////////////////////////////////////////////////////////////////
 
                     SendSurveyRequest sendSurveyRequest = new SendSurveyRequest();
@@ -219,6 +230,7 @@ public class ProveedorFarmaService {
                     SendSurveyResponse sendSurveyResponse = surveyMonkeyService.sendSurvey(sendSurveyRequest, collectorId, messageId);
                     log.info("{}", sendSurveyResponse);
                     Utils.waitMilliSeconds(500);
+
                 }catch (WebClientResponseException e) {
                     // Capturar errores relacionados con la respuesta del servidor
                     log.error("Error al consumir el servicio SurveyMonkey. Código de error: {}", e.getRawStatusCode());

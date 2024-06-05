@@ -23,4 +23,5 @@ public class CentroRehaOdonto {
     private String telefono;
     private String email;
     private String telefonoAdicional;
+    private String uniqueId;
 }

@@ -22,4 +22,5 @@ public class AccidentesPersonales {
     private String nombreSolicitante;
     private String telefono;
     private String email;
+    private String uniqueId;
 }

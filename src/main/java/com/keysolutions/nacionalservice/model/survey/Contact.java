@@ -22,4 +22,5 @@ public class Contact {
     private String id;
     private String status;
     private String href;
+    private String uniqueId;
 }

@@ -25,4 +25,5 @@ public class ConsultasReclamos {
     private String email;
     private String idPoliza;
     private String asunto;
+    private String uniqueId;
 }

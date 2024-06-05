@@ -68,7 +68,8 @@ public class Constant {
     public static final String ORIENTACION_MED_TELEF_CODE="ORIMEDTEL";
     public static final String ATEN_ASIS_PROD_VIDA_PLUS_CODE="ATTEPROPLU";
     public static final String VAGONETA_SEGURA_CODE="VAGSEG";
-
+    public static final String EMAIL_INVALID ="INVALID";
+    public static final String EMAIL_REPETED="REPETED";
    
 
 }

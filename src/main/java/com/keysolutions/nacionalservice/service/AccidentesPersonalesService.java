@@ -78,7 +78,7 @@ public class AccidentesPersonalesService {
                 ticketRequest.setServiceDeskId(manageJiraInMemory.getServiceDeskInfo(Constant.CONFIG_ACCIDENTES_PERSONALES).getServiceDeskId());
                 Issue issue = jiraService.createJiraTicket(ticketRequest);
                 log.info("issue {}", issue);
-                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(), issue.getIssueKey(), issue.getRequestTypeId(),issue.getServiceDeskId(), Constant.CONFIG_ACCIDENTES_PERSONALES, fileName));
+                manageLog.recorJiralog(Utils.createJiraLog(issue.getIssueId(), issue.getIssueKey(), issue.getRequestTypeId(),issue.getServiceDeskId(), Constant.CONFIG_ACCIDENTES_PERSONALES, fileName,accidentesPersonales.getUniqueId()));
 
             } catch (WebClientResponseException e) {
                 log.error("Error al consumir el servicio Jira. Código de error: {}", e.getRawStatusCode());

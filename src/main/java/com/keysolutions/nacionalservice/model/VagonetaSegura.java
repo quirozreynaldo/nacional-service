@@ -23,4 +23,5 @@ public class VagonetaSegura {
     private String telefono;
     private String telefonoAlternativo;
     private String placa;
+    private String uniqueId;
 }

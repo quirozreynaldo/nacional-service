@@ -28,4 +28,5 @@ public class OrientacionMedTelef {
     private String email;
     private String observaciones;
     private String aclaraciones;
+    private String uniqueId;
 }

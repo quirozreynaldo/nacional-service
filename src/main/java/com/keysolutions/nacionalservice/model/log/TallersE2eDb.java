@@ -31,6 +31,7 @@ public class TallersE2eDb extends TallersE2e {
     private String idPoliza;
     private String intermediario;
     private String email;
+    private String uniqueId;
     private String nombreArchivo;
     private String status;
     private Timestamp recordDate;

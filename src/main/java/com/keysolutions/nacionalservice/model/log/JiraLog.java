@@ -18,4 +18,5 @@ public class JiraLog {
     private String nombreArchivo;
     private String status;
     private Timestamp recordDate;
+    private String uniqueId;
 }

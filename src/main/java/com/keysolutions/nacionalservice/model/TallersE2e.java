@@ -28,4 +28,5 @@ public class TallersE2e {
     private String idPoliza;
     private String intermediario;
     private String email;
+    private String uniqueId;
 }

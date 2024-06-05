@@ -29,4 +29,5 @@ public class AsistenciaMedDomi {
     private String telefonoAlternativo;
     private String direccionAtencion;
     private String aclaraciones;
+    private String uniqueId;
 }

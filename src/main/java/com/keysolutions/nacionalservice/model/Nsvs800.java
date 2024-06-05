@@ -23,4 +23,5 @@ public class Nsvs800 {
     private String telefono;
     private String email;
     private String idPoliza;
+    private String uniqueId;
 }

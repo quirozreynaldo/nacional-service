@@ -16,5 +16,5 @@ public class CallCenterNspf {
     private String idOperador;
     private String fechaContacto;
     private String idCliente;
-
+    private String uniqueId;
 }

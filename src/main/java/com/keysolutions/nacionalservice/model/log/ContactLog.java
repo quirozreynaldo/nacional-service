@@ -77,5 +77,7 @@ public class ContactLog {
     private String nombreArchivo;
     private String status;
     private Timestamp recordDate;
+    private String uniqueId;
+    private String emailStatus;
 }
 
