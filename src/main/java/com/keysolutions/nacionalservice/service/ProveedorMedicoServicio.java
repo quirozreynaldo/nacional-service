@@ -71,7 +71,7 @@ public class ProveedorMedicoServicio {
         proveedorMedicoList.clear();
     }
 
-    private void sendJira(List<ProveedorMedico> proveedorMedicoList) {
+    public void sendJira(List<ProveedorMedico> proveedorMedicoList) {
         for (ProveedorMedico proveedorMedico : proveedorMedicoList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();

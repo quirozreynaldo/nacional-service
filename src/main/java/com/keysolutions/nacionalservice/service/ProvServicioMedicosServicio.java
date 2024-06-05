@@ -70,7 +70,7 @@ public class ProvServicioMedicosServicio {
         provServicioMedicoList.clear();
     }
 
-    private void sendJira(List<ProvServicioMedico> provServicioMedicoList) {
+    public void sendJira(List<ProvServicioMedico> provServicioMedicoList) {
         for (ProvServicioMedico provServicioMedico : provServicioMedicoList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();

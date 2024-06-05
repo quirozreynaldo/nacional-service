@@ -78,7 +78,7 @@ public class AtencionInicialService {
         atencionInicialList.clear();
     }
 
-    private void sendJira(List<AtencionInicial> atencionInicialList) {
+    public void sendJira(List<AtencionInicial> atencionInicialList) {
         for (AtencionInicial atencionInicial : atencionInicialList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();

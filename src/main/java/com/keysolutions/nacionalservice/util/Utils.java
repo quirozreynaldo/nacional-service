@@ -197,7 +197,23 @@ public class Utils {
         inmedicalAtuMedidaDb.setNombreArchivo(nombreArchivo);
         return inmedicalAtuMedidaDb;
     }
-
+	public static InmedicalAtuMedida convertInmedicalAtuMedidaRemainder(InmedicalAtuMedidaDb inmedicalAtuMedidaDb) {
+        InmedicalAtuMedida inmedicalAtuMedida = new InmedicalAtuMedida();
+        inmedicalAtuMedida.setUniqueId(inmedicalAtuMedidaDb.getUniqueId());
+        inmedicalAtuMedida.setIdProceso(inmedicalAtuMedidaDb.getIdProceso());
+        inmedicalAtuMedida.setIdRubro(inmedicalAtuMedidaDb.getIdRubro());
+        inmedicalAtuMedida.setIdCiudad(inmedicalAtuMedidaDb.getIdCiudad());
+        inmedicalAtuMedida.setProveedor(convertCharset(inmedicalAtuMedidaDb.getProveedor()));
+        inmedicalAtuMedida.setIdCentro(convertCharset(inmedicalAtuMedidaDb.getIdCentro()));
+        inmedicalAtuMedida.setServicio(convertCharset(inmedicalAtuMedidaDb.getServicio()));
+        inmedicalAtuMedida.setFechaContacto(inmedicalAtuMedidaDb.getFechaContacto());
+        inmedicalAtuMedida.setIdDocumento(inmedicalAtuMedidaDb.getIdDocumento());
+        inmedicalAtuMedida.setNombreTitular(convertCharset(inmedicalAtuMedidaDb.getNombreTitular()));
+        inmedicalAtuMedida.setNombreSolicitante(convertCharset(inmedicalAtuMedidaDb.getNombreSolicitante()));
+        inmedicalAtuMedida.setTelefono(inmedicalAtuMedidaDb.getTelefono());
+        inmedicalAtuMedida.setEmail(inmedicalAtuMedidaDb.getEmail());
+        return inmedicalAtuMedida;
+    }
     public static InmedicalBancoGanaderoDb convertInmedicalBancoGanaderoDb(InmedicalBancoGanadero inmedicalBancoGanadero, String nombreArchivo) {
         InmedicalBancoGanaderoDb inmedicalBancoGanaderoDb = new InmedicalBancoGanaderoDb();
         String uniqueId = UUID.randomUUID().toString().replace("-", "");
@@ -243,7 +259,28 @@ public class Utils {
         tallersE2eDb.setNombreArchivo(nombreArchivo);
         return tallersE2eDb;
     }
-
+	public static TallersE2e convertTallersE2eReminder(TallersE2eDb tallersE2eDb) {
+        TallersE2e tallersE2e = new TallersE2e();
+        tallersE2e.setUniqueId(tallersE2eDb.getUniqueId());
+        tallersE2e.setIdProceso(tallersE2eDb.getIdProceso());
+        tallersE2e.setIdRubro(tallersE2eDb.getIdRubro());
+        tallersE2e.setIdCiudad(tallersE2eDb.getIdCiudad());
+        tallersE2e.setIdOperador(convertCharset(tallersE2eDb.getIdOperador()));
+        tallersE2e.setServicio(convertCharset(tallersE2eDb.getServicio()));
+        tallersE2e.setFechaContacto(tallersE2eDb.getFechaContacto());
+        tallersE2e.setPeriodo(convertCharset(tallersE2eDb.getPeriodo()));
+        tallersE2e.setNombreTitular(convertCharset(tallersE2eDb.getNombreTitular()));
+        tallersE2e.setNombreSolicitante(convertCharset(tallersE2eDb.getNombreSolicitante()));
+        tallersE2e.setTelefono(tallersE2eDb.getTelefono());
+        tallersE2e.setMarca(convertCharset(tallersE2eDb.getMarca()));
+        tallersE2e.setModelo(convertCharset(tallersE2eDb.getModelo()));
+        tallersE2e.setPlaca(convertCharset(tallersE2eDb.getPlaca()));
+        tallersE2e.setColor(convertCharset(tallersE2eDb.getColor()));
+        tallersE2e.setIdPoliza(convertCharset(tallersE2eDb.getIdPoliza()));
+        tallersE2e.setIntermediario(convertCharset(tallersE2eDb.getIntermediario()));
+        tallersE2e.setEmail(tallersE2eDb.getEmail());
+        return tallersE2e;
+    }
     public static CentroRehaOdontoDb convertCentroRehaOdontoDb(CentroRehaOdonto centroRehaOdonto, String nombreArchivo) {
         CentroRehaOdontoDb centroRehaOdontoDb = new CentroRehaOdontoDb();
         String uniqueId = UUID.randomUUID().toString().replace("-", "");
@@ -263,6 +300,23 @@ public class Utils {
         centroRehaOdontoDb.setTelefonoAdicional(centroRehaOdonto.getTelefonoAdicional());
         centroRehaOdontoDb.setNombreArchivo(nombreArchivo);
         return centroRehaOdontoDb;
+    }
+    public static CentroRehaOdonto convertCentroRehaOdontoReminder(CentroRehaOdontoDb centroRehaOdontoDb) {
+        CentroRehaOdonto centroRehaOdonto = new CentroRehaOdonto();
+        centroRehaOdonto.setUniqueId(centroRehaOdontoDb.getUniqueId());
+        centroRehaOdonto.setIdProceso(centroRehaOdontoDb.getIdProceso());
+        centroRehaOdonto.setIdRubro(centroRehaOdontoDb.getIdRubro());
+        centroRehaOdonto.setIdCiudad(centroRehaOdontoDb.getIdCiudad());
+        centroRehaOdonto.setIdOperador(convertCharset(centroRehaOdontoDb.getIdOperador()));
+        centroRehaOdonto.setCentroMedico(convertCharset(centroRehaOdontoDb.getCentroMedico()));
+        centroRehaOdonto.setFechaContacto(centroRehaOdontoDb.getFechaContacto());
+        centroRehaOdonto.setFechaSalida(centroRehaOdontoDb.getFechaSalida());
+        centroRehaOdonto.setPaciente(convertCharset(centroRehaOdontoDb.getPaciente()));
+        centroRehaOdonto.setPlan(convertCharset(centroRehaOdontoDb.getPlan()));
+        centroRehaOdonto.setTelefono(centroRehaOdontoDb.getTelefono());
+        centroRehaOdonto.setEmail(centroRehaOdontoDb.getEmail());
+        centroRehaOdonto.setTelefonoAdicional(centroRehaOdontoDb.getTelefonoAdicional());
+        return centroRehaOdonto;
     }
     public static ProvServicioMedicoDb convertProvServMedicoDb(ProvServicioMedico provServicioMedico, String nombreArchivo) {
         ProvServicioMedicoDb provServicioMedicoDb = new ProvServicioMedicoDb();
@@ -287,6 +341,26 @@ public class Utils {
         provServicioMedicoDb.setNombreArchivo(nombreArchivo);
         return provServicioMedicoDb;
     }
+    public static ProvServicioMedico convertProvServMedicoReminder(ProvServicioMedicoDb provServicioMedicoDb) {
+        ProvServicioMedico provServicioMedico = new ProvServicioMedico();
+        provServicioMedico.setUniqueId(provServicioMedicoDb.getUniqueId());
+        provServicioMedico.setIdProveedor(provServicioMedicoDb.getIdProveedor());
+        provServicioMedico.setIdRubro(provServicioMedicoDb.getIdRubro());
+        provServicioMedico.setIdCiudad(provServicioMedicoDb.getIdCiudad());
+        provServicioMedico.setProducto(convertCharset(provServicioMedicoDb.getProducto()));
+        provServicioMedico.setServicio(convertCharset(provServicioMedicoDb.getServicio()));
+        provServicioMedico.setFechaDenuncia(provServicioMedicoDb.getFechaDenuncia());
+        provServicioMedico.setFechaContacto(provServicioMedicoDb.getFechaContacto());
+        provServicioMedico.setIdEjecutivo(convertCharset(provServicioMedicoDb.getIdEjecutivo()));
+        provServicioMedico.setNombreAsegurado(convertCharset(provServicioMedicoDb.getNombreAsegurado()));
+        provServicioMedico.setNombreSolicitante(convertCharset(provServicioMedicoDb.getNombreSolicitante()));
+        provServicioMedico.setTelefono(provServicioMedicoDb.getTelefono());
+        provServicioMedico.setEmail(provServicioMedicoDb.getEmail());
+        provServicioMedico.setPoliza(convertCharset(provServicioMedicoDb.getPoliza()));
+        provServicioMedico.setDignostico(convertCharset(provServicioMedicoDb.getDignostico()));
+        provServicioMedico.setIntermediario(convertCharset(provServicioMedicoDb.getIntermediario()));
+        return provServicioMedico;
+    }
     public static ProveedorMedicoDb convertProveedorMedicoDb(ProveedorMedico proveedorMedico, String nombreArchivo) {
         ProveedorMedicoDb proveedorMedicoDb = new ProveedorMedicoDb();
         String uniqueId = UUID.randomUUID().toString().replace("-", "");
@@ -310,6 +384,26 @@ public class Utils {
         proveedorMedicoDb.setNombreArchivo(nombreArchivo);
         return proveedorMedicoDb;
     }
+    public static ProveedorMedico convertProveedorMedicoReminder(ProveedorMedicoDb proveedorMedicoDb) {
+        ProveedorMedico proveedorMedico = new ProveedorMedico();
+        proveedorMedico.setUniqueId(proveedorMedicoDb.getUniqueId());
+        proveedorMedico.setIdProveedor(proveedorMedicoDb.getIdProveedor());
+        proveedorMedico.setIdRubro(proveedorMedicoDb.getIdRubro());
+        proveedorMedico.setIdCiudad(proveedorMedicoDb.getIdCiudad());
+        proveedorMedico.setProducto(convertCharset(proveedorMedicoDb.getProducto()));
+        proveedorMedico.setServicio(convertCharset(proveedorMedicoDb.getServicio()));
+        proveedorMedico.setFechaDenuncia(proveedorMedicoDb.getFechaDenuncia());
+        proveedorMedico.setFechaContacto(proveedorMedicoDb.getFechaContacto());
+        proveedorMedico.setIdEjecutivo(convertCharset(proveedorMedicoDb.getIdEjecutivo()));
+        proveedorMedico.setNombreAsegurado(convertCharset(proveedorMedicoDb.getNombreAsegurado()));
+        proveedorMedico.setNombreSolicitante(convertCharset(proveedorMedicoDb.getNombreSolicitante()));
+        proveedorMedico.setTelefono(proveedorMedicoDb.getTelefono());
+        proveedorMedico.setEmail(proveedorMedicoDb.getEmail());
+        proveedorMedico.setPoliza(convertCharset(proveedorMedicoDb.getPoliza()));
+        proveedorMedico.setDignostico(convertCharset(proveedorMedicoDb.getDignostico()));
+        proveedorMedico.setIntermediario(convertCharset(proveedorMedicoDb.getIntermediario()));
+        return proveedorMedico;
+    }
     public static ProveedorFarmaDb convertProveedorFarmaDb(ProveedorFarma proveedorFarma, String nombreArchivo) {
         ProveedorFarmaDb proveedorFarmaDb = new ProveedorFarmaDb();
         String uniqueId = UUID.randomUUID().toString().replace("-", "");
@@ -332,6 +426,26 @@ public class Utils {
         proveedorFarmaDb.setIntermediario(convertCharset(proveedorFarma.getIntermediario()));
         proveedorFarmaDb.setNombreArchivo(nombreArchivo);
         return proveedorFarmaDb;
+    }
+    public static ProveedorFarma convertProveedorFarmaReminder(ProveedorFarmaDb proveedorFarmaDb) {
+        ProveedorFarma proveedorFarma = new ProveedorFarma();
+        proveedorFarma.setUniqueId(proveedorFarmaDb.getUniqueId());
+        proveedorFarma.setIdProveedor(proveedorFarmaDb.getIdProveedor());
+        proveedorFarma.setIdRubro(proveedorFarmaDb.getIdRubro());
+        proveedorFarma.setIdCiudad(proveedorFarmaDb.getIdCiudad());
+        proveedorFarma.setProducto(convertCharset(proveedorFarmaDb.getProducto()));
+        proveedorFarma.setServicio(convertCharset(proveedorFarmaDb.getServicio()));
+        proveedorFarma.setFechaDenuncia(proveedorFarmaDb.getFechaDenuncia());
+        proveedorFarma.setFechaContacto(proveedorFarmaDb.getFechaContacto());
+        proveedorFarma.setIdEjecutivo(convertCharset(proveedorFarmaDb.getIdEjecutivo()));
+        proveedorFarma.setNombreAsegurado(convertCharset(proveedorFarmaDb.getNombreAsegurado()));
+        proveedorFarma.setNombreSolicitante(convertCharset(proveedorFarmaDb.getNombreSolicitante()));
+        proveedorFarma.setTelefono(proveedorFarmaDb.getTelefono());
+        proveedorFarma.setEmail(proveedorFarmaDb.getEmail());
+        proveedorFarma.setPoliza(convertCharset(proveedorFarmaDb.getPoliza()));
+        proveedorFarma.setDignostico(convertCharset(proveedorFarmaDb.getDignostico())); // Corrected typo
+        proveedorFarma.setIntermediario(convertCharset(proveedorFarmaDb.getIntermediario()));
+        return proveedorFarma;
     }
     public static AsistenciaMedDomiDb convertAsistenciaMedDomiDb(AsistenciaMedDomi asistenciaMedDomi, String nombreArchivo) {
         AsistenciaMedDomiDb asistenciaMedDomiDb = new AsistenciaMedDomiDb();

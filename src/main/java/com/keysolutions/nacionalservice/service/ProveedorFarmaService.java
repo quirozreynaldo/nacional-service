@@ -70,7 +70,7 @@ public class ProveedorFarmaService {
         proveedorFarmaList.clear();
     }
 
-    private void sendJira(List<ProveedorFarma> proveedorFarmaList) {
+    public void sendJira(List<ProveedorFarma> proveedorFarmaList) {
         for (ProveedorFarma proveedorFarma : proveedorFarmaList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();

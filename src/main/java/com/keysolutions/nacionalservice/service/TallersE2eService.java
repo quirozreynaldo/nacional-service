@@ -71,7 +71,7 @@ public class TallersE2eService {
         tallersE2eList.clear();
     }
 
-    private void sendJira(List<TallersE2e> tallersE2eList) {
+    public void sendJira(List<TallersE2e> tallersE2eList) {
         for (TallersE2e tallersE2e : tallersE2eList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();

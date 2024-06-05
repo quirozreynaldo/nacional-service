@@ -69,7 +69,7 @@ public class InmedicalAtuMedidaService {
         inmedicalAtuMedidaList.clear();
     }
 
-    private void sendJira(List<InmedicalAtuMedida> inmedicalAtuMedidaList) {
+    public void sendJira(List<InmedicalAtuMedida> inmedicalAtuMedidaList) {
         for (InmedicalAtuMedida inmedicalAtuMedida : inmedicalAtuMedidaList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();

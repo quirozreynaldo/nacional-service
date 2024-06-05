@@ -69,7 +69,7 @@ public class CentroRehaOdontoService {
         centroRehaOdontoList.clear();
     }
 
-    private void sendJira(List<CentroRehaOdonto> centroRehaOdontoList) {
+    public void sendJira(List<CentroRehaOdonto> centroRehaOdontoList) {
         for (CentroRehaOdonto centroRehaOdonto : centroRehaOdontoList) {
             try {
                 TicketRequest ticketRequest = new TicketRequest();
