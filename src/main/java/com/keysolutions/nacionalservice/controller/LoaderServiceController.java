@@ -17,6 +17,7 @@ import com.keysolutions.nacionalservice.service.CentroRehaOdontoService;
 import com.keysolutions.nacionalservice.service.ConsultasReclamosService;
 import com.keysolutions.nacionalservice.service.InmedicalAtuMedidaService;
 import com.keysolutions.nacionalservice.util.Utils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +35,7 @@ import java.util.List;
 
 @RequestMapping("/api")
 @RestController
+@Slf4j
 public class LoaderServiceController {
 @Autowired
 private JiraService jiraService;
@@ -67,92 +69,92 @@ private JiraService jiraService;
 
     @GetMapping("/reminder")
     public ResponseEntity<String> retrieveReminder() {
-       /*   manageReminder.retrieveConsultasReclamosReminder().stream().forEach(registro->{
+          manageReminder.retrieveConsultasReclamosReminder().stream().forEach(registro->{
               List<ConsultasReclamos> lista = new ArrayList<>();
               ConsultasReclamos consultasReclamos = Utils.convertConsultaReclamoReminder(registro);
-              System.out.println(registro.toString());
-              System.out.println(consultasReclamos.toString());
+              log.info(registro.toString());
+              log.info(consultasReclamos.toString());
               consultasReclamosService.setFileName("REENVIADO");
               lista.add(consultasReclamos);
               consultasReclamosService.sendJira(lista);
           });
 
-        */
-        System.out.println("===================1=====================");
-       /*  manageReminder.retrieveAtencionInicialReminder().stream().forEach(registro->{
+        
+        log.info("===================1=====================");
+         manageReminder.retrieveAtencionInicialReminder().stream().forEach(registro->{
             List<AtencionInicial> lista = new ArrayList<>();
             AtencionInicial atencionInicial = Utils.convertAtencionInicialReminder(registro);
-            System.out.println(registro.toString());
-            System.out.println(atencionInicial.toString());
+            log.info(registro.toString());
+            log.info(atencionInicial.toString());
             atencionInicialService.setFileName("REENVIADO");
             lista.add(atencionInicial);
             atencionInicialService.sendJira(lista);
         });
-        */
-        System.out.println("===================2=====================");
-         /*   manageReminder.retrieveInmedialAtuMedidaReminder().stream().forEach(registro->{
+
+        log.info("===================2=====================");
+            manageReminder.retrieveInmedialAtuMedidaReminder().stream().forEach(registro->{
             List<InmedicalAtuMedida> lista = new ArrayList<>();
             InmedicalAtuMedida inmedicalAtuMedida = Utils.convertInmedicalAtuMedidaRemainder(registro);
-            System.out.println(registro.toString());
-            System.out.println(inmedicalAtuMedida.toString());
+            log.info(registro.toString());
+            log.info(inmedicalAtuMedida.toString());
             inmedicalAtuMedidaService.setFileName("REENVIADO");
             lista.add(inmedicalAtuMedida);
             inmedicalAtuMedidaService.sendJira(lista);
              
-        });*/
-        System.out.println("===================3=====================");
-       /* manageReminder.retrieveTallersE2eReminder().stream().forEach(registro->{
+        });
+        log.info("===================3=====================");
+        manageReminder.retrieveTallersE2eReminder().stream().forEach(registro->{
             List<TallersE2e> lista = new ArrayList<>();
             TallersE2e tallersE2e = Utils.convertTallersE2eReminder(registro);
-            System.out.println(registro.toString());
-            System.out.println(tallersE2e.toString());
+            log.info(registro.toString());
+            log.info(tallersE2e.toString());
             tallersE2eService.setFileName("REENVIADO");
             lista.add(tallersE2e);
             tallersE2eService.sendJira(lista);
-        });*/
-        System.out.println("===================4=====================");
-       /* manageReminder.retrieveCentroRehaOdontoReminder().stream().forEach(registro->{
+        });
+        log.info("===================4=====================");
+        manageReminder.retrieveCentroRehaOdontoReminder().stream().forEach(registro->{
             List<CentroRehaOdonto> lista = new ArrayList<>();
             CentroRehaOdonto centroRehaOdonto = Utils.convertCentroRehaOdontoReminder(registro);
-            System.out.println(registro.toString());
-            System.out.println(centroRehaOdonto.toString());
+            log.info(registro.toString());
+            log.info(centroRehaOdonto.toString());
             centroRehaOdontoService.setFileName("REENVIADO");
             lista.add(centroRehaOdonto);
             centroRehaOdontoService.sendJira(lista);
-        });*/
-        System.out.println("===================5=====================");
-       /* manageReminder.retrieveProvServMedicoReminder().stream().forEach(registro->{
+        });
+        log.info("===================5=====================");
+        manageReminder.retrieveProvServMedicoReminder().stream().forEach(registro->{
             List<ProvServicioMedico> lista = new ArrayList<>();
             ProvServicioMedico provServicioMedico = Utils.convertProvServMedicoReminder(registro);
-            System.out.println(registro.toString());
-            System.out.println(provServicioMedico.toString());
+            log.info(registro.toString());
+            log.info(provServicioMedico.toString());
             provServicioMedicosServicio.setFileName("REENVIADO");
             lista.add(provServicioMedico);
             provServicioMedicosServicio.sendJira(lista);
         });
-        */
-        System.out.println("===================6=====================");
-       /* manageReminder.retrieveProveedorMedicoReminder().stream().forEach(registro->{
+        
+        log.info("===================6=====================");
+        manageReminder.retrieveProveedorMedicoReminder().stream().forEach(registro->{
             List<ProveedorMedico> lista = new ArrayList<>();
             ProveedorMedico proveedorMedico = Utils.convertProveedorMedicoReminder(registro);
-            System.out.println(registro.toString());
-            System.out.println(proveedorMedico.toString());
+            log.info(registro.toString());
+            log.info(proveedorMedico.toString());
             proveedorMedicoServicio.setFileName("REENVIADO");
             lista.add(proveedorMedico);
             proveedorMedicoServicio.sendJira(lista);
         });
-        */
-        System.out.println("===================7=====================");
-        /*manageReminder.retrieveProveedorFarmaReminder().stream().forEach(registro->{
+        
+        log.info("===================7=====================");
+        manageReminder.retrieveProveedorFarmaReminder().stream().forEach(registro->{
             List<ProveedorFarma> lista = new ArrayList<>();
             ProveedorFarma proveedorFarma = Utils.convertProveedorFarmaReminder(registro);
-            System.out.println(registro.toString());
-            System.out.println(proveedorFarma.toString());
+            log.info(registro.toString());
+            log.info(proveedorFarma.toString());
             proveedorFarmaService.setFileName("REENVIADO");
             lista.add(proveedorFarma);
             proveedorFarmaService.sendJira(lista);
         });
-        */
+        
         return ResponseEntity.status(200).body("OK");
 
     }

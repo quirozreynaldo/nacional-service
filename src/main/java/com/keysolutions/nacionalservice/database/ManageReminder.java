@@ -17,7 +17,7 @@ public class ManageReminder {
     @Qualifier("digitalTemplate")
     private JdbcTemplate jdbcTemplate;
     public List<ConsultasReclamosDb> retrieveConsultasReclamosReminder(){
-        String sqlSelect="select cr.consulta_reclamo_id, cr.id_proceso, " +
+        String sqlSelect="select DISTINCT cr.consulta_reclamo_id, cr.id_proceso, " +
                 " cr.id_rubro, " +
                 " cr.id_ciudad, " +
                 " cr.id_operador, " +
@@ -40,7 +40,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id  " +
                 " and ncl.first_name =cr.email " +
                 " and ncl.nombre_archivo =cr.nombre_archivo " +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59') " +
+                " and cr.consulta_reclamo_id =ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00') " +
                 "  AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<ConsultasReclamosDb> result = new ArrayList<>();
         try {
@@ -71,7 +72,7 @@ public class ManageReminder {
         return result;
     }
     public List<AtencionInicialDb> retrieveAtencionInicialReminder(){
-        String sqlSelect=" select cr.atencion_inicial_id, " +
+        String sqlSelect=" select DISTINCT cr.atencion_inicial_id, " +
                 "       cr.id_proceso, " +
                 "   cr.id_rubro, " +
                 "   cr.id_ciudad, " +
@@ -93,7 +94,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id  " +
                 " and ncl.first_name =cr.email" +
                 " and ncl.nombre_archivo =cr.nombre_archivo" +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59')" +
+                " and cr.atencion_inicial_id = ncl.unique_id " +
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00')" +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<AtencionInicialDb> result = new ArrayList<>();
         try {
@@ -122,7 +124,7 @@ public class ManageReminder {
         return result;
     }
     public List<InmedicalAtuMedidaDb> retrieveInmedialAtuMedidaReminder(){
-        String sqlSelect="select cr.inmediacal_atu_id, " +
+        String sqlSelect="select DISTINCT cr.inmediacal_atu_id, " +
                 " cr.id_proceso, " +
                 " cr.id_rubro, " +
                 " cr.id_ciudad, " +
@@ -144,7 +146,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id  " +
                 " and ncl.first_name =cr.email" +
                 " and ncl.nombre_archivo =cr.nombre_archivo" +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59') " +
+                " and cr.inmediacal_atu_id = ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00') " +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<InmedicalAtuMedidaDb> result = new ArrayList<>();
         try {
@@ -173,7 +176,7 @@ public class ManageReminder {
         return result;
     }
     public List<TallersE2eDb> retrieveTallersE2eReminder(){
-        String sqlSelect="select cr.talleres_e2e_id, " +
+        String sqlSelect="select DISTINCT cr.talleres_e2e_id, " +
                 "cr.id_proceso,id_rubro, " +
                 "cr.id_ciudad, " +
                 "cr.id_operador, " +
@@ -200,7 +203,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id   " +
                 " and ncl.first_name =cr.email " +
                 " and ncl.nombre_archivo =cr.nombre_archivo " +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59') " +
+                " and cr.talleres_e2e_id = ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00') " +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<TallersE2eDb> result = new ArrayList<>();
         try {
@@ -235,7 +239,7 @@ public class ManageReminder {
     }
 
     public List<CentroRehaOdontoDb> retrieveCentroRehaOdontoReminder(){
-        String sqlSelect=" select  " +
+        String sqlSelect=" select DISTINCT  " +
                 " cr.centro_reha_odonto_id, " +
                 " cr.id_proceso,id_rubro, " +
                 " cr.id_ciudad,id_operador, " +
@@ -257,7 +261,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id   " +
                 " and ncl.first_name =cr.email " +
                 " and ncl.nombre_archivo =cr.nombre_archivo " +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59') " +
+                " and cr.centro_reha_odonto_id = ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00') " +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<CentroRehaOdontoDb> result = new ArrayList<>();
         try {
@@ -286,7 +291,7 @@ public class ManageReminder {
         return result;
     }
     public List<ProvServicioMedicoDb> retrieveProvServMedicoReminder(){
-        String sqlSelect="select " +
+        String sqlSelect="select DISTINCT " +
                 " cr.prov_ser_med_id, " +
                 " cr.id_proveedor, " +
                 " cr.id_rubro, cr.id_ciudad, " +
@@ -312,7 +317,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id  " +
                 " and ncl.first_name =cr.email" +
                 " and ncl.nombre_archivo =cr.nombre_archivo" +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59')" +
+                " and cr.prov_ser_med_id = ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00')" +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<ProvServicioMedicoDb> result = new ArrayList<>();
         try {
@@ -344,7 +350,7 @@ public class ManageReminder {
         return result;
     }
     public List<ProveedorMedicoDb> retrieveProveedorMedicoReminder(){
-        String sqlSelect="select " +
+        String sqlSelect="select DISTINCT " +
                 " cr.prov_med_id, " +
                 " cr.id_proveedor, " +
                 " cr.id_rubro, " +
@@ -371,7 +377,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id  " +
                 " and ncl.first_name =cr.email" +
                 " and ncl.nombre_archivo =cr.nombre_archivo" +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59')" +
+                " and cr.prov_med_id = ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00')" +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<ProveedorMedicoDb> result = new ArrayList<>();
         try {
@@ -404,7 +411,7 @@ public class ManageReminder {
     }
 
     public List<ProveedorFarmaDb> retrieveProveedorFarmaReminder(){
-        String sqlSelect="select " +
+        String sqlSelect="select DISTINCT  " +
                 " cr.prov_far_id, " +
                 " cr.id_proveedor, " +
                 " cr.id_rubro, " +
@@ -431,7 +438,8 @@ public class ManageReminder {
                 " and nrl.recipient_id = ncl.recipient_id  " +
                 " and ncl.first_name =cr.email" +
                 " and ncl.nombre_archivo =cr.nombre_archivo" +
-                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 3 DAY), ' 23:59:59')" +
+                " and cr.prov_far_id = ncl.unique_id "+
+                " and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00')" +
                 "                    AND CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
         List<ProveedorFarmaDb> result = new ArrayList<>();
         try {

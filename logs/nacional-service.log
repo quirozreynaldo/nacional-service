@@ -1,0 +1,587 @@
+2024-06-06T00:00:00,005 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:05:00,004 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:10:00,009 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:15:00,003 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:20:00,001 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:25:00,016 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:30:00,008 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-06T00:32:01,046 [INFO]  [AbstractCamelContext]:[3461]- Apache Camel 4.0.0-M1 (camel-1) is shutting down (timeout:45s)
+2024-06-06T00:32:01,055 [INFO]  [AbstractCamelContext]:[166]- Routes stopped (stopped:1)
+2024-06-06T00:32:01,055 [INFO]  [AbstractCamelContext]:[166]-     Stopped route1 (file://in)
+2024-06-06T00:32:01,058 [INFO]  [AbstractCamelContext]:[3600]- Apache Camel 4.0.0-M1 (camel-1) shutdown in 11ms (uptime:1h5m)
+2024-06-06T00:32:03,171 [INFO]  [HikariDataSource]:[350]- HikariPool-1 - Shutdown initiated...
+2024-06-06T00:32:04,488 [INFO]  [HikariDataSource]:[352]- HikariPool-1 - Shutdown completed.
+2024-06-06T00:47:33,956 [INFO]  [Version]:[21]- HV000001: Hibernate Validator 6.2.5.Final
+2024-06-06T00:47:34,003 [INFO]  [NacionalServiceApplication]:[55]- Starting NacionalServiceApplication using Java 17.0.7 on N2NTBILRQUIROZ with PID 11256 (C:\workspace\nuevatel_2024\ultimas_versiones_digitlaexperience\versionado\nacional-service\target\classes started by rquiroz in C:\workspace\nuevatel_2024\ultimas_versiones_digitlaexperience\versionado\nacional-service)
+2024-06-06T00:47:34,010 [INFO]  [NacionalServiceApplication]:[631]- No active profile set, falling back to 1 default profile: "default"
+2024-06-06T00:47:35,872 [INFO]  [TomcatWebServer]:[108]- Tomcat initialized with port(s): 3003 (http)
+2024-06-06T00:47:35,881 [INFO]  [Http11NioProtocol]:[173]- Initializing ProtocolHandler ["http-nio-3003"]
+2024-06-06T00:47:35,881 [INFO]  [StandardService]:[173]- Starting service [Tomcat]
+2024-06-06T00:47:35,882 [INFO]  [StandardEngine]:[173]- Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-06-06T00:47:36,052 [INFO]  [[/]]:[173]- Initializing Spring embedded WebApplicationContext
+2024-06-06T00:47:36,053 [INFO]  [ServletWebServerApplicationContext]:[292]- Root WebApplicationContext: initialization completed in 1991 ms
+2024-06-06T00:47:36,559 [INFO]  [HikariDataSource]:[110]- HikariPool-1 - Starting...
+2024-06-06T00:47:37,996 [INFO]  [HikariPool]:[565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dbeedff
+2024-06-06T00:47:38,008 [INFO]  [HikariDataSource]:[123]- HikariPool-1 - Start completed.
+2024-06-06T00:47:38,521 [INFO]  [ManageSurveyInMemory]:[54]- Load Survey were done : 
+{PROV_SERV_MEDICO=412455347, INMEDICAL_ATU_MEDIDA=517447449, CALLCENTER_NSPF=1123456789, TALLERES_E2E=412449075, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=517447099, CONSULTAS_RECLAMOS=412479011, PROVEEDOR_MEDICO=517417762, NSVS_800=517447155, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=517414488, PROVEEDOR_FARMACIA=517423341}
+2024-06-06T00:47:38,522 [INFO]  [ManageSurveyInMemory]:[55]- Load Collectors were done : 
+{PROV_SERV_MEDICO=431052375, INMEDICAL_ATU_MEDIDA=456114450, CALLCENTER_NSPF=1123456789, TALLERES_E2E=431052443, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=456113888, CONSULTAS_RECLAMOS=431052410, PROVEEDOR_MEDICO=456114317, NSVS_800=1123456789, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=456114096, PROVEEDOR_FARMACIA=456114274}
+2024-06-06T00:47:38,523 [INFO]  [ManageSurveyInMemory]:[56]- Load Messages were done : 
+{PROV_SERV_MEDICO=116541950, INMEDICAL_ATU_MEDIDA=116542033, CALLCENTER_NSPF=1123456789, TALLERES_E2E=116541997, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=116541285, CONSULTAS_RECLAMOS=116541967, PROVEEDOR_MEDICO=116541910, NSVS_800=1123456789, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=116621928, PROVEEDOR_FARMACIA=116541868}
+2024-06-06T00:47:38,524 [INFO]  [ManageSurveyInMemory]:[57]- Load Conctact List were done : 
+{NACIONAL_CONTACTS=257004175}
+2024-06-06T00:47:38,655 [INFO]  [ManageJiraInMemory]:[29]- {CALLCENTER_NSPF=ConfigJira(configJiraId=5, serviceDeskId=2, requestTypeId=26, issueTypeId=10007, code=CALLCENTER_NSPF, status=A, recordDate=2024-04-29 20:36:06.0), PROV_SERV_MEDICO=ConfigJira(configJiraId=11, serviceDeskId=2, requestTypeId=20, issueTypeId=10007, code=PROV_SERV_MEDICO, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_MED_DOMI_AMBU=ConfigJira(configJiraId=15, serviceDeskId=2, requestTypeId=30, issueTypeId=10007, code=ASISTENCIA_MED_DOMI_AMBU, status=A, recordDate=2024-04-29 20:36:06.0), ACCIDENTES_PERSONALES=ConfigJira(configJiraId=2, serviceDeskId=2, requestTypeId=32, issueTypeId=10007, code=ACCIDENTES_PERSONALES, status=A, recordDate=2024-04-29 20:36:06.0), NSVS_800=ConfigJira(configJiraId=1, serviceDeskId=2, requestTypeId=33, issueTypeId=10007, code=NSVS_800, status=A, recordDate=2024-04-29 20:36:06.0), PROVEEDOR_MEDICO=ConfigJira(configJiraId=12, serviceDeskId=2, requestTypeId=43, issueTypeId=10007, code=PROVEEDOR_MEDICO, status=A, recordDate=2024-04-29 20:36:06.0), VAGONETA_SEGURA=ConfigJira(configJiraId=18, serviceDeskId=2, requestTypeId=18, issueTypeId=10007, code=VAGONETA_SEGURA, status=A, recordDate=2024-04-29 20:36:06.0), ATEN_ASIS_PROD_VIDA_PLUS=ConfigJira(configJiraId=17, serviceDeskId=2, requestTypeId=28, issueTypeId=10007, code=ATEN_ASIS_PROD_VIDA_PLUS, status=A, recordDate=2024-04-29 20:36:06.0), INMEDICAL_ATU_MEDIDA=ConfigJira(configJiraId=7, serviceDeskId=2, requestTypeId=34, issueTypeId=10007, code=INMEDICAL_ATU_MEDIDA, status=A, recordDate=2024-04-29 20:36:06.0), TALLERES_E2E=ConfigJira(configJiraId=9, serviceDeskId=2, requestTypeId=19, issueTypeId=10007, code=TALLERES_E2E, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_VIAL=ConfigJira(configJiraId=3, serviceDeskId=2, requestTypeId=29, issueTypeId=10007, code=ASISTENCIA_VIAL, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_MED_DOMI=ConfigJira(configJiraId=14, serviceDeskId=2, requestTypeId=31, issueTypeId=10007, code=ASISTENCIA_MED_DOMI, status=A, recordDate=2024-04-29 20:36:06.0), CENTRO_REHA_ODONTOLOGICA=ConfigJira(configJiraId=10, serviceDeskId=2, requestTypeId=25, issueTypeId=10007, code=CENTRO_REHA_ODONTOLOGICA, status=A, recordDate=2024-04-29 20:36:06.0), PROVEEDOR_FARMACIA=ConfigJira(configJiraId=13, serviceDeskId=2, requestTypeId=21, issueTypeId=10007, code=PROVEEDOR_FARMACIA, status=A, recordDate=2024-04-29 20:36:06.0), CONSULTAS_RECLAMOS=ConfigJira(configJiraId=6, serviceDeskId=2, requestTypeId=24, issueTypeId=10007, code=CONSULTAS_RECLAMOS, status=A, recordDate=2024-04-29 20:36:06.0), INMEDICAL_BANCO_GANADERO=ConfigJira(configJiraId=8, serviceDeskId=2, requestTypeId=23, issueTypeId=10007, code=INMEDICAL_BANCO_GANADERO, status=A, recordDate=2024-04-29 20:36:06.0), ORIENTA_MED_TELEFONO=ConfigJira(configJiraId=16, serviceDeskId=2, requestTypeId=22, issueTypeId=10007, code=ORIENTA_MED_TELEFONO, status=A, recordDate=2024-04-29 20:36:06.0), ATENCION_INICIAL=ConfigJira(configJiraId=4, serviceDeskId=2, requestTypeId=27, issueTypeId=10007, code=ATENCION_INICIAL, status=A, recordDate=2024-04-29 20:36:06.0)}
+2024-06-06T00:47:38,702 [INFO]  [CsvProcessor]:[70]- =======================
+2024-06-06T00:47:38,702 [INFO]  [CsvProcessor]:[74]- PRODUCTION MODE RUNNING
+2024-06-06T00:47:38,702 [INFO]  [CsvProcessor]:[76]- =======================
+2024-06-06T00:47:39,045 [INFO]  [CsvFileMoverService]:[81]- +++++++++++LOOK FOR NEW CSV FILES+++++++++++++
+2024-06-06T00:47:39,680 [INFO]  [EndpointLinksResolver]:[58]- Exposing 3 endpoint(s) beneath base path '/actuator'
+2024-06-06T00:47:39,729 [INFO]  [Http11NioProtocol]:[173]- Starting ProtocolHandler ["http-nio-3003"]
+2024-06-06T00:47:39,758 [INFO]  [TomcatWebServer]:[220]- Tomcat started on port(s): 3003 (http) with context path ''
+2024-06-06T00:47:40,130 [INFO]  [AbstractCamelContext]:[3066]- Apache Camel 4.0.0-M1 (camel-1) is starting
+2024-06-06T00:47:40,150 [INFO]  [AbstractCamelContext]:[3228]- Routes startup (started:1)
+2024-06-06T00:47:40,150 [INFO]  [AbstractCamelContext]:[3233]-     Started route1 (file://in)
+2024-06-06T00:47:40,150 [INFO]  [AbstractCamelContext]:[3257]- Apache Camel 4.0.0-M1 (camel-1) started in 368ms (build:60ms init:288ms start:20ms)
+2024-06-06T00:47:40,155 [INFO]  [NacionalServiceApplication]:[61]- Started NacionalServiceApplication in 6.606 seconds (JVM running for 7.726)
+2024-06-06T00:47:59,758 [INFO]  [[/]]:[173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T00:47:59,758 [INFO]  [DispatcherServlet]:[525]- Initializing Servlet 'dispatcherServlet'
+2024-06-06T00:47:59,759 [INFO]  [DispatcherServlet]:[547]- Completed initialization in 1 ms
+2024-06-06T00:48:00,069 [INFO]  [LoaderServiceController]:[75]- ConsultasReclamosDb(super=ConsultasReclamos(idProceso=5, idRubro=Masivos, idCiudad=Santa Cruz, idOperador=Selena Imanareco, servicio=Atención al cliente, fechaContacto=2024-03-27 19:24:00, fechaCierreFreshDesk=2024-06-03 09:51:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=HUGO GONZALO URQUIDI CARDENAS, telefono=72046323, email=gonurquidi3456@gmail.com, idPoliza=31267, asunto=ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO), uniqueId=05d2ceb67fca4c9d8cffe9bb4c90fcd3), consultaReclamoId=05d2ceb67fca4c9d8cffe9bb4c90fcd3, nombreArchivo=012_Base al 03.06.2024.csv, status=A, recordDate=2024-06-04 05:20:06.0)
+2024-06-06T00:48:00,069 [INFO]  [LoaderServiceController]:[76]- ConsultasReclamos(idProceso=5, idRubro=Masivos, idCiudad=Santa Cruz, idOperador=Selena Imanareco, servicio=Atención al cliente, fechaContacto=2024-03-27 19:24:00, fechaCierreFreshDesk=2024-06-03 09:51:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=HUGO GONZALO URQUIDI CARDENAS, telefono=72046323, email=gonurquidi3456@gmail.com, idPoliza=31267, asunto=ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO), uniqueId=05d2ceb67fca4c9d8cffe9bb4c90fcd3)
+2024-06-06T00:48:00,073 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 5
+Id Rubro: Masivos
+Id Ciudad: Santa Cruz
+Id Operador: Selena Imanareco
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-03-27 19:24:00
+Fecha cierre freshdesk: 2024-06-03 09:51:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: HUGO GONZALO URQUIDI CARDENAS
+Teléfono: 72046323
+Email: gonurquidi3456@gmail.com
+Id Poliza: 31267
+Asunto: ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO)
+
+
+https://es.research.net/r/BDHNLKZ?t=72046323&e=gonurquidi3456@gmail.com&ipro=5&irub=Masivos&iciu=Santa%20Cruz&iope=Selena%20Imanareco&ser=NA&fcon=2024-03-27%2019:24:00&fcie=2024-06-03%2009:51:00&iobj=Solicitud&ntit=NA&nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&ipol=31267&asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004800.72046323, summary=CONSULTAS RECLAMOS 72046323), requestTypeId=24, serviceDeskId=2)
+2024-06-06T00:48:02,950 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18304, issueKey=GE-4166, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:01-0400, jira=2024-06-06T00:48:01.710-0400, friendly=Hoy 12:48 AM, epochMillis=1717649281710), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 72046323, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Masivos
+Id Ciudad: Santa Cruz
+Id Operador: Selena Imanareco
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-03-27 19:24:00
+Fecha cierre freshdesk: 2024-06-03 09:51:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: HUGO GONZALO URQUIDI CARDENAS
+Teléfono: 72046323
+Email: gonurquidi3456@gmail.com
+Id Poliza: 31267
+Asunto: ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO)
+
+
+https://es.research.net/r/BDHNLKZ?t=72046323&e=gonurquidi3456@gmail.com&ipro=5&irub=Masivos&iciu=Santa%20Cruz&iope=Selena%20Imanareco&ser=NA&fcon=2024-03-27%2019:24:00&fcie=2024-06-03%2009:51:00&iobj=Solicitud&ntit=NA&nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&ipol=31267&asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004800.72046323, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Masivos<br>
+Id Ciudad: Santa Cruz<br>
+Id Operador: Selena Imanareco<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-03-27 19:24:00<br>
+Fecha cierre freshdesk: 2024-06-03 09:51:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: HUGO GONZALO URQUIDI CARDENAS<br>
+Teléfono: 72046323<br>
+Email: gonurquidi3456@gmail.com<br>
+Id Poliza: 31267<br>
+Asunto: ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO)</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=72046323&amp;e=gonurquidi3456@gmail.com&amp;ipro=5&amp;irub=Masivos&amp;iciu=Santa%20Cruz&amp;iope=Selena%20Imanareco&amp;ser=NA&amp;fcon=2024-03-27%2019:24:00&amp;fcie=2024-06-03%2009:51:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&amp;ipol=31267&amp;asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004800.72046323" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=72046323&amp;e=gonurquidi3456@gmail.com&amp;ipro=5&amp;irub=Masivos&amp;iciu=Santa%20Cruz&amp;iope=Selena%20Imanareco&amp;ser=NA&amp;fcon=2024-03-27%2019:24:00&amp;fcie=2024-06-03%2009:51:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&amp;ipol=31267&amp;asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004800.72046323</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:01-0400, jira=2024-06-06T00:48:01.710-0400, friendly=Hoy 12:48 AM, epochMillis=1717649281710)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18304, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4166, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18304, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4166))
+2024-06-06T00:48:02,963 [INFO]  [ConsultasReclamosService]:[97]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18304, issueKey=GE-4166, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:01-0400, jira=2024-06-06T00:48:01.710-0400, friendly=Hoy 12:48 AM, epochMillis=1717649281710), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 72046323, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Masivos
+Id Ciudad: Santa Cruz
+Id Operador: Selena Imanareco
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-03-27 19:24:00
+Fecha cierre freshdesk: 2024-06-03 09:51:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: HUGO GONZALO URQUIDI CARDENAS
+Teléfono: 72046323
+Email: gonurquidi3456@gmail.com
+Id Poliza: 31267
+Asunto: ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO)
+
+
+https://es.research.net/r/BDHNLKZ?t=72046323&e=gonurquidi3456@gmail.com&ipro=5&irub=Masivos&iciu=Santa%20Cruz&iope=Selena%20Imanareco&ser=NA&fcon=2024-03-27%2019:24:00&fcie=2024-06-03%2009:51:00&iobj=Solicitud&ntit=NA&nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&ipol=31267&asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004800.72046323, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Masivos<br>
+Id Ciudad: Santa Cruz<br>
+Id Operador: Selena Imanareco<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-03-27 19:24:00<br>
+Fecha cierre freshdesk: 2024-06-03 09:51:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: HUGO GONZALO URQUIDI CARDENAS<br>
+Teléfono: 72046323<br>
+Email: gonurquidi3456@gmail.com<br>
+Id Poliza: 31267<br>
+Asunto: ESTADO SOLICITUD ACTIVACION SEGURO DESEMPLEO (BANCO GANADERO)</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=72046323&amp;e=gonurquidi3456@gmail.com&amp;ipro=5&amp;irub=Masivos&amp;iciu=Santa%20Cruz&amp;iope=Selena%20Imanareco&amp;ser=NA&amp;fcon=2024-03-27%2019:24:00&amp;fcie=2024-06-03%2009:51:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&amp;ipol=31267&amp;asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004800.72046323" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=72046323&amp;e=gonurquidi3456@gmail.com&amp;ipro=5&amp;irub=Masivos&amp;iciu=Santa%20Cruz&amp;iope=Selena%20Imanareco&amp;ser=NA&amp;fcon=2024-03-27%2019:24:00&amp;fcie=2024-06-03%2009:51:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=HUGO%20GONZALO%20URQUIDI%20CARDENAS&amp;ipol=31267&amp;asu=ESTADO%20SOLICITUD%20ACTIVACION%20SEGURO%20DESEMPLEO%20(BANCO%20GANADERO)&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004800.72046323</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:01-0400, jira=2024-06-06T00:48:01.710-0400, friendly=Hoy 12:48 AM, epochMillis=1717649281710)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18304, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4166, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18304, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4166))
+2024-06-06T00:48:03,207 [INFO]  [LoaderServiceController]:[75]- ConsultasReclamosDb(super=ConsultasReclamos(idProceso=5, idRubro=Salud, idCiudad=Santa Cruz, idOperador=Sander Pereira, servicio=Atención al cliente, fechaContacto=2024-05-24 12:15:00, fechaCierreFreshDesk=2024-06-03 11:39:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=SANDRA CAROLINA PEREDO RODRIGUEZ, telefono=78183359, email=carolinaperedo48@outlook.com, idPoliza=31998, asunto=SOLICITUD DE ATENCION, uniqueId=baedd1453ea94cc199752a711098aca9), consultaReclamoId=baedd1453ea94cc199752a711098aca9, nombreArchivo=012_Base al 03.06.2024.csv, status=A, recordDate=2024-06-04 05:20:06.0)
+2024-06-06T00:48:03,207 [INFO]  [LoaderServiceController]:[76]- ConsultasReclamos(idProceso=5, idRubro=Salud, idCiudad=Santa Cruz, idOperador=Sander Pereira, servicio=Atención al cliente, fechaContacto=2024-05-24 12:15:00, fechaCierreFreshDesk=2024-06-03 11:39:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=SANDRA CAROLINA PEREDO RODRIGUEZ, telefono=78183359, email=carolinaperedo48@outlook.com, idPoliza=31998, asunto=SOLICITUD DE ATENCION, uniqueId=baedd1453ea94cc199752a711098aca9)
+2024-06-06T00:48:03,208 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 5
+Id Rubro: Salud
+Id Ciudad: Santa Cruz
+Id Operador: Sander Pereira
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-05-24 12:15:00
+Fecha cierre freshdesk: 2024-06-03 11:39:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: SANDRA CAROLINA PEREDO RODRIGUEZ
+Teléfono: 78183359
+Email: carolinaperedo48@outlook.com
+Id Poliza: 31998
+Asunto: SOLICITUD DE ATENCION
+
+
+https://es.research.net/r/BDHNLKZ?t=78183359&e=carolinaperedo48@outlook.com&ipro=5&irub=Salud&iciu=Santa%20Cruz&iope=Sander%20Pereira&ser=NA&fcon=2024-05-24%2012:15:00&fcie=2024-06-03%2011:39:00&iobj=Solicitud&ntit=NA&nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&ipol=31998&asu=SOLICITUD%20DE%20ATENCION&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004803.78183359, summary=CONSULTAS RECLAMOS 78183359), requestTypeId=24, serviceDeskId=2)
+2024-06-06T00:48:04,167 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18306, issueKey=GE-4167, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:03-0400, jira=2024-06-06T00:48:03.488-0400, friendly=Hoy 12:48 AM, epochMillis=1717649283488), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 78183359, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Salud
+Id Ciudad: Santa Cruz
+Id Operador: Sander Pereira
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-05-24 12:15:00
+Fecha cierre freshdesk: 2024-06-03 11:39:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: SANDRA CAROLINA PEREDO RODRIGUEZ
+Teléfono: 78183359
+Email: carolinaperedo48@outlook.com
+Id Poliza: 31998
+Asunto: SOLICITUD DE ATENCION
+
+
+https://es.research.net/r/BDHNLKZ?t=78183359&e=carolinaperedo48@outlook.com&ipro=5&irub=Salud&iciu=Santa%20Cruz&iope=Sander%20Pereira&ser=NA&fcon=2024-05-24%2012:15:00&fcie=2024-06-03%2011:39:00&iobj=Solicitud&ntit=NA&nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&ipol=31998&asu=SOLICITUD%20DE%20ATENCION&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004803.78183359, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Salud<br>
+Id Ciudad: Santa Cruz<br>
+Id Operador: Sander Pereira<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-05-24 12:15:00<br>
+Fecha cierre freshdesk: 2024-06-03 11:39:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: SANDRA CAROLINA PEREDO RODRIGUEZ<br>
+Teléfono: 78183359<br>
+Email: carolinaperedo48@outlook.com<br>
+Id Poliza: 31998<br>
+Asunto: SOLICITUD DE ATENCION</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=78183359&amp;e=carolinaperedo48@outlook.com&amp;ipro=5&amp;irub=Salud&amp;iciu=Santa%20Cruz&amp;iope=Sander%20Pereira&amp;ser=NA&amp;fcon=2024-05-24%2012:15:00&amp;fcie=2024-06-03%2011:39:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&amp;ipol=31998&amp;asu=SOLICITUD%20DE%20ATENCION&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004803.78183359" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=78183359&amp;e=carolinaperedo48@outlook.com&amp;ipro=5&amp;irub=Salud&amp;iciu=Santa%20Cruz&amp;iope=Sander%20Pereira&amp;ser=NA&amp;fcon=2024-05-24%2012:15:00&amp;fcie=2024-06-03%2011:39:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&amp;ipol=31998&amp;asu=SOLICITUD%20DE%20ATENCION&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004803.78183359</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:03-0400, jira=2024-06-06T00:48:03.488-0400, friendly=Hoy 12:48 AM, epochMillis=1717649283488)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18306, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4167, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18306, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4167))
+2024-06-06T00:48:04,168 [INFO]  [ConsultasReclamosService]:[97]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18306, issueKey=GE-4167, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:03-0400, jira=2024-06-06T00:48:03.488-0400, friendly=Hoy 12:48 AM, epochMillis=1717649283488), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 78183359, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Salud
+Id Ciudad: Santa Cruz
+Id Operador: Sander Pereira
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-05-24 12:15:00
+Fecha cierre freshdesk: 2024-06-03 11:39:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: SANDRA CAROLINA PEREDO RODRIGUEZ
+Teléfono: 78183359
+Email: carolinaperedo48@outlook.com
+Id Poliza: 31998
+Asunto: SOLICITUD DE ATENCION
+
+
+https://es.research.net/r/BDHNLKZ?t=78183359&e=carolinaperedo48@outlook.com&ipro=5&irub=Salud&iciu=Santa%20Cruz&iope=Sander%20Pereira&ser=NA&fcon=2024-05-24%2012:15:00&fcie=2024-06-03%2011:39:00&iobj=Solicitud&ntit=NA&nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&ipol=31998&asu=SOLICITUD%20DE%20ATENCION&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004803.78183359, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Salud<br>
+Id Ciudad: Santa Cruz<br>
+Id Operador: Sander Pereira<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-05-24 12:15:00<br>
+Fecha cierre freshdesk: 2024-06-03 11:39:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: SANDRA CAROLINA PEREDO RODRIGUEZ<br>
+Teléfono: 78183359<br>
+Email: carolinaperedo48@outlook.com<br>
+Id Poliza: 31998<br>
+Asunto: SOLICITUD DE ATENCION</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=78183359&amp;e=carolinaperedo48@outlook.com&amp;ipro=5&amp;irub=Salud&amp;iciu=Santa%20Cruz&amp;iope=Sander%20Pereira&amp;ser=NA&amp;fcon=2024-05-24%2012:15:00&amp;fcie=2024-06-03%2011:39:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&amp;ipol=31998&amp;asu=SOLICITUD%20DE%20ATENCION&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004803.78183359" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=78183359&amp;e=carolinaperedo48@outlook.com&amp;ipro=5&amp;irub=Salud&amp;iciu=Santa%20Cruz&amp;iope=Sander%20Pereira&amp;ser=NA&amp;fcon=2024-05-24%2012:15:00&amp;fcie=2024-06-03%2011:39:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=SANDRA%20CAROLINA%20PEREDO%20RODRIGUEZ&amp;ipol=31998&amp;asu=SOLICITUD%20DE%20ATENCION&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004803.78183359</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:03-0400, jira=2024-06-06T00:48:03.488-0400, friendly=Hoy 12:48 AM, epochMillis=1717649283488)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18306, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4167, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18306, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4167))
+2024-06-06T00:48:04,404 [INFO]  [LoaderServiceController]:[75]- ConsultasReclamosDb(super=ConsultasReclamos(idProceso=5, idRubro=Vida, idCiudad=La Paz, idOperador=Nataly Eliana Alvarez Cossio, servicio=Atención al cliente, fechaContacto=2024-05-29 18:52:00, fechaCierreFreshDesk=2024-06-03 11:11:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=Alejandro Nicolás Sánchez Acosta, telefono=79679658, email=nishosanchez1715@gmail.com, idPoliza=32043, asunto=App Movil - Formulario de Contacto, uniqueId=f7a8060bfb4c404681d4cef203ddd374), consultaReclamoId=f7a8060bfb4c404681d4cef203ddd374, nombreArchivo=012_Base al 03.06.2024.csv, status=A, recordDate=2024-06-04 05:20:06.0)
+2024-06-06T00:48:04,404 [INFO]  [LoaderServiceController]:[76]- ConsultasReclamos(idProceso=5, idRubro=Vida, idCiudad=La Paz, idOperador=Nataly Eliana Alvarez Cossio, servicio=Atención al cliente, fechaContacto=2024-05-29 18:52:00, fechaCierreFreshDesk=2024-06-03 11:11:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=Alejandro Nicolás Sánchez Acosta, telefono=79679658, email=nishosanchez1715@gmail.com, idPoliza=32043, asunto=App Movil - Formulario de Contacto, uniqueId=f7a8060bfb4c404681d4cef203ddd374)
+2024-06-06T00:48:04,406 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 5
+Id Rubro: Vida
+Id Ciudad: La Paz
+Id Operador: Nataly Eliana Alvarez Cossio
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-05-29 18:52:00
+Fecha cierre freshdesk: 2024-06-03 11:11:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: Alejandro Nicolás Sánchez Acosta
+Teléfono: 79679658
+Email: nishosanchez1715@gmail.com
+Id Poliza: 32043
+Asunto: App Movil - Formulario de Contacto
+
+
+https://es.research.net/r/BDHNLKZ?t=79679658&e=nishosanchez1715@gmail.com&ipro=5&irub=Vida&iciu=La%20Paz&iope=Nataly%20Eliana%20Alvarez%20Cossio&ser=NA&fcon=2024-05-29%2018:52:00&fcie=2024-06-03%2011:11:00&iobj=Solicitud&ntit=NA&nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&ipol=32043&asu=App%20Movil%20-%20Formulario%20de%20Contacto&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004804.79679658, summary=CONSULTAS RECLAMOS 79679658), requestTypeId=24, serviceDeskId=2)
+2024-06-06T00:48:05,453 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18308, issueKey=GE-4168, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:04-0400, jira=2024-06-06T00:48:04.767-0400, friendly=Hoy 12:48 AM, epochMillis=1717649284767), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 79679658, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Vida
+Id Ciudad: La Paz
+Id Operador: Nataly Eliana Alvarez Cossio
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-05-29 18:52:00
+Fecha cierre freshdesk: 2024-06-03 11:11:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: Alejandro Nicolás Sánchez Acosta
+Teléfono: 79679658
+Email: nishosanchez1715@gmail.com
+Id Poliza: 32043
+Asunto: App Movil - Formulario de Contacto
+
+
+https://es.research.net/r/BDHNLKZ?t=79679658&e=nishosanchez1715@gmail.com&ipro=5&irub=Vida&iciu=La%20Paz&iope=Nataly%20Eliana%20Alvarez%20Cossio&ser=NA&fcon=2024-05-29%2018:52:00&fcie=2024-06-03%2011:11:00&iobj=Solicitud&ntit=NA&nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&ipol=32043&asu=App%20Movil%20-%20Formulario%20de%20Contacto&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004804.79679658, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Vida<br>
+Id Ciudad: La Paz<br>
+Id Operador: Nataly Eliana Alvarez Cossio<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-05-29 18:52:00<br>
+Fecha cierre freshdesk: 2024-06-03 11:11:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: Alejandro Nicolás Sánchez Acosta<br>
+Teléfono: 79679658<br>
+Email: nishosanchez1715@gmail.com<br>
+Id Poliza: 32043<br>
+Asunto: App Movil - Formulario de Contacto</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=79679658&amp;e=nishosanchez1715@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=La%20Paz&amp;iope=Nataly%20Eliana%20Alvarez%20Cossio&amp;ser=NA&amp;fcon=2024-05-29%2018:52:00&amp;fcie=2024-06-03%2011:11:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&amp;ipol=32043&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004804.79679658" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=79679658&amp;e=nishosanchez1715@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=La%20Paz&amp;iope=Nataly%20Eliana%20Alvarez%20Cossio&amp;ser=NA&amp;fcon=2024-05-29%2018:52:00&amp;fcie=2024-06-03%2011:11:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&amp;ipol=32043&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004804.79679658</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:04-0400, jira=2024-06-06T00:48:04.767-0400, friendly=Hoy 12:48 AM, epochMillis=1717649284767)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18308, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4168, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18308, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4168))
+2024-06-06T00:48:05,454 [INFO]  [ConsultasReclamosService]:[97]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18308, issueKey=GE-4168, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:04-0400, jira=2024-06-06T00:48:04.767-0400, friendly=Hoy 12:48 AM, epochMillis=1717649284767), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 79679658, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Vida
+Id Ciudad: La Paz
+Id Operador: Nataly Eliana Alvarez Cossio
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-05-29 18:52:00
+Fecha cierre freshdesk: 2024-06-03 11:11:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: Alejandro Nicolás Sánchez Acosta
+Teléfono: 79679658
+Email: nishosanchez1715@gmail.com
+Id Poliza: 32043
+Asunto: App Movil - Formulario de Contacto
+
+
+https://es.research.net/r/BDHNLKZ?t=79679658&e=nishosanchez1715@gmail.com&ipro=5&irub=Vida&iciu=La%20Paz&iope=Nataly%20Eliana%20Alvarez%20Cossio&ser=NA&fcon=2024-05-29%2018:52:00&fcie=2024-06-03%2011:11:00&iobj=Solicitud&ntit=NA&nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&ipol=32043&asu=App%20Movil%20-%20Formulario%20de%20Contacto&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004804.79679658, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Vida<br>
+Id Ciudad: La Paz<br>
+Id Operador: Nataly Eliana Alvarez Cossio<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-05-29 18:52:00<br>
+Fecha cierre freshdesk: 2024-06-03 11:11:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: Alejandro Nicolás Sánchez Acosta<br>
+Teléfono: 79679658<br>
+Email: nishosanchez1715@gmail.com<br>
+Id Poliza: 32043<br>
+Asunto: App Movil - Formulario de Contacto</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=79679658&amp;e=nishosanchez1715@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=La%20Paz&amp;iope=Nataly%20Eliana%20Alvarez%20Cossio&amp;ser=NA&amp;fcon=2024-05-29%2018:52:00&amp;fcie=2024-06-03%2011:11:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&amp;ipol=32043&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004804.79679658" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=79679658&amp;e=nishosanchez1715@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=La%20Paz&amp;iope=Nataly%20Eliana%20Alvarez%20Cossio&amp;ser=NA&amp;fcon=2024-05-29%2018:52:00&amp;fcie=2024-06-03%2011:11:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Alejandro%20Nicolas%20Sanchez%20Acosta&amp;ipol=32043&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004804.79679658</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:04-0400, jira=2024-06-06T00:48:04.767-0400, friendly=Hoy 12:48 AM, epochMillis=1717649284767)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18308, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4168, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18308, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4168))
+2024-06-06T00:48:05,691 [INFO]  [LoaderServiceController]:[75]- ConsultasReclamosDb(super=ConsultasReclamos(idProceso=5, idRubro=Vida, idCiudad=Santa Cruz, idOperador=Mariana Melgar Justiniano, servicio=Atención al cliente, fechaContacto=2024-06-03 09:04:00, fechaCierreFreshDesk=2024-06-03 10:53:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=Jahsmine Tristan, telefono=71363734, email=jahsmine12@gmail.com, idPoliza=32084, asunto=App Movil - Formulario de Contacto, uniqueId=1473af258a9846de83f0c28ffe35a09a), consultaReclamoId=1473af258a9846de83f0c28ffe35a09a, nombreArchivo=012_Base al 03.06.2024.csv, status=A, recordDate=2024-06-04 05:20:06.0)
+2024-06-06T00:48:05,692 [INFO]  [LoaderServiceController]:[76]- ConsultasReclamos(idProceso=5, idRubro=Vida, idCiudad=Santa Cruz, idOperador=Mariana Melgar Justiniano, servicio=Atención al cliente, fechaContacto=2024-06-03 09:04:00, fechaCierreFreshDesk=2024-06-03 10:53:00, idObjeto=Solicitud, nombreTitular=, nombreSolicitante=Jahsmine Tristan, telefono=71363734, email=jahsmine12@gmail.com, idPoliza=32084, asunto=App Movil - Formulario de Contacto, uniqueId=1473af258a9846de83f0c28ffe35a09a)
+2024-06-06T00:48:05,693 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 5
+Id Rubro: Vida
+Id Ciudad: Santa Cruz
+Id Operador: Mariana Melgar Justiniano
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-06-03 09:04:00
+Fecha cierre freshdesk: 2024-06-03 10:53:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: Jahsmine Tristan
+Teléfono: 71363734
+Email: jahsmine12@gmail.com
+Id Poliza: 32084
+Asunto: App Movil - Formulario de Contacto
+
+
+https://es.research.net/r/BDHNLKZ?t=71363734&e=jahsmine12@gmail.com&ipro=5&irub=Vida&iciu=Santa%20Cruz&iope=Mariana%20Melgar%20Justiniano&ser=NA&fcon=2024-06-03%2009:04:00&fcie=2024-06-03%2010:53:00&iobj=Solicitud&ntit=NA&nsol=Jahsmine%20Tristan&ipol=32084&asu=App%20Movil%20-%20Formulario%20de%20Contacto&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004805.71363734, summary=CONSULTAS RECLAMOS 71363734), requestTypeId=24, serviceDeskId=2)
+2024-06-06T00:48:06,615 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18310, issueKey=GE-4169, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:05-0400, jira=2024-06-06T00:48:05.994-0400, friendly=Hoy 12:48 AM, epochMillis=1717649285994), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 71363734, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Vida
+Id Ciudad: Santa Cruz
+Id Operador: Mariana Melgar Justiniano
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-06-03 09:04:00
+Fecha cierre freshdesk: 2024-06-03 10:53:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: Jahsmine Tristan
+Teléfono: 71363734
+Email: jahsmine12@gmail.com
+Id Poliza: 32084
+Asunto: App Movil - Formulario de Contacto
+
+
+https://es.research.net/r/BDHNLKZ?t=71363734&e=jahsmine12@gmail.com&ipro=5&irub=Vida&iciu=Santa%20Cruz&iope=Mariana%20Melgar%20Justiniano&ser=NA&fcon=2024-06-03%2009:04:00&fcie=2024-06-03%2010:53:00&iobj=Solicitud&ntit=NA&nsol=Jahsmine%20Tristan&ipol=32084&asu=App%20Movil%20-%20Formulario%20de%20Contacto&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004805.71363734, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Vida<br>
+Id Ciudad: Santa Cruz<br>
+Id Operador: Mariana Melgar Justiniano<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-06-03 09:04:00<br>
+Fecha cierre freshdesk: 2024-06-03 10:53:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: Jahsmine Tristan<br>
+Teléfono: 71363734<br>
+Email: jahsmine12@gmail.com<br>
+Id Poliza: 32084<br>
+Asunto: App Movil - Formulario de Contacto</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=71363734&amp;e=jahsmine12@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=Santa%20Cruz&amp;iope=Mariana%20Melgar%20Justiniano&amp;ser=NA&amp;fcon=2024-06-03%2009:04:00&amp;fcie=2024-06-03%2010:53:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Jahsmine%20Tristan&amp;ipol=32084&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004805.71363734" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=71363734&amp;e=jahsmine12@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=Santa%20Cruz&amp;iope=Mariana%20Melgar%20Justiniano&amp;ser=NA&amp;fcon=2024-06-03%2009:04:00&amp;fcie=2024-06-03%2010:53:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Jahsmine%20Tristan&amp;ipol=32084&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004805.71363734</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:05-0400, jira=2024-06-06T00:48:05.994-0400, friendly=Hoy 12:48 AM, epochMillis=1717649285994)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18310, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4169, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18310, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4169))
+2024-06-06T00:48:06,615 [INFO]  [ConsultasReclamosService]:[97]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18310, issueKey=GE-4169, requestTypeId=24, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:05-0400, jira=2024-06-06T00:48:05.994-0400, friendly=Hoy 12:48 AM, epochMillis=1717649285994), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=CONSULTAS RECLAMOS 71363734, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 5
+Id Rubro: Vida
+Id Ciudad: Santa Cruz
+Id Operador: Mariana Melgar Justiniano
+Id Servicio: Atención al cliente
+Fecha contacto: 2024-06-03 09:04:00
+Fecha cierre freshdesk: 2024-06-03 10:53:00
+Id Objeto: Solicitud
+Nombre Titular: 
+Nombre Solicitante: Jahsmine Tristan
+Teléfono: 71363734
+Email: jahsmine12@gmail.com
+Id Poliza: 32084
+Asunto: App Movil - Formulario de Contacto
+
+
+https://es.research.net/r/BDHNLKZ?t=71363734&e=jahsmine12@gmail.com&ipro=5&irub=Vida&iciu=Santa%20Cruz&iope=Mariana%20Melgar%20Justiniano&ser=NA&fcon=2024-06-03%2009:04:00&fcie=2024-06-03%2010:53:00&iobj=Solicitud&ntit=NA&nsol=Jahsmine%20Tristan&ipol=32084&asu=App%20Movil%20-%20Formulario%20de%20Contacto&pla=NA&ieje=NA&isin=NA&icli=NA&talt=NA&idT=CONSREC.20240606004805.71363734, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 5<br>
+Id Rubro: Vida<br>
+Id Ciudad: Santa Cruz<br>
+Id Operador: Mariana Melgar Justiniano<br>
+Id Servicio: Atención al cliente<br>
+Fecha contacto: 2024-06-03 09:04:00<br>
+Fecha cierre freshdesk: 2024-06-03 10:53:00<br>
+Id Objeto: Solicitud<br>
+Nombre Titular: <br>
+Nombre Solicitante: Jahsmine Tristan<br>
+Teléfono: 71363734<br>
+Email: jahsmine12@gmail.com<br>
+Id Poliza: 32084<br>
+Asunto: App Movil - Formulario de Contacto</p>
+
+
+<p><a href="https://es.research.net/r/BDHNLKZ?t=71363734&amp;e=jahsmine12@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=Santa%20Cruz&amp;iope=Mariana%20Melgar%20Justiniano&amp;ser=NA&amp;fcon=2024-06-03%2009:04:00&amp;fcie=2024-06-03%2010:53:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Jahsmine%20Tristan&amp;ipol=32084&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004805.71363734" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/BDHNLKZ?t=71363734&amp;e=jahsmine12@gmail.com&amp;ipro=5&amp;irub=Vida&amp;iciu=Santa%20Cruz&amp;iope=Mariana%20Melgar%20Justiniano&amp;ser=NA&amp;fcon=2024-06-03%2009:04:00&amp;fcie=2024-06-03%2010:53:00&amp;iobj=Solicitud&amp;ntit=NA&amp;nsol=Jahsmine%20Tristan&amp;ipol=32084&amp;asu=App%20Movil%20-%20Formulario%20de%20Contacto&amp;pla=NA&amp;ieje=NA&amp;isin=NA&amp;icli=NA&amp;talt=NA&amp;idT=CONSREC.20240606004805.71363734</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:05-0400, jira=2024-06-06T00:48:05.994-0400, friendly=Hoy 12:48 AM, epochMillis=1717649285994)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18310, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4169, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18310, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4169))
+2024-06-06T00:48:06,850 [INFO]  [LoaderServiceController]:[83]- ===================1=====================
+2024-06-06T00:48:06,992 [INFO]  [LoaderServiceController]:[87]- AtencionInicialDb(super=AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=SANTA CRUZ, idOperador=Livia Analy Molina Claure, idEjecutivo=Jose Miguel Burgos, fechaContacto=2024-06-03 10:18:00, placa=5607-YCB, nombreTitular=YHUDITH MAGALY VINACHA PANTOJA, nombreSolicitante=JORGE ROMERO, telefono=67800471, email=pafc2702@gmail.com, idPoliza=ACSS-SC1-003557-01-2023, uniqueId=6acfbdcbb8dd497c8bc0605d2b7b0ebd), atencionInicialId=6acfbdcbb8dd497c8bc0605d2b7b0ebd, nombreArchivo=015_CLIENTE ATENCION INICIAL.csv, status=A, recordDate=2024-06-04 05:15:45.0)
+2024-06-06T00:48:06,993 [INFO]  [LoaderServiceController]:[88]- AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=SANTA CRUZ, idOperador=Livia Analy Molina Claure, idEjecutivo=Jose Miguel Burgos, fechaContacto=2024-06-03 10:18:00, placa=5607-YCB, nombreTitular=YHUDITH MAGALY VINACHA PANTOJA, nombreSolicitante=JORGE ROMERO, telefono=67800471, email=pafc2702@gmail.com, idPoliza=ACSS-SC1-003557-01-2023, uniqueId=6acfbdcbb8dd497c8bc0605d2b7b0ebd)
+2024-06-06T00:48:06,993 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: SANTA CRUZ
+Id Operador: Livia Analy Molina Claure
+Id Ejecutivo: Jose Miguel Burgos
+Fecha contacto: 2024-06-03 10:18:00
+Placa: 5607-YCB
+Nombre Titular: YHUDITH MAGALY VINACHA PANTOJA
+Nombre Solicitante: JORGE ROMERO
+Teléfono: 67800471
+Email: pafc2702@gmail.com
+Id Poliza: ACSS-SC1-003557-01-2023
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=SANTA%20CRUZ&iope=Livia%20Analy%20Molina%20Claure&fcon=2024-06-03%2010:18:00&ntit=YHUDITH%20MAGALY%20VINACHA%20PANTOJA&nsol=JORGE%20ROMERO&t=67800471&e=pafc2702@gmail.com&ipol=ACSS-SC1-003557-01-2023&pla=5607-YCB&ieje=Jose%20Miguel%20Burgos&idT=ATEINI.20240606004806.67800471, summary=ATENCION INICIAL 67800471), requestTypeId=27, serviceDeskId=2)
+2024-06-06T00:48:07,351 [ERROR]  [JiraService]:[48]- Error al consumir el servicio. Código de error: 503
+2024-06-06T00:48:07,356 [ERROR]  [JiraService]:[49]- Respuesta del servidor: <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Oops - an error has occurred</title><link type='text/css' rel='stylesheet' href='/static-assets/metal-all.css' media='all'><script src='/static-assets/metal-all.js'></script><meta name="decorator" content="none" /></head><body class=" error-page error503"><script type="text/javascript">document.body.className += " js-enabled";</script><div id="page"><header id="header" role="banner"></header><!-- #header --><section id="content" role="main"><div class="aui-page-panel"><div class="aui-page-panel-inner"><section class="aui-page-panel-content lowerContent"><div id="error-state"><span class="error-type"></span><h1>Something went wrong</h1><p>Try reloading the page, then check our <a href="https://status.atlassian.com">Statuspage</a> for any current outages. If there are no relevant outages, create a <a href="https://support.atlassian.com/contact/">support request</a> so we can help you out.</p><p>If you create a request, include the following so we can help you as fast as possible:</p><ul><li>Error type: <strong>503 - Service unavailable</strong></li><li>Log reference: <strong>d1d8e759-dbe9-4789-96b0-3538dab34499</strong></li></ul></div></section><!-- .aui-page-panel-content --></div><!-- .aui-page-panel-inner --></div><!-- .aui-page-panel --></section><!-- #content --><footer id="footer" role="contentinfo"><section class="footer-body"><div id="footer-logo"><a href="http://www.atlassian.com/" rel="nofollow">Atlassian</a></div></section></footer><!-- #footer --></div><!-- #page --></body></html>
+2024-06-06T00:48:07,357 [ERROR]  [JiraService]:[50]- TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: SANTA CRUZ
+Id Operador: Livia Analy Molina Claure
+Id Ejecutivo: Jose Miguel Burgos
+Fecha contacto: 2024-06-03 10:18:00
+Placa: 5607-YCB
+Nombre Titular: YHUDITH MAGALY VINACHA PANTOJA
+Nombre Solicitante: JORGE ROMERO
+Teléfono: 67800471
+Email: pafc2702@gmail.com
+Id Poliza: ACSS-SC1-003557-01-2023
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=SANTA%20CRUZ&iope=Livia%20Analy%20Molina%20Claure&fcon=2024-06-03%2010:18:00&ntit=YHUDITH%20MAGALY%20VINACHA%20PANTOJA&nsol=JORGE%20ROMERO&t=67800471&e=pafc2702@gmail.com&ipol=ACSS-SC1-003557-01-2023&pla=5607-YCB&ieje=Jose%20Miguel%20Burgos&idT=ATEINI.20240606004806.67800471, summary=ATENCION INICIAL 67800471), requestTypeId=27, serviceDeskId=2)
+2024-06-06T00:48:07,357 [ERROR]  [AtencionInicialService]:[96]- Error al consumir el servicio Jira. Código de error: 503
+2024-06-06T00:48:07,357 [ERROR]  [AtencionInicialService]:[97]- Respuesta del servidor: <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Oops - an error has occurred</title><link type='text/css' rel='stylesheet' href='/static-assets/metal-all.css' media='all'><script src='/static-assets/metal-all.js'></script><meta name="decorator" content="none" /></head><body class=" error-page error503"><script type="text/javascript">document.body.className += " js-enabled";</script><div id="page"><header id="header" role="banner"></header><!-- #header --><section id="content" role="main"><div class="aui-page-panel"><div class="aui-page-panel-inner"><section class="aui-page-panel-content lowerContent"><div id="error-state"><span class="error-type"></span><h1>Something went wrong</h1><p>Try reloading the page, then check our <a href="https://status.atlassian.com">Statuspage</a> for any current outages. If there are no relevant outages, create a <a href="https://support.atlassian.com/contact/">support request</a> so we can help you out.</p><p>If you create a request, include the following so we can help you as fast as possible:</p><ul><li>Error type: <strong>503 - Service unavailable</strong></li><li>Log reference: <strong>d1d8e759-dbe9-4789-96b0-3538dab34499</strong></li></ul></div></section><!-- .aui-page-panel-content --></div><!-- .aui-page-panel-inner --></div><!-- .aui-page-panel --></section><!-- #content --><footer id="footer" role="contentinfo"><section class="footer-body"><div id="footer-logo"><a href="http://www.atlassian.com/" rel="nofollow">Atlassian</a></div></section></footer><!-- #footer --></div><!-- #page --></body></html>
+2024-06-06T00:48:07,357 [ERROR]  [AtencionInicialService]:[98]- AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=SANTA CRUZ, idOperador=Livia Analy Molina Claure, idEjecutivo=Jose Miguel Burgos, fechaContacto=2024-06-03 10:18:00, placa=5607-YCB, nombreTitular=YHUDITH MAGALY VINACHA PANTOJA, nombreSolicitante=JORGE ROMERO, telefono=67800471, email=pafc2702@gmail.com, idPoliza=ACSS-SC1-003557-01-2023, uniqueId=6acfbdcbb8dd497c8bc0605d2b7b0ebd)
+2024-06-06T00:48:07,531 [INFO]  [LoaderServiceController]:[87]- AtencionInicialDb(super=AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=SANTA CRUZ, idOperador=Klaus Alejandro Coronado Vargas, idEjecutivo=Jose Miguel Burgos, fechaContacto=2024-06-03 16:44:00, placa=5730-ZGS, nombreTitular=SKYDESING S.R.L., nombreSolicitante=MIGUEL OCONOR, telefono=76345771, email=juanalem@gmail.com, idPoliza=ALKM-SC1-000020-02-2024, uniqueId=0b4512143edf4c51980478b78e7a2bbc), atencionInicialId=0b4512143edf4c51980478b78e7a2bbc, nombreArchivo=015_CLIENTE ATENCION INICIAL.csv, status=A, recordDate=2024-06-04 05:15:45.0)
+2024-06-06T00:48:07,532 [INFO]  [LoaderServiceController]:[88]- AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=SANTA CRUZ, idOperador=Klaus Alejandro Coronado Vargas, idEjecutivo=Jose Miguel Burgos, fechaContacto=2024-06-03 16:44:00, placa=5730-ZGS, nombreTitular=SKYDESING S.R.L., nombreSolicitante=MIGUEL OCONOR, telefono=76345771, email=juanalem@gmail.com, idPoliza=ALKM-SC1-000020-02-2024, uniqueId=0b4512143edf4c51980478b78e7a2bbc)
+2024-06-06T00:48:07,536 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: SANTA CRUZ
+Id Operador: Klaus Alejandro Coronado Vargas
+Id Ejecutivo: Jose Miguel Burgos
+Fecha contacto: 2024-06-03 16:44:00
+Placa: 5730-ZGS
+Nombre Titular: SKYDESING S.R.L.
+Nombre Solicitante: MIGUEL OCONOR
+Teléfono: 76345771
+Email: juanalem@gmail.com
+Id Poliza: ALKM-SC1-000020-02-2024
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=SANTA%20CRUZ&iope=Klaus%20Alejandro%20Coronado%20Vargas&fcon=2024-06-03%2016:44:00&ntit=SKYDESING%20S.R.L.&nsol=MIGUEL%20OCONOR&t=76345771&e=juanalem@gmail.com&ipol=ALKM-SC1-000020-02-2024&pla=5730-ZGS&ieje=Jose%20Miguel%20Burgos&idT=ATEINI.20240606004807.76345771, summary=ATENCION INICIAL 76345771), requestTypeId=27, serviceDeskId=2)
+2024-06-06T00:48:08,714 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18312, issueKey=GE-4170, requestTypeId=27, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:07-0400, jira=2024-06-06T00:48:07.908-0400, friendly=Hoy 12:48 AM, epochMillis=1717649287908), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=ATENCION INICIAL 76345771, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: SANTA CRUZ
+Id Operador: Klaus Alejandro Coronado Vargas
+Id Ejecutivo: Jose Miguel Burgos
+Fecha contacto: 2024-06-03 16:44:00
+Placa: 5730-ZGS
+Nombre Titular: SKYDESING S.R.L.
+Nombre Solicitante: MIGUEL OCONOR
+Teléfono: 76345771
+Email: juanalem@gmail.com
+Id Poliza: ALKM-SC1-000020-02-2024
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=SANTA%20CRUZ&iope=Klaus%20Alejandro%20Coronado%20Vargas&fcon=2024-06-03%2016:44:00&ntit=SKYDESING%20S.R.L.&nsol=MIGUEL%20OCONOR&t=76345771&e=juanalem@gmail.com&ipol=ALKM-SC1-000020-02-2024&pla=5730-ZGS&ieje=Jose%20Miguel%20Burgos&idT=ATEINI.20240606004807.76345771, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 2<br>
+Id Rubro: VEHICULAR<br>
+Id Ciudad: SANTA CRUZ<br>
+Id Operador: Klaus Alejandro Coronado Vargas<br>
+Id Ejecutivo: Jose Miguel Burgos<br>
+Fecha contacto: 2024-06-03 16:44:00<br>
+Placa: 5730-ZGS<br>
+Nombre Titular: SKYDESING S.R.L.<br>
+Nombre Solicitante: MIGUEL OCONOR<br>
+Teléfono: 76345771<br>
+Email: juanalem@gmail.com<br>
+Id Poliza: ALKM-SC1-000020-02-2024</p>
+
+
+<p><a href="https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=SANTA%20CRUZ&amp;iope=Klaus%20Alejandro%20Coronado%20Vargas&amp;fcon=2024-06-03%2016:44:00&amp;ntit=SKYDESING%20S.R.L.&amp;nsol=MIGUEL%20OCONOR&amp;t=76345771&amp;e=juanalem@gmail.com&amp;ipol=ALKM-SC1-000020-02-2024&amp;pla=5730-ZGS&amp;ieje=Jose%20Miguel%20Burgos&amp;idT=ATEINI.20240606004807.76345771" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=SANTA%20CRUZ&amp;iope=Klaus%20Alejandro%20Coronado%20Vargas&amp;fcon=2024-06-03%2016:44:00&amp;ntit=SKYDESING%20S.R.L.&amp;nsol=MIGUEL%20OCONOR&amp;t=76345771&amp;e=juanalem@gmail.com&amp;ipol=ALKM-SC1-000020-02-2024&amp;pla=5730-ZGS&amp;ieje=Jose%20Miguel%20Burgos&amp;idT=ATEINI.20240606004807.76345771</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:07-0400, jira=2024-06-06T00:48:07.908-0400, friendly=Hoy 12:48 AM, epochMillis=1717649287908)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18312, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4170, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18312, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4170))
+2024-06-06T00:48:08,714 [INFO]  [AtencionInicialService]:[93]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18312, issueKey=GE-4170, requestTypeId=27, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:07-0400, jira=2024-06-06T00:48:07.908-0400, friendly=Hoy 12:48 AM, epochMillis=1717649287908), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=ATENCION INICIAL 76345771, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: SANTA CRUZ
+Id Operador: Klaus Alejandro Coronado Vargas
+Id Ejecutivo: Jose Miguel Burgos
+Fecha contacto: 2024-06-03 16:44:00
+Placa: 5730-ZGS
+Nombre Titular: SKYDESING S.R.L.
+Nombre Solicitante: MIGUEL OCONOR
+Teléfono: 76345771
+Email: juanalem@gmail.com
+Id Poliza: ALKM-SC1-000020-02-2024
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=SANTA%20CRUZ&iope=Klaus%20Alejandro%20Coronado%20Vargas&fcon=2024-06-03%2016:44:00&ntit=SKYDESING%20S.R.L.&nsol=MIGUEL%20OCONOR&t=76345771&e=juanalem@gmail.com&ipol=ALKM-SC1-000020-02-2024&pla=5730-ZGS&ieje=Jose%20Miguel%20Burgos&idT=ATEINI.20240606004807.76345771, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 2<br>
+Id Rubro: VEHICULAR<br>
+Id Ciudad: SANTA CRUZ<br>
+Id Operador: Klaus Alejandro Coronado Vargas<br>
+Id Ejecutivo: Jose Miguel Burgos<br>
+Fecha contacto: 2024-06-03 16:44:00<br>
+Placa: 5730-ZGS<br>
+Nombre Titular: SKYDESING S.R.L.<br>
+Nombre Solicitante: MIGUEL OCONOR<br>
+Teléfono: 76345771<br>
+Email: juanalem@gmail.com<br>
+Id Poliza: ALKM-SC1-000020-02-2024</p>
+
+
+<p><a href="https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=SANTA%20CRUZ&amp;iope=Klaus%20Alejandro%20Coronado%20Vargas&amp;fcon=2024-06-03%2016:44:00&amp;ntit=SKYDESING%20S.R.L.&amp;nsol=MIGUEL%20OCONOR&amp;t=76345771&amp;e=juanalem@gmail.com&amp;ipol=ALKM-SC1-000020-02-2024&amp;pla=5730-ZGS&amp;ieje=Jose%20Miguel%20Burgos&amp;idT=ATEINI.20240606004807.76345771" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=SANTA%20CRUZ&amp;iope=Klaus%20Alejandro%20Coronado%20Vargas&amp;fcon=2024-06-03%2016:44:00&amp;ntit=SKYDESING%20S.R.L.&amp;nsol=MIGUEL%20OCONOR&amp;t=76345771&amp;e=juanalem@gmail.com&amp;ipol=ALKM-SC1-000020-02-2024&amp;pla=5730-ZGS&amp;ieje=Jose%20Miguel%20Burgos&amp;idT=ATEINI.20240606004807.76345771</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:07-0400, jira=2024-06-06T00:48:07.908-0400, friendly=Hoy 12:48 AM, epochMillis=1717649287908)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18312, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4170, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18312, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4170))
+2024-06-06T00:48:08,948 [INFO]  [LoaderServiceController]:[87]- AtencionInicialDb(super=AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=CHUQUISACA, idOperador=Brandon Sebastian Choque Condori, idEjecutivo=David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia, fechaContacto=2024-06-03 18:06:00, placa=5629-SHG, nombreTitular=LORGIO CARLOS SANDOVAL MONTALVO, nombreSolicitante=LORGIO CARLOS SANDOVAL MONTALVO, telefono=72404177, email=cinthiamoralesloayza@gmail.com, idPoliza=AUSC-CH1-000606-03-2024, uniqueId=e6f464c7185f4ae9b04c1737941b18ff), atencionInicialId=e6f464c7185f4ae9b04c1737941b18ff, nombreArchivo=015_CLIENTE ATENCION INICIAL.csv, status=A, recordDate=2024-06-04 05:15:45.0)
+2024-06-06T00:48:08,948 [INFO]  [LoaderServiceController]:[88]- AtencionInicial(idProceso=2, idRubro=VEHICULAR, idCiudad=CHUQUISACA, idOperador=Brandon Sebastian Choque Condori, idEjecutivo=David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia, fechaContacto=2024-06-03 18:06:00, placa=5629-SHG, nombreTitular=LORGIO CARLOS SANDOVAL MONTALVO, nombreSolicitante=LORGIO CARLOS SANDOVAL MONTALVO, telefono=72404177, email=cinthiamoralesloayza@gmail.com, idPoliza=AUSC-CH1-000606-03-2024, uniqueId=e6f464c7185f4ae9b04c1737941b18ff)
+2024-06-06T00:48:08,949 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: CHUQUISACA
+Id Operador: Brandon Sebastian Choque Condori
+Id Ejecutivo: David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia
+Fecha contacto: 2024-06-03 18:06:00
+Placa: 5629-SHG
+Nombre Titular: LORGIO CARLOS SANDOVAL MONTALVO
+Nombre Solicitante: LORGIO CARLOS SANDOVAL MONTALVO
+Teléfono: 72404177
+Email: cinthiamoralesloayza@gmail.com
+Id Poliza: AUSC-CH1-000606-03-2024
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=CHUQUISACA&iope=Brandon%20Sebastian%20Choque%20Condori&fcon=2024-06-03%2018:06:00&ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&t=72404177&e=cinthiamoralesloayza@gmail.com&ipol=AUSC-CH1-000606-03-2024&pla=5629-SHG&ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&idT=ATEINI.20240606004808.72404177, summary=ATENCION INICIAL 72404177), requestTypeId=27, serviceDeskId=2)
+2024-06-06T00:48:09,928 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18314, issueKey=GE-4171, requestTypeId=27, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:09-0400, jira=2024-06-06T00:48:09.236-0400, friendly=Hoy 12:48 AM, epochMillis=1717649289236), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=ATENCION INICIAL 72404177, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: CHUQUISACA
+Id Operador: Brandon Sebastian Choque Condori
+Id Ejecutivo: David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia
+Fecha contacto: 2024-06-03 18:06:00
+Placa: 5629-SHG
+Nombre Titular: LORGIO CARLOS SANDOVAL MONTALVO
+Nombre Solicitante: LORGIO CARLOS SANDOVAL MONTALVO
+Teléfono: 72404177
+Email: cinthiamoralesloayza@gmail.com
+Id Poliza: AUSC-CH1-000606-03-2024
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=CHUQUISACA&iope=Brandon%20Sebastian%20Choque%20Condori&fcon=2024-06-03%2018:06:00&ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&t=72404177&e=cinthiamoralesloayza@gmail.com&ipol=AUSC-CH1-000606-03-2024&pla=5629-SHG&ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&idT=ATEINI.20240606004808.72404177, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 2<br>
+Id Rubro: VEHICULAR<br>
+Id Ciudad: CHUQUISACA<br>
+Id Operador: Brandon Sebastian Choque Condori<br>
+Id Ejecutivo: David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia<br>
+Fecha contacto: 2024-06-03 18:06:00<br>
+Placa: 5629-SHG<br>
+Nombre Titular: LORGIO CARLOS SANDOVAL MONTALVO<br>
+Nombre Solicitante: LORGIO CARLOS SANDOVAL MONTALVO<br>
+Teléfono: 72404177<br>
+Email: cinthiamoralesloayza@gmail.com<br>
+Id Poliza: AUSC-CH1-000606-03-2024</p>
+
+
+<p><a href="https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=CHUQUISACA&amp;iope=Brandon%20Sebastian%20Choque%20Condori&amp;fcon=2024-06-03%2018:06:00&amp;ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;t=72404177&amp;e=cinthiamoralesloayza@gmail.com&amp;ipol=AUSC-CH1-000606-03-2024&amp;pla=5629-SHG&amp;ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&amp;idT=ATEINI.20240606004808.72404177" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=CHUQUISACA&amp;iope=Brandon%20Sebastian%20Choque%20Condori&amp;fcon=2024-06-03%2018:06:00&amp;ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;t=72404177&amp;e=cinthiamoralesloayza@gmail.com&amp;ipol=AUSC-CH1-000606-03-2024&amp;pla=5629-SHG&amp;ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&amp;idT=ATEINI.20240606004808.72404177</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:09-0400, jira=2024-06-06T00:48:09.236-0400, friendly=Hoy 12:48 AM, epochMillis=1717649289236)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18314, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4171, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18314, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4171))
+2024-06-06T00:48:09,930 [INFO]  [AtencionInicialService]:[93]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=18314, issueKey=GE-4171, requestTypeId=27, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:09-0400, jira=2024-06-06T00:48:09.236-0400, friendly=Hoy 12:48 AM, epochMillis=1717649289236), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=ATENCION INICIAL 72404177, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 2
+Id Rubro: VEHICULAR
+Id Ciudad: CHUQUISACA
+Id Operador: Brandon Sebastian Choque Condori
+Id Ejecutivo: David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia
+Fecha contacto: 2024-06-03 18:06:00
+Placa: 5629-SHG
+Nombre Titular: LORGIO CARLOS SANDOVAL MONTALVO
+Nombre Solicitante: LORGIO CARLOS SANDOVAL MONTALVO
+Teléfono: 72404177
+Email: cinthiamoralesloayza@gmail.com
+Id Poliza: AUSC-CH1-000606-03-2024
+
+
+https://es.research.net/r/M5H3YKC?ipro=2&irub=VEHICULAR&iciu=CHUQUISACA&iope=Brandon%20Sebastian%20Choque%20Condori&fcon=2024-06-03%2018:06:00&ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&t=72404177&e=cinthiamoralesloayza@gmail.com&ipol=AUSC-CH1-000606-03-2024&pla=5629-SHG&ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&idT=ATEINI.20240606004808.72404177, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 2<br>
+Id Rubro: VEHICULAR<br>
+Id Ciudad: CHUQUISACA<br>
+Id Operador: Brandon Sebastian Choque Condori<br>
+Id Ejecutivo: David Fernando Arancibia AgradaDavid Fernando ArancibiaDavid Fernando ArancibiaDavid Fernando Arancibia<br>
+Fecha contacto: 2024-06-03 18:06:00<br>
+Placa: 5629-SHG<br>
+Nombre Titular: LORGIO CARLOS SANDOVAL MONTALVO<br>
+Nombre Solicitante: LORGIO CARLOS SANDOVAL MONTALVO<br>
+Teléfono: 72404177<br>
+Email: cinthiamoralesloayza@gmail.com<br>
+Id Poliza: AUSC-CH1-000606-03-2024</p>
+
+
+<p><a href="https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=CHUQUISACA&amp;iope=Brandon%20Sebastian%20Choque%20Condori&amp;fcon=2024-06-03%2018:06:00&amp;ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;t=72404177&amp;e=cinthiamoralesloayza@gmail.com&amp;ipol=AUSC-CH1-000606-03-2024&amp;pla=5629-SHG&amp;ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&amp;idT=ATEINI.20240606004808.72404177" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/M5H3YKC?ipro=2&amp;irub=VEHICULAR&amp;iciu=CHUQUISACA&amp;iope=Brandon%20Sebastian%20Choque%20Condori&amp;fcon=2024-06-03%2018:06:00&amp;ntit=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;nsol=LORGIO%20CARLOS%20SANDOVAL%20MONTALVO&amp;t=72404177&amp;e=cinthiamoralesloayza@gmail.com&amp;ipol=AUSC-CH1-000606-03-2024&amp;pla=5629-SHG&amp;ieje=David%20Fernando%20Arancibia%20AgradaDavid%20Fernando%20ArancibiaDavid%20Fernando%20ArancibiaDavid%20Fernando%20Arancibia&amp;idT=ATEINI.20240606004808.72404177</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-06T00:48:09-0400, jira=2024-06-06T00:48:09.236-0400, friendly=Hoy 12:48 AM, epochMillis=1717649289236)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/18314, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4171, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/18314, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4171))
+2024-06-06T00:48:10,166 [INFO]  [LoaderServiceController]:[94]- ===================2=====================
+2024-06-06T00:48:10,300 [INFO]  [LoaderServiceController]:[105]- ===================3=====================
+2024-06-06T00:48:10,430 [INFO]  [LoaderServiceController]:[115]- ===================4=====================
+2024-06-06T00:48:10,556 [INFO]  [LoaderServiceController]:[125]- ===================5=====================
+2024-06-06T00:48:10,683 [INFO]  [LoaderServiceController]:[136]- ===================6=====================
+2024-06-06T00:48:10,811 [INFO]  [LoaderServiceController]:[147]- ===================7=====================
+2024-06-06T00:49:36,806 [INFO]  [AbstractCamelContext]:[3461]- Apache Camel 4.0.0-M1 (camel-1) is shutting down (timeout:45s)
+2024-06-06T00:49:36,813 [INFO]  [AbstractCamelContext]:[166]- Routes stopped (stopped:1)
+2024-06-06T00:49:36,814 [INFO]  [AbstractCamelContext]:[166]-     Stopped route1 (file://in)
+2024-06-06T00:49:36,816 [INFO]  [AbstractCamelContext]:[3600]- Apache Camel 4.0.0-M1 (camel-1) shutdown in 9ms (uptime:1m56s)
