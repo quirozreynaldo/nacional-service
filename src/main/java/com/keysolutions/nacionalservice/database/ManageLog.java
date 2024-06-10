@@ -549,8 +549,7 @@ public class ManageLog {
     public List<ArchivoCargadoDb> retrieveArchivosCargados(){
         String sqlSelect="SELECT ns_archivos_cargos_id, nombre_archivo, cantidad_fila_archivo, service_complain, status, record_date " +
                 " FROM deaxs_record.ns_archivos_cargados " +
-                " WHERE record_date >= CURRENT_DATE - INTERVAL 10 DAY " +
-                " AND status!= 'I' "+
+                " WHERE status!= 'I' "+
                 " ORDER BY record_date DESC";
         List<ArchivoCargadoDb> result = new ArrayList<>();
         try {
