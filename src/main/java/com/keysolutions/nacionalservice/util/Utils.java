@@ -562,6 +562,28 @@ public class Utils {
         vagonetaSeguraDb.setNombreArchivo(nombreArchivo);
         return vagonetaSeguraDb;
     }
+
+    public static SegurosMasivoDb convertSegurosMasivo(SegurosMasivo segurosMasivo,String nombreArchivo) {
+        SegurosMasivoDb segurosMasivoDb = new SegurosMasivoDb();
+        String uniqueId = UUID.randomUUID().toString().replace("-", "");
+        segurosMasivo.setUniqueId(uniqueId);
+        segurosMasivoDb.setSegurosMasivoId(uniqueId);
+        segurosMasivoDb.setIdProceso(segurosMasivo.getIdProceso());
+        segurosMasivoDb.setIdRubro(segurosMasivo.getIdRubro());
+        segurosMasivoDb.setSponsor(convertCharset(segurosMasivo.getSponsor()));
+        segurosMasivoDb.setIdCiudad(segurosMasivo.getIdCiudad());
+        segurosMasivoDb.setProducto(convertCharset(segurosMasivo.getProducto()));
+        segurosMasivoDb.setProveedorDeAsistencia(convertCharset(segurosMasivo.getProveedorDeAsistencia()));
+        segurosMasivoDb.setServicio(convertCharset(segurosMasivo.getServicio()));
+        segurosMasivoDb.setFechaContacto(stringToDate(segurosMasivo.getFechaContacto()));
+        segurosMasivoDb.setFechaUsoServicio(stringToDate(segurosMasivo.getFechaUsoServicio()));
+        segurosMasivoDb.setIdDocumento(convertCharset(segurosMasivo.getIdDocumento()));
+        segurosMasivoDb.setNombreSolicitante(convertCharset(segurosMasivo.getNombreSolicitante()));
+        segurosMasivoDb.setTelefono(segurosMasivo.getTelefono());
+        segurosMasivoDb.setEmail(segurosMasivo.getEmail());
+        segurosMasivoDb.setNombreArchivo(nombreArchivo);
+        return segurosMasivoDb;
+    }
     public static String convertirFecha(String fechaOriginal) {
         System.out.println("fecha: " + fechaOriginal);
         if (fechaOriginal != null && fechaOriginal.trim().length() > 0) {

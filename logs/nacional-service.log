@@ -1,0 +1,1119 @@
+2024-06-12T00:49:05,525 [INFO]  [Version]:[21]- HV000001: Hibernate Validator 6.2.5.Final
+2024-06-12T00:49:05,609 [INFO]  [NacionalServiceApplication]:[55]- Starting NacionalServiceApplication using Java 17.0.7 on N2NTBILRQUIROZ with PID 14496 (C:\workspace\nuevatel_2024\ultimas_versiones_digitlaexperience\versionado\nacional-service\target\classes started by rquiroz in C:\workspace\nuevatel_2024\ultimas_versiones_digitlaexperience\versionado\nacional-service)
+2024-06-12T00:49:05,616 [INFO]  [NacionalServiceApplication]:[631]- No active profile set, falling back to 1 default profile: "default"
+2024-06-12T00:49:07,687 [INFO]  [TomcatWebServer]:[108]- Tomcat initialized with port(s): 3003 (http)
+2024-06-12T00:49:07,697 [INFO]  [Http11NioProtocol]:[173]- Initializing ProtocolHandler ["http-nio-3003"]
+2024-06-12T00:49:07,697 [INFO]  [StandardService]:[173]- Starting service [Tomcat]
+2024-06-12T00:49:07,697 [INFO]  [StandardEngine]:[173]- Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-06-12T00:49:07,862 [INFO]  [[/]]:[173]- Initializing Spring embedded WebApplicationContext
+2024-06-12T00:49:07,862 [INFO]  [ServletWebServerApplicationContext]:[292]- Root WebApplicationContext: initialization completed in 2180 ms
+2024-06-12T00:49:08,411 [INFO]  [HikariDataSource]:[110]- HikariPool-1 - Starting...
+2024-06-12T00:49:10,021 [INFO]  [HikariPool]:[565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79b8ecb
+2024-06-12T00:49:10,024 [INFO]  [HikariDataSource]:[123]- HikariPool-1 - Start completed.
+2024-06-12T00:49:10,565 [INFO]  [ManageSurveyInMemory]:[54]- Load Survey were done : 
+{PROV_SERV_MEDICO=412455347, INMEDICAL_ATU_MEDIDA=517447449, SEGUROS_MASIVO=518406277, CALLCENTER_NSPF=1123456789, TALLERES_E2E=412449075, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=517447099, CONSULTAS_RECLAMOS=412479011, PROVEEDOR_MEDICO=517417762, NSVS_800=517447155, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=517414488, PROVEEDOR_FARMACIA=517423341}
+2024-06-12T00:49:10,565 [INFO]  [ManageSurveyInMemory]:[55]- Load Collectors were done : 
+{PROV_SERV_MEDICO=431052375, INMEDICAL_ATU_MEDIDA=456114450, SEGUROS_MASIVO=456745385, CALLCENTER_NSPF=1123456789, TALLERES_E2E=431052443, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=456113888, CONSULTAS_RECLAMOS=431052410, PROVEEDOR_MEDICO=456114317, NSVS_800=1123456789, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=456114096, PROVEEDOR_FARMACIA=456114274}
+2024-06-12T00:49:10,566 [INFO]  [ManageSurveyInMemory]:[56]- Load Messages were done : 
+{PROV_SERV_MEDICO=116541950, INMEDICAL_ATU_MEDIDA=116542033, SEGUROS_MASIVO=117661138, CALLCENTER_NSPF=1123456789, TALLERES_E2E=116541997, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=116541285, CONSULTAS_RECLAMOS=116541967, PROVEEDOR_MEDICO=116541910, NSVS_800=1123456789, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=116621928, PROVEEDOR_FARMACIA=116541868}
+2024-06-12T00:49:10,566 [INFO]  [ManageSurveyInMemory]:[57]- Load Conctact List were done : 
+{NACIONAL_CONTACTS=257004175}
+2024-06-12T00:49:10,705 [INFO]  [ManageJiraInMemory]:[29]- {CALLCENTER_NSPF=ConfigJira(configJiraId=5, serviceDeskId=2, requestTypeId=26, issueTypeId=10007, code=CALLCENTER_NSPF, status=A, recordDate=2024-04-29 20:36:06.0), PROV_SERV_MEDICO=ConfigJira(configJiraId=11, serviceDeskId=2, requestTypeId=20, issueTypeId=10007, code=PROV_SERV_MEDICO, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_MED_DOMI_AMBU=ConfigJira(configJiraId=15, serviceDeskId=2, requestTypeId=30, issueTypeId=10007, code=ASISTENCIA_MED_DOMI_AMBU, status=A, recordDate=2024-04-29 20:36:06.0), ACCIDENTES_PERSONALES=ConfigJira(configJiraId=2, serviceDeskId=2, requestTypeId=32, issueTypeId=10007, code=ACCIDENTES_PERSONALES, status=A, recordDate=2024-04-29 20:36:06.0), NSVS_800=ConfigJira(configJiraId=1, serviceDeskId=2, requestTypeId=33, issueTypeId=10007, code=NSVS_800, status=A, recordDate=2024-04-29 20:36:06.0), PROVEEDOR_MEDICO=ConfigJira(configJiraId=12, serviceDeskId=2, requestTypeId=43, issueTypeId=10007, code=PROVEEDOR_MEDICO, status=A, recordDate=2024-04-29 20:36:06.0), SEGUROS_MASIVO=ConfigJira(configJiraId=19, serviceDeskId=2, requestTypeId=44, issueTypeId=10007, code=SEGUROS_MASIVO, status=A, recordDate=2024-06-11 20:36:06.0), VAGONETA_SEGURA=ConfigJira(configJiraId=18, serviceDeskId=2, requestTypeId=18, issueTypeId=10007, code=VAGONETA_SEGURA, status=A, recordDate=2024-04-29 20:36:06.0), ATEN_ASIS_PROD_VIDA_PLUS=ConfigJira(configJiraId=17, serviceDeskId=2, requestTypeId=28, issueTypeId=10007, code=ATEN_ASIS_PROD_VIDA_PLUS, status=A, recordDate=2024-04-29 20:36:06.0), INMEDICAL_ATU_MEDIDA=ConfigJira(configJiraId=7, serviceDeskId=2, requestTypeId=34, issueTypeId=10007, code=INMEDICAL_ATU_MEDIDA, status=A, recordDate=2024-04-29 20:36:06.0), TALLERES_E2E=ConfigJira(configJiraId=9, serviceDeskId=2, requestTypeId=19, issueTypeId=10007, code=TALLERES_E2E, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_VIAL=ConfigJira(configJiraId=3, serviceDeskId=2, requestTypeId=29, issueTypeId=10007, code=ASISTENCIA_VIAL, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_MED_DOMI=ConfigJira(configJiraId=14, serviceDeskId=2, requestTypeId=31, issueTypeId=10007, code=ASISTENCIA_MED_DOMI, status=A, recordDate=2024-04-29 20:36:06.0), CENTRO_REHA_ODONTOLOGICA=ConfigJira(configJiraId=10, serviceDeskId=2, requestTypeId=25, issueTypeId=10007, code=CENTRO_REHA_ODONTOLOGICA, status=A, recordDate=2024-04-29 20:36:06.0), PROVEEDOR_FARMACIA=ConfigJira(configJiraId=13, serviceDeskId=2, requestTypeId=21, issueTypeId=10007, code=PROVEEDOR_FARMACIA, status=A, recordDate=2024-04-29 20:36:06.0), CONSULTAS_RECLAMOS=ConfigJira(configJiraId=6, serviceDeskId=2, requestTypeId=24, issueTypeId=10007, code=CONSULTAS_RECLAMOS, status=A, recordDate=2024-04-29 20:36:06.0), INMEDICAL_BANCO_GANADERO=ConfigJira(configJiraId=8, serviceDeskId=2, requestTypeId=23, issueTypeId=10007, code=INMEDICAL_BANCO_GANADERO, status=A, recordDate=2024-04-29 20:36:06.0), ORIENTA_MED_TELEFONO=ConfigJira(configJiraId=16, serviceDeskId=2, requestTypeId=22, issueTypeId=10007, code=ORIENTA_MED_TELEFONO, status=A, recordDate=2024-04-29 20:36:06.0), ATENCION_INICIAL=ConfigJira(configJiraId=4, serviceDeskId=2, requestTypeId=27, issueTypeId=10007, code=ATENCION_INICIAL, status=A, recordDate=2024-04-29 20:36:06.0)}
+2024-06-12T00:49:10,752 [INFO]  [CsvProcessor]:[72]- =======================
+2024-06-12T00:49:10,752 [INFO]  [CsvProcessor]:[76]- PRODUCTION MODE RUNNING
+2024-06-12T00:49:10,753 [INFO]  [CsvProcessor]:[78]- =======================
+2024-06-12T00:49:11,086 [INFO]  [CsvFileMoverService]:[81]- +++++++++++LOOK FOR NEW CSV FILES+++++++++++++
+2024-06-12T00:49:11,098 [INFO]  [ReminderScheduler]:[28]- +++++++++++REMINDER CRON +++++++++++++
+2024-06-12T00:49:11,790 [INFO]  [EndpointLinksResolver]:[58]- Exposing 3 endpoint(s) beneath base path '/actuator'
+2024-06-12T00:49:11,843 [INFO]  [Http11NioProtocol]:[173]- Starting ProtocolHandler ["http-nio-3003"]
+2024-06-12T00:49:11,876 [INFO]  [TomcatWebServer]:[220]- Tomcat started on port(s): 3003 (http) with context path ''
+2024-06-12T00:49:12,283 [INFO]  [AbstractCamelContext]:[3066]- Apache Camel 4.0.0-M1 (camel-1) is starting
+2024-06-12T00:49:12,302 [INFO]  [AbstractCamelContext]:[3228]- Routes startup (started:1)
+2024-06-12T00:49:12,303 [INFO]  [AbstractCamelContext]:[3233]-     Started route1 (file://in)
+2024-06-12T00:49:12,303 [INFO]  [AbstractCamelContext]:[3257]- Apache Camel 4.0.0-M1 (camel-1) started in 392ms (build:63ms init:310ms start:19ms)
+2024-06-12T00:49:12,311 [INFO]  [NacionalServiceApplication]:[61]- Started NacionalServiceApplication in 7.097 seconds (JVM running for 8.314)
+2024-06-12T00:49:41,262 [INFO]  [route1]:[166]-   022_SEGUROS MASIVOS_abr_2024.csv 
+2024-06-12T00:49:41,262 [INFO]  [CsvProcessor]:[803]- ===========================================init=========================================
+2024-06-12T00:49:41,278 [INFO]  [CsvProcessor]:[752]- {ID CIUDAD=3, FF HH USO DEL SERVICIO=8, EMAIL=12, SERVICIO=6, ID_DOCUMENTO=9, PROVEEDOR DE ASISTENCIA=5, PRODUCTO=4, ID RUBRO=1, TELEFONO=11, ID PROCESO=0, NOMBRE SOLICITANTE=10, SPONSOR=2, FF HH CONTACTO CON CC=7}
+2024-06-12T00:49:41,543 [INFO]  [CsvProcessor]:[773]- SegurosMasivo(idProceso=22, idRubro=MASIVO, sponsor=Banco Económico, idCiudad=TARIJA, producto=VIDASALUD PLUS, proveedorDeAsistencia=INMEDICAL, servicio=PEDIATRIA, fechaContacto=03/04/2024 06:31, fechaUsoServicio=03/04/2024 09:00, idDocumento=7141820, nombreSolicitante=MARTINEZ AVILA LOURDES , telefono=70710241, email=, uniqueId=6d93562d6eb04b5f8dc4a2248cc0f65c)
+2024-06-12T00:49:41,550 [INFO]  [SegurosMasivoService]:[62]- ==========SEND-JIRA==========
+2024-06-12T00:49:41,554 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 22
+Id Rubro: MASIVO
+Sponsor: Banco Económico
+Id Ciudad: TARIJA
+Producto: VIDASALUD PLUS
+Proveedor de Asistencia: INMEDICAL
+Id Servicio: PEDIATRIA
+Fecha contacto: 03/04/2024 06:31
+Fecha Uso del Servicio: 03/04/2024 09:00
+Id Documento: 7141820
+Nombre Solicitante: MARTINEZ AVILA LOURDES 
+Teléfono: 70710241
+Email: 
+
+
+https://es.research.net/r/DWVKKNK?ipro=22&irub=MASIVO&sp=Banco%20Economico&iciu=TARIJA&idprod=VIDASALUD%20PLUS&pa=INMEDICAL&ser=PEDIATRIA&fcon=03/04/2024%2006:31&fus=03/04/2024%2009:00&Idoc=7141820&nsol=MARTINEZ%20AVILA%20LOURDES%20&t=70710241&e=NA&idT=SEGMED.20240403063100.70710241, summary=SEGUROS MASIVO 70710241), requestTypeId=44, serviceDeskId=2)
+2024-06-12T00:49:57,152 [ERROR]  [JiraService]:[54]- Error inesperado al consumir el servicio
+org.springframework.web.reactive.function.client.WebClientRequestException: Failed to resolve 'nacionalseguroscall.atlassian.net' after 6 queries ; nested exception is java.net.UnknownHostException: Failed to resolve 'nacionalseguroscall.atlassian.net' after 6 queries 
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:141) ~[spring-webflux-5.3.25.jar:5.3.25]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? Request to POST https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:141) ~[spring-webflux-5.3.25.jar:5.3.25]
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:225) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:274) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:415) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onNext(FluxConcatMap.java:251) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.EmitterProcessor.drain(EmitterProcessor.java:537) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.EmitterProcessor.tryEmitNext(EmitterProcessor.java:343) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:190) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:307) ~[reactor-netty-http-1.0.27.jar:1.0.27]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:160) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:475) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:431) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:558) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:192) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:259) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.tryFailure(TransportConnector.java:580) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.netty.transport.TransportConnector.lambda$doResolveAndConnect$11(TransportConnector.java:387) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure(DefaultPromise.java:110) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.InetSocketAddressResolver$2.operationComplete(InetSocketAddressResolver.java:86) ~[netty-resolver-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1077) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:1022) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:418) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.access$600(DnsResolveContext.java:66) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:489) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsQueryContext.tryFailure(DnsQueryContext.java:256) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsQueryContext$4.run(DnsQueryContext.java:208) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at java.lang.Thread.run(Thread.java:833) ~[?:?]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Mono.block(Mono.java:1742) ~[reactor-core-3.4.26.jar:3.4.26]
+		at com.keysolutions.nacionalservice.service.JiraService.createJiraTicket(JiraService.java:43) ~[classes/:?]
+		at com.keysolutions.nacionalservice.service.SegurosMasivoService.sendJira(SegurosMasivoService.java:83) ~[classes/:?]
+		at com.keysolutions.nacionalservice.service.SegurosMasivoService.createJiraSurvey(SegurosMasivoService.java:63) ~[classes/:?]
+		at com.keysolutions.nacionalservice.processor.CsvProcessor.segurosMasivoProcess(CsvProcessor.java:778) ~[classes/:?]
+		at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+		at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+		at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+		at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+		at org.apache.camel.support.ObjectHelper.invokeMethodSafe(ObjectHelper.java:382) ~[camel-support-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.MethodInfo.invoke(MethodInfo.java:494) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.MethodInfo$1.doProceed(MethodInfo.java:316) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.MethodInfo$1.proceed(MethodInfo.java:286) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.AbstractBeanProcessor.process(AbstractBeanProcessor.java:146) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:81) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59) ~[camel-base-engine-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.processor.Pipeline.process(Pipeline.java:165) ~[camel-core-processor-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:392) ~[camel-base-engine-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:492) ~[camel-file-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:245) ~[camel-file-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:206) ~[camel-file-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.support.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:202) ~[camel-support-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.support.ScheduledPollConsumer.run(ScheduledPollConsumer.java:116) ~[camel-support-4.0.0-M1.jar:4.0.0-M1]
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+		at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+		at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+		at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.net.UnknownHostException: Failed to resolve 'nacionalseguroscall.atlassian.net' after 6 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1069) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:1022) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:418) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext.access$600(DnsResolveContext.java:66) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:489) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsQueryContext.tryFailure(DnsQueryContext.java:256) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsQueryContext$4.run(DnsQueryContext.java:208) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: io.netty.resolver.dns.DnsNameResolverTimeoutException: [/10.10.10.1:53] query via UDP timed out after 5000 milliseconds (no stack trace available)
+2024-06-12T00:49:57,163 [ERROR]  [JiraService]:[55]- TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 22
+Id Rubro: MASIVO
+Sponsor: Banco Económico
+Id Ciudad: TARIJA
+Producto: VIDASALUD PLUS
+Proveedor de Asistencia: INMEDICAL
+Id Servicio: PEDIATRIA
+Fecha contacto: 03/04/2024 06:31
+Fecha Uso del Servicio: 03/04/2024 09:00
+Id Documento: 7141820
+Nombre Solicitante: MARTINEZ AVILA LOURDES 
+Teléfono: 70710241
+Email: 
+
+
+https://es.research.net/r/DWVKKNK?ipro=22&irub=MASIVO&sp=Banco%20Economico&iciu=TARIJA&idprod=VIDASALUD%20PLUS&pa=INMEDICAL&ser=PEDIATRIA&fcon=03/04/2024%2006:31&fus=03/04/2024%2009:00&Idoc=7141820&nsol=MARTINEZ%20AVILA%20LOURDES%20&t=70710241&e=NA&idT=SEGMED.20240403063100.70710241, summary=SEGUROS MASIVO 70710241), requestTypeId=44, serviceDeskId=2)
+2024-06-12T00:49:57,164 [ERROR]  [SegurosMasivoService]:[92]- Error inesperado al consumir el servicio
+org.springframework.web.reactive.function.client.WebClientRequestException: Failed to resolve 'nacionalseguroscall.atlassian.net' after 6 queries ; nested exception is java.net.UnknownHostException: Failed to resolve 'nacionalseguroscall.atlassian.net' after 6 queries 
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:141) ~[spring-webflux-5.3.25.jar:5.3.25]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? Request to POST https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:141) ~[spring-webflux-5.3.25.jar:5.3.25]
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:225) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:274) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.drain(FluxConcatMap.java:415) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxConcatMap$ConcatMapImmediate.onNext(FluxConcatMap.java:251) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.EmitterProcessor.drain(EmitterProcessor.java:537) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.EmitterProcessor.tryEmitNext(EmitterProcessor.java:343) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:190) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:307) ~[reactor-netty-http-1.0.27.jar:1.0.27]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:160) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:475) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:431) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:558) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:192) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:259) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Operators.error(Operators.java:198) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4490) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.tryFailure(TransportConnector.java:580) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at reactor.netty.transport.TransportConnector.lambda$doResolveAndConnect$11(TransportConnector.java:387) ~[reactor-netty-core-1.0.27.jar:1.0.27]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure(DefaultPromise.java:110) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.InetSocketAddressResolver$2.operationComplete(InetSocketAddressResolver.java:86) ~[netty-resolver-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1077) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:1022) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:418) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext.access$600(DnsResolveContext.java:66) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:489) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsQueryContext.tryFailure(DnsQueryContext.java:256) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.resolver.dns.DnsQueryContext$4.run(DnsQueryContext.java:208) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+		at java.lang.Thread.run(Thread.java:833) ~[?:?]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99) ~[reactor-core-3.4.26.jar:3.4.26]
+		at reactor.core.publisher.Mono.block(Mono.java:1742) ~[reactor-core-3.4.26.jar:3.4.26]
+		at com.keysolutions.nacionalservice.service.JiraService.createJiraTicket(JiraService.java:43) ~[classes/:?]
+		at com.keysolutions.nacionalservice.service.SegurosMasivoService.sendJira(SegurosMasivoService.java:83) ~[classes/:?]
+		at com.keysolutions.nacionalservice.service.SegurosMasivoService.createJiraSurvey(SegurosMasivoService.java:63) ~[classes/:?]
+		at com.keysolutions.nacionalservice.processor.CsvProcessor.segurosMasivoProcess(CsvProcessor.java:778) ~[classes/:?]
+		at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+		at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+		at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+		at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+		at org.apache.camel.support.ObjectHelper.invokeMethodSafe(ObjectHelper.java:382) ~[camel-support-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.MethodInfo.invoke(MethodInfo.java:494) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.MethodInfo$1.doProceed(MethodInfo.java:316) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.MethodInfo$1.proceed(MethodInfo.java:286) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.AbstractBeanProcessor.process(AbstractBeanProcessor.java:146) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.bean.BeanProcessor.process(BeanProcessor.java:81) ~[camel-bean-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.processor.errorhandler.RedeliveryErrorHandler$SimpleTask.run(RedeliveryErrorHandler.java:477) ~[camel-core-processor-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.impl.engine.DefaultReactiveExecutor$Worker.schedule(DefaultReactiveExecutor.java:181) ~[camel-base-engine-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.impl.engine.DefaultReactiveExecutor.scheduleMain(DefaultReactiveExecutor.java:59) ~[camel-base-engine-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.processor.Pipeline.process(Pipeline.java:165) ~[camel-core-processor-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.impl.engine.CamelInternalProcessor.process(CamelInternalProcessor.java:392) ~[camel-base-engine-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.file.GenericFileConsumer.processExchange(GenericFileConsumer.java:492) ~[camel-file-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.file.GenericFileConsumer.processBatch(GenericFileConsumer.java:245) ~[camel-file-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.component.file.GenericFileConsumer.poll(GenericFileConsumer.java:206) ~[camel-file-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.support.ScheduledPollConsumer.doRun(ScheduledPollConsumer.java:202) ~[camel-support-4.0.0-M1.jar:4.0.0-M1]
+		at org.apache.camel.support.ScheduledPollConsumer.run(ScheduledPollConsumer.java:116) ~[camel-support-4.0.0-M1.jar:4.0.0-M1]
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[?:?]
+		at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[?:?]
+		at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+		at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.net.UnknownHostException: Failed to resolve 'nacionalseguroscall.atlassian.net' after 6 queries 
+	at io.netty.resolver.dns.DnsResolveContext.finishResolve(DnsResolveContext.java:1069) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext.tryToFinishResolve(DnsResolveContext.java:1022) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext.query(DnsResolveContext.java:418) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext.access$600(DnsResolveContext.java:66) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsResolveContext$2.operationComplete(DnsResolveContext.java:489) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsQueryContext.tryFailure(DnsQueryContext.java:256) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.resolver.dns.DnsQueryContext$4.run(DnsQueryContext.java:208) ~[netty-resolver-dns-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: io.netty.resolver.dns.DnsNameResolverTimeoutException: [/10.10.10.1:53] query via UDP timed out after 5000 milliseconds (no stack trace available)
+2024-06-12T00:49:57,169 [ERROR]  [SegurosMasivoService]:[93]- SegurosMasivo(idProceso=22, idRubro=MASIVO, sponsor=Banco Económico, idCiudad=TARIJA, producto=VIDASALUD PLUS, proveedorDeAsistencia=INMEDICAL, servicio=PEDIATRIA, fechaContacto=03/04/2024 06:31, fechaUsoServicio=03/04/2024 09:00, idDocumento=7141820, nombreSolicitante=MARTINEZ AVILA LOURDES , telefono=70710241, email=, uniqueId=6d93562d6eb04b5f8dc4a2248cc0f65c)
+2024-06-12T00:49:57,543 [INFO]  [CsvProcessor]:[781]- ____________________FIN DE ARCHIVO_______________________________
+2024-06-12T00:50:00,011 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-12T00:51:15,701 [INFO]  [Version]:[21]- HV000001: Hibernate Validator 6.2.5.Final
+2024-06-12T00:51:15,744 [INFO]  [NacionalServiceApplication]:[55]- Starting NacionalServiceApplication using Java 17.0.7 on N2NTBILRQUIROZ with PID 10636 (C:\workspace\nuevatel_2024\ultimas_versiones_digitlaexperience\versionado\nacional-service\target\classes started by rquiroz in C:\workspace\nuevatel_2024\ultimas_versiones_digitlaexperience\versionado\nacional-service)
+2024-06-12T00:51:15,749 [INFO]  [NacionalServiceApplication]:[631]- No active profile set, falling back to 1 default profile: "default"
+2024-06-12T00:51:17,746 [INFO]  [TomcatWebServer]:[108]- Tomcat initialized with port(s): 3003 (http)
+2024-06-12T00:51:17,757 [INFO]  [Http11NioProtocol]:[173]- Initializing ProtocolHandler ["http-nio-3003"]
+2024-06-12T00:51:17,758 [INFO]  [StandardService]:[173]- Starting service [Tomcat]
+2024-06-12T00:51:17,759 [INFO]  [StandardEngine]:[173]- Starting Servlet engine: [Apache Tomcat/9.0.71]
+2024-06-12T00:51:17,966 [INFO]  [[/]]:[173]- Initializing Spring embedded WebApplicationContext
+2024-06-12T00:51:17,966 [INFO]  [ServletWebServerApplicationContext]:[292]- Root WebApplicationContext: initialization completed in 2161 ms
+2024-06-12T00:51:18,529 [INFO]  [HikariDataSource]:[110]- HikariPool-1 - Starting...
+2024-06-12T00:51:20,054 [INFO]  [HikariPool]:[565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79b8ecb
+2024-06-12T00:51:20,058 [INFO]  [HikariDataSource]:[123]- HikariPool-1 - Start completed.
+2024-06-12T00:51:20,589 [INFO]  [ManageSurveyInMemory]:[54]- Load Survey were done : 
+{PROV_SERV_MEDICO=412455347, INMEDICAL_ATU_MEDIDA=517447449, SEGUROS_MASIVO=518406277, CALLCENTER_NSPF=1123456789, TALLERES_E2E=412449075, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=517447099, CONSULTAS_RECLAMOS=412479011, PROVEEDOR_MEDICO=517417762, NSVS_800=517447155, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=517414488, PROVEEDOR_FARMACIA=517423341}
+2024-06-12T00:51:20,589 [INFO]  [ManageSurveyInMemory]:[55]- Load Collectors were done : 
+{PROV_SERV_MEDICO=431052375, INMEDICAL_ATU_MEDIDA=456114450, SEGUROS_MASIVO=456745385, CALLCENTER_NSPF=1123456789, TALLERES_E2E=431052443, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=456113888, CONSULTAS_RECLAMOS=431052410, PROVEEDOR_MEDICO=456114317, NSVS_800=1123456789, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=456114096, PROVEEDOR_FARMACIA=456114274}
+2024-06-12T00:51:20,590 [INFO]  [ManageSurveyInMemory]:[56]- Load Messages were done : 
+{PROV_SERV_MEDICO=116541950, INMEDICAL_ATU_MEDIDA=116542033, SEGUROS_MASIVO=117661138, CALLCENTER_NSPF=1123456789, TALLERES_E2E=116541997, ACCIDENTES_PERSONALES=1123456789, CENTRO_REHA_ODONTOLOGICA=116541285, CONSULTAS_RECLAMOS=116541967, PROVEEDOR_MEDICO=116541910, NSVS_800=1123456789, ASISTENCIA_VIAL=1123456789, ATENCION_INICIAL=116621928, PROVEEDOR_FARMACIA=116541868}
+2024-06-12T00:51:20,590 [INFO]  [ManageSurveyInMemory]:[57]- Load Conctact List were done : 
+{NACIONAL_CONTACTS=257004175}
+2024-06-12T00:51:20,718 [INFO]  [ManageJiraInMemory]:[29]- {CALLCENTER_NSPF=ConfigJira(configJiraId=5, serviceDeskId=2, requestTypeId=26, issueTypeId=10007, code=CALLCENTER_NSPF, status=A, recordDate=2024-04-29 20:36:06.0), PROV_SERV_MEDICO=ConfigJira(configJiraId=11, serviceDeskId=2, requestTypeId=20, issueTypeId=10007, code=PROV_SERV_MEDICO, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_MED_DOMI_AMBU=ConfigJira(configJiraId=15, serviceDeskId=2, requestTypeId=30, issueTypeId=10007, code=ASISTENCIA_MED_DOMI_AMBU, status=A, recordDate=2024-04-29 20:36:06.0), ACCIDENTES_PERSONALES=ConfigJira(configJiraId=2, serviceDeskId=2, requestTypeId=32, issueTypeId=10007, code=ACCIDENTES_PERSONALES, status=A, recordDate=2024-04-29 20:36:06.0), NSVS_800=ConfigJira(configJiraId=1, serviceDeskId=2, requestTypeId=33, issueTypeId=10007, code=NSVS_800, status=A, recordDate=2024-04-29 20:36:06.0), PROVEEDOR_MEDICO=ConfigJira(configJiraId=12, serviceDeskId=2, requestTypeId=43, issueTypeId=10007, code=PROVEEDOR_MEDICO, status=A, recordDate=2024-04-29 20:36:06.0), SEGUROS_MASIVO=ConfigJira(configJiraId=19, serviceDeskId=2, requestTypeId=44, issueTypeId=10007, code=SEGUROS_MASIVO, status=A, recordDate=2024-06-11 20:36:06.0), VAGONETA_SEGURA=ConfigJira(configJiraId=18, serviceDeskId=2, requestTypeId=18, issueTypeId=10007, code=VAGONETA_SEGURA, status=A, recordDate=2024-04-29 20:36:06.0), ATEN_ASIS_PROD_VIDA_PLUS=ConfigJira(configJiraId=17, serviceDeskId=2, requestTypeId=28, issueTypeId=10007, code=ATEN_ASIS_PROD_VIDA_PLUS, status=A, recordDate=2024-04-29 20:36:06.0), INMEDICAL_ATU_MEDIDA=ConfigJira(configJiraId=7, serviceDeskId=2, requestTypeId=34, issueTypeId=10007, code=INMEDICAL_ATU_MEDIDA, status=A, recordDate=2024-04-29 20:36:06.0), TALLERES_E2E=ConfigJira(configJiraId=9, serviceDeskId=2, requestTypeId=19, issueTypeId=10007, code=TALLERES_E2E, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_VIAL=ConfigJira(configJiraId=3, serviceDeskId=2, requestTypeId=29, issueTypeId=10007, code=ASISTENCIA_VIAL, status=A, recordDate=2024-04-29 20:36:06.0), ASISTENCIA_MED_DOMI=ConfigJira(configJiraId=14, serviceDeskId=2, requestTypeId=31, issueTypeId=10007, code=ASISTENCIA_MED_DOMI, status=A, recordDate=2024-04-29 20:36:06.0), CENTRO_REHA_ODONTOLOGICA=ConfigJira(configJiraId=10, serviceDeskId=2, requestTypeId=25, issueTypeId=10007, code=CENTRO_REHA_ODONTOLOGICA, status=A, recordDate=2024-04-29 20:36:06.0), PROVEEDOR_FARMACIA=ConfigJira(configJiraId=13, serviceDeskId=2, requestTypeId=21, issueTypeId=10007, code=PROVEEDOR_FARMACIA, status=A, recordDate=2024-04-29 20:36:06.0), CONSULTAS_RECLAMOS=ConfigJira(configJiraId=6, serviceDeskId=2, requestTypeId=24, issueTypeId=10007, code=CONSULTAS_RECLAMOS, status=A, recordDate=2024-04-29 20:36:06.0), INMEDICAL_BANCO_GANADERO=ConfigJira(configJiraId=8, serviceDeskId=2, requestTypeId=23, issueTypeId=10007, code=INMEDICAL_BANCO_GANADERO, status=A, recordDate=2024-04-29 20:36:06.0), ORIENTA_MED_TELEFONO=ConfigJira(configJiraId=16, serviceDeskId=2, requestTypeId=22, issueTypeId=10007, code=ORIENTA_MED_TELEFONO, status=A, recordDate=2024-04-29 20:36:06.0), ATENCION_INICIAL=ConfigJira(configJiraId=4, serviceDeskId=2, requestTypeId=27, issueTypeId=10007, code=ATENCION_INICIAL, status=A, recordDate=2024-04-29 20:36:06.0)}
+2024-06-12T00:51:20,770 [INFO]  [CsvProcessor]:[72]- =======================
+2024-06-12T00:51:20,771 [INFO]  [CsvProcessor]:[76]- PRODUCTION MODE RUNNING
+2024-06-12T00:51:20,771 [INFO]  [CsvProcessor]:[78]- =======================
+2024-06-12T00:51:21,096 [INFO]  [CsvFileMoverService]:[81]- +++++++++++LOOK FOR NEW CSV FILES+++++++++++++
+2024-06-12T00:51:21,108 [INFO]  [ReminderScheduler]:[28]- +++++++++++REMINDER CRON +++++++++++++
+2024-06-12T00:51:21,796 [INFO]  [EndpointLinksResolver]:[58]- Exposing 3 endpoint(s) beneath base path '/actuator'
+2024-06-12T00:51:21,854 [INFO]  [Http11NioProtocol]:[173]- Starting ProtocolHandler ["http-nio-3003"]
+2024-06-12T00:51:21,885 [INFO]  [TomcatWebServer]:[220]- Tomcat started on port(s): 3003 (http) with context path ''
+2024-06-12T00:51:22,279 [INFO]  [AbstractCamelContext]:[3066]- Apache Camel 4.0.0-M1 (camel-1) is starting
+2024-06-12T00:51:22,302 [INFO]  [AbstractCamelContext]:[3228]- Routes startup (started:1)
+2024-06-12T00:51:22,302 [INFO]  [AbstractCamelContext]:[3233]-     Started route1 (file://in)
+2024-06-12T00:51:22,303 [INFO]  [AbstractCamelContext]:[3257]- Apache Camel 4.0.0-M1 (camel-1) started in 393ms (build:64ms init:306ms start:23ms)
+2024-06-12T00:51:22,307 [INFO]  [NacionalServiceApplication]:[61]- Started NacionalServiceApplication in 6.886 seconds (JVM running for 8.206)
+2024-06-12T00:51:29,460 [INFO]  [route1]:[166]-   022_SEGUROS MASIVOS_abr_2024.csv 
+2024-06-12T00:51:29,463 [INFO]  [CsvProcessor]:[803]- ===========================================init=========================================
+2024-06-12T00:51:29,485 [INFO]  [CsvProcessor]:[752]- {ID CIUDAD=3, FF HH USO DEL SERVICIO=8, EMAIL=12, SERVICIO=6, ID_DOCUMENTO=9, PROVEEDOR DE ASISTENCIA=5, PRODUCTO=4, ID RUBRO=1, TELEFONO=11, ID PROCESO=0, NOMBRE SOLICITANTE=10, SPONSOR=2, FF HH CONTACTO CON CC=7}
+2024-06-12T00:51:29,743 [INFO]  [CsvProcessor]:[773]- SegurosMasivo(idProceso=22, idRubro=MASIVO, sponsor=Banco Económico, idCiudad=TARIJA, producto=VIDASALUD PLUS, proveedorDeAsistencia=INMEDICAL, servicio=PEDIATRIA, fechaContacto=03/04/2024 06:31, fechaUsoServicio=03/04/2024 09:00, idDocumento=7141820, nombreSolicitante=MARTINEZ AVILA LOURDES , telefono=70710241, email=, uniqueId=d43c12f66fe2484785d8e1ff1583a27a)
+2024-06-12T00:51:29,750 [INFO]  [SegurosMasivoService]:[62]- ==========SEND-JIRA==========
+2024-06-12T00:51:29,753 [INFO]  [JiraService]:[30]- createJiraTicket: TicketRequest(requestFieldValues=RequestFieldValues(description=Id Proceso: 22
+Id Rubro: MASIVO
+Sponsor: Banco Económico
+Id Ciudad: TARIJA
+Producto: VIDASALUD PLUS
+Proveedor de Asistencia: INMEDICAL
+Id Servicio: PEDIATRIA
+Fecha contacto: 03/04/2024 06:31
+Fecha Uso del Servicio: 03/04/2024 09:00
+Id Documento: 7141820
+Nombre Solicitante: MARTINEZ AVILA LOURDES 
+Teléfono: 70710241
+Email: 
+
+
+https://es.research.net/r/DWVKKNK?ipro=22&irub=MASIVO&sp=Banco%20Economico&iciu=TARIJA&idprod=VIDASALUD%20PLUS&pa=INMEDICAL&ser=PEDIATRIA&fcon=03/04/2024%2006:31&fus=03/04/2024%2009:00&Idoc=7141820&nsol=MARTINEZ%20AVILA%20LOURDES%20&t=70710241&e=NA&idT=SEGMED.20240403063100.70710241, summary=SEGUROS MASIVO 70710241), requestTypeId=44, serviceDeskId=2)
+2024-06-12T00:51:33,318 [INFO]  [JiraService]:[44]- createJiraTicket: Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=19880, issueKey=GE-4954, requestTypeId=44, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-12T00:51:24-0400, jira=2024-06-12T00:51:24.255-0400, friendly=Hoy 12:51 AM, epochMillis=1718167884255), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=SEGUROS MASIVO 70710241, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 22
+Id Rubro: MASIVO
+Sponsor: Banco Económico
+Id Ciudad: TARIJA
+Producto: VIDASALUD PLUS
+Proveedor de Asistencia: INMEDICAL
+Id Servicio: PEDIATRIA
+Fecha contacto: 03/04/2024 06:31
+Fecha Uso del Servicio: 03/04/2024 09:00
+Id Documento: 7141820
+Nombre Solicitante: MARTINEZ AVILA LOURDES 
+Teléfono: 70710241
+Email: 
+
+
+https://es.research.net/r/DWVKKNK?ipro=22&irub=MASIVO&sp=Banco%20Economico&iciu=TARIJA&idprod=VIDASALUD%20PLUS&pa=INMEDICAL&ser=PEDIATRIA&fcon=03/04/2024%2006:31&fus=03/04/2024%2009:00&Idoc=7141820&nsol=MARTINEZ%20AVILA%20LOURDES%20&t=70710241&e=NA&idT=SEGMED.20240403063100.70710241, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 22<br>
+Id Rubro: MASIVO<br>
+Sponsor: Banco Económico<br>
+Id Ciudad: TARIJA<br>
+Producto: VIDASALUD PLUS<br>
+Proveedor de Asistencia: INMEDICAL<br>
+Id Servicio: PEDIATRIA<br>
+Fecha contacto: 03/04/2024 06:31<br>
+Fecha Uso del Servicio: 03/04/2024 09:00<br>
+Id Documento: 7141820<br>
+Nombre Solicitante: MARTINEZ AVILA LOURDES <br>
+Teléfono: 70710241<br>
+Email: </p>
+
+
+<p><a href="https://es.research.net/r/DWVKKNK?ipro=22&amp;irub=MASIVO&amp;sp=Banco%20Economico&amp;iciu=TARIJA&amp;idprod=VIDASALUD%20PLUS&amp;pa=INMEDICAL&amp;ser=PEDIATRIA&amp;fcon=03/04/2024%2006:31&amp;fus=03/04/2024%2009:00&amp;Idoc=7141820&amp;nsol=MARTINEZ%20AVILA%20LOURDES%20&amp;t=70710241&amp;e=NA&amp;idT=SEGMED.20240403063100.70710241" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/DWVKKNK?ipro=22&amp;irub=MASIVO&amp;sp=Banco%20Economico&amp;iciu=TARIJA&amp;idprod=VIDASALUD%20PLUS&amp;pa=INMEDICAL&amp;ser=PEDIATRIA&amp;fcon=03/04/2024%2006:31&amp;fus=03/04/2024%2009:00&amp;Idoc=7141820&amp;nsol=MARTINEZ%20AVILA%20LOURDES%20&amp;t=70710241&amp;e=NA&amp;idT=SEGMED.20240403063100.70710241</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-12T00:51:24-0400, jira=2024-06-12T00:51:24.255-0400, friendly=Hoy 12:51 AM, epochMillis=1718167884255)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/19880, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4954, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/19880, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4954))
+2024-06-12T00:51:33,335 [INFO]  [SegurosMasivoService]:[84]- issue Issue(expands=[participant, status, sla, requestType, serviceDesk, attachment, action, comment], issueId=19880, issueKey=GE-4954, requestTypeId=44, serviceDeskId=2, createdDate=Issue.CreatedDate(iso8601=2024-06-12T00:51:24-0400, jira=2024-06-12T00:51:24.255-0400, friendly=Hoy 12:51 AM, epochMillis=1718167884255), reporter=Issue.Reporter(accountId=712020:925d1869-7c88-4e68-aaef-0b2b458617e1, emailAddress=nacionalseguroscall.jira@gmail.com, displayName=nacional seguros call center, active=true, timeZone=America/Caracas, links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, web=null, self=https://nacionalseguroscall.atlassian.net/rest/api/2/user?accountId=712020%3A925d1869-7c88-4e68-aaef-0b2b458617e1, agent=null)), requestFieldValues=[Issue.RequestFieldValue(fieldId=summary, label=Summary, value=SEGUROS MASIVO 70710241, renderedValue=null), Issue.RequestFieldValue(fieldId=description, label=Descripción, value=Id Proceso: 22
+Id Rubro: MASIVO
+Sponsor: Banco Económico
+Id Ciudad: TARIJA
+Producto: VIDASALUD PLUS
+Proveedor de Asistencia: INMEDICAL
+Id Servicio: PEDIATRIA
+Fecha contacto: 03/04/2024 06:31
+Fecha Uso del Servicio: 03/04/2024 09:00
+Id Documento: 7141820
+Nombre Solicitante: MARTINEZ AVILA LOURDES 
+Teléfono: 70710241
+Email: 
+
+
+https://es.research.net/r/DWVKKNK?ipro=22&irub=MASIVO&sp=Banco%20Economico&iciu=TARIJA&idprod=VIDASALUD%20PLUS&pa=INMEDICAL&ser=PEDIATRIA&fcon=03/04/2024%2006:31&fus=03/04/2024%2009:00&Idoc=7141820&nsol=MARTINEZ%20AVILA%20LOURDES%20&t=70710241&e=NA&idT=SEGMED.20240403063100.70710241, renderedValue=Issue.RenderedValue(html=<p>Id Proceso: 22<br>
+Id Rubro: MASIVO<br>
+Sponsor: Banco Económico<br>
+Id Ciudad: TARIJA<br>
+Producto: VIDASALUD PLUS<br>
+Proveedor de Asistencia: INMEDICAL<br>
+Id Servicio: PEDIATRIA<br>
+Fecha contacto: 03/04/2024 06:31<br>
+Fecha Uso del Servicio: 03/04/2024 09:00<br>
+Id Documento: 7141820<br>
+Nombre Solicitante: MARTINEZ AVILA LOURDES <br>
+Teléfono: 70710241<br>
+Email: </p>
+
+
+<p><a href="https://es.research.net/r/DWVKKNK?ipro=22&amp;irub=MASIVO&amp;sp=Banco%20Economico&amp;iciu=TARIJA&amp;idprod=VIDASALUD%20PLUS&amp;pa=INMEDICAL&amp;ser=PEDIATRIA&amp;fcon=03/04/2024%2006:31&amp;fus=03/04/2024%2009:00&amp;Idoc=7141820&amp;nsol=MARTINEZ%20AVILA%20LOURDES%20&amp;t=70710241&amp;e=NA&amp;idT=SEGMED.20240403063100.70710241" class="external-link" rel="nofollow noreferrer">https://es.research.net/r/DWVKKNK?ipro=22&amp;irub=MASIVO&amp;sp=Banco%20Economico&amp;iciu=TARIJA&amp;idprod=VIDASALUD%20PLUS&amp;pa=INMEDICAL&amp;ser=PEDIATRIA&amp;fcon=03/04/2024%2006:31&amp;fus=03/04/2024%2009:00&amp;Idoc=7141820&amp;nsol=MARTINEZ%20AVILA%20LOURDES%20&amp;t=70710241&amp;e=NA&amp;idT=SEGMED.20240403063100.70710241</a></p>))], currentStatus=Issue.CurrentStatus(status=NUEVO, statusCategory=NEW, statusDate=Issue.CreatedDate(iso8601=2024-06-12T00:51:24-0400, jira=2024-06-12T00:51:24.255-0400, friendly=Hoy 12:51 AM, epochMillis=1718167884255)), links=Issue.Links(jiraRest=https://nacionalseguroscall.atlassian.net/rest/api/2/issue/19880, web=https://nacionalseguroscall.atlassian.net/servicedesk/customer/portal/2/GE-4954, self=https://nacionalseguroscall.atlassian.net/rest/servicedeskapi/request/19880, agent=https://nacionalseguroscall.atlassian.net/browse/GE-4954))
+2024-06-12T00:51:33,705 [INFO]  [CsvProcessor]:[781]- ____________________FIN DE ARCHIVO_______________________________
+2024-06-12T00:55:00,011 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-12T00:56:15,032 [INFO]  [route1]:[166]-   022_SEGUROS MASIVOS_abr_2024.csv 
+2024-06-12T00:56:15,032 [INFO]  [CsvProcessor]:[803]- ===========================================init=========================================
+2024-06-12T00:56:15,034 [INFO]  [CsvProcessor]:[752]- {ID CIUDAD=3, FF HH USO DEL SERVICIO=8, EMAIL=12, SERVICIO=6, ID_DOCUMENTO=9, PROVEEDOR DE ASISTENCIA=5, PRODUCTO=4, ID RUBRO=1, TELEFONO=11, ID PROCESO=0, NOMBRE SOLICITANTE=10, SPONSOR=2, FF HH CONTACTO CON CC=7}
+2024-06-12T00:56:15,279 [INFO]  [CsvProcessor]:[773]- SegurosMasivo(idProceso=22, idRubro=MASIVO, sponsor=Banco Económico, idCiudad=TARIJA, producto=VIDASALUD PLUS, proveedorDeAsistencia=INMEDICAL, servicio=PEDIATRIA, fechaContacto=03/04/2024 06:31, fechaUsoServicio=03/04/2024 09:00, idDocumento=7141820, nombreSolicitante=MARTINEZ AVILA LOURDES , telefono=70710241, email=agile.bolivia.net@gmail.com, uniqueId=aace1832f078480fb6f3997f4ee1e890)
+2024-06-12T00:56:15,280 [INFO]  [SegurosMasivoService]:[66]- ==========SEND-SURVEY==========
+2024-06-12T00:56:15,304 [INFO]  [SurveyMonkeyService]:[95]- contacts: Contacts(contacts=[Contact(firstName=agile.bolivia.net@gmail.com, lastName=SEGMED.20240403063100.70710241, email=agile.bolivia.net+20240612005615@gmail.com, customFields=CustomFields(field1=70710241, field2=NA, field3=MASIVO, field4=TARIJA, field5=NA, field6=NA, field7=PEDIATRIA, field8=NA, field9=MARTINEZ AVILA LOURDES , field10=NA, field11=NA, field12=03/04/2024 06:31, field13=NA, field14=NA, field15=NA, field16=7141820, field17=NA, field18=NA, field19=NA, field20=NA, field21=NA, field22=NA, field23=VIDASALUD PLUS, field24=NA, field25=NA, field26=NA, field27=NA, field28=NA, field29=NA, field30=NA, field31=NA, field32=NA, field33=NA, field34=NA, field35=NA, field36=NA, field37=NA, field38=NA, field39=22, field40=NA, field41=INMEDICAL, field42=NA, field43=NA, field44=Banco Económico, field45=03/04/2024 09:00, field46=NA, field47=NA, field48=NA, field49=NA, field50=aace1832f078480fb6f3997f4ee1e890), id=null, status=null, href=null, uniqueId=null)])
+2024-06-12T00:56:17,686 [INFO]  [SegurosMasivoService]:[175]- succeeded.getExisting():[]
+2024-06-12T00:56:17,687 [INFO]  [SegurosMasivoService]:[176]- succeeded.getSucceeded(): [Contact(firstName=agile.bolivia.net@gmail.com, lastName=SEGMED.20240403063100.70710241, email=agile.bolivia.net+20240612005615@gmail.com, customFields=CustomFields(field1=70710241, field2=NA, field3=MASIVO, field4=TARIJA, field5=NA, field6=NA, field7=PEDIATRIA, field8=NA, field9=MARTINEZ AVILA LOURDES, field10=NA, field11=NA, field12=03/04/2024 06:31, field13=NA, field14=NA, field15=NA, field16=7141820, field17=NA, field18=NA, field19=NA, field20=NA, field21=NA, field22=NA, field23=VIDASALUD PLUS, field24=NA, field25=NA, field26=NA, field27=NA, field28=NA, field29=NA, field30=NA, field31=NA, field32=NA, field33=NA, field34=NA, field35=NA, field36=NA, field37=NA, field38=NA, field39=22, field40=NA, field41=INMEDICAL, field42=NA, field43=NA, field44=Banco Económico, field45=03/04/2024 09:00, field46=NA, field47=NA, field48=NA, field49=NA, field50=aace1832f078480fb6f3997f4ee1e890), id=6733625405, status=active, href=https://api.surveymonkey.net/v3/contacts/6733625405, uniqueId=null)]
+2024-06-12T00:56:17,688 [INFO]  [SegurosMasivoService]:[177]- succeeded.getInvalid(): []
+2024-06-12T00:56:17,692 [INFO]  [SurveyMonkeyService]:[294]- MessageRequest(from_collector_id=456745385, from_message_id=117661138, include_recipients=false) : 
+2024-06-12T00:56:19,152 [INFO]  [SurveyMonkeyService]:[180]- recipientRequest: RecipientRequest(contact_list_ids=[], contact_ids=[6733625405])
+2024-06-12T00:56:19,153 [INFO]  [SurveyMonkeyService]:[181]- collectorId: 456745385
+2024-06-12T00:56:19,154 [INFO]  [SurveyMonkeyService]:[182]- messageId: 117685659
+2024-06-12T00:56:19,750 [INFO]  [SurveyMonkeyService]:[193]- recipientResponse: RecipientResponse(succeeded=[Recipient(id=8649469443, email=agile.bolivia.net+20240612005615@gmail.com, phone_number=null, href=https://api.surveymonkey.net/v3/collectors/456745385/recipients/8649469443)], bounced=[], existing=[], duplicate=[], invalids=[], opted_out=[])
+2024-06-12T00:56:19,762 [INFO]  [SegurosMasivoService]:[220]- RecipientResponse(succeeded=[Recipient(id=8649469443, email=agile.bolivia.net+20240612005615@gmail.com, phone_number=null, href=https://api.surveymonkey.net/v3/collectors/456745385/recipients/8649469443)], bounced=[], existing=[], duplicate=[], invalids=[], opted_out=[])
+2024-06-12T00:56:20,135 [INFO]  [SurveyMonkeyService]:[210]- sendSurveyRequest: SendSurveyRequest(scheduled_date=2024-06-12T04:56:20+00:00)
+2024-06-12T00:56:20,135 [INFO]  [SurveyMonkeyService]:[211]- collectorId: 456745385
+2024-06-12T00:56:20,135 [INFO]  [SurveyMonkeyService]:[212]- messageId: 117685659
+2024-06-12T00:56:21,079 [INFO]  [SurveyMonkeyService]:[223]- sendSurveyResponse: SendSurveyResponse(is_scheduled=true, scheduled_date=2024-06-12T04:56:20+00:00, subject=Tu opinión es Importante!, body=<html>
+  <body style="margin:0; padding: 0;">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+        {% if ShowHeader %}
+            {% if ImageURL %}
+                <tr bgcolor="#ffffff">
+                    <td colspan="5" height="24"> </td>
+                </tr>
+                <tr bgcolor="#ffffff" align="{{ ImagePosition }}">
+                    <td width="20"> </td>
+                    <td colspan="3">
+                        {% if ImageSize == "small" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="100"/>
+                        {% elif ImageSize == "medium" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="200"/>
+                        {% elif ImageSize == "large" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="300"/>
+                        {% else %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}"/>
+                        {% endif %}
+                      </td>
+                    <td width="20"> </td>
+                </tr>
+            {% endif %}
+        <tr bgcolor="#ffffff">
+          <td colspan="5" height="24"> </td>
+        </tr>
+                {% if HeaderText %}
+                    <tr bgcolor="#ffffff">
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                      <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;"> <p><br></p> </td>
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td colspan="5" height="24"> </td>
+                    </tr>
+                {% endif %}
+        <tr>
+          <td height="10" colspan="5"> </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td width="20"> </td>
+          <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;"> {% if FirstQuestion %} <p>[EmbeddedBody]</p> {% else %} <p>Estimado(a) cliente:<br><br>La información que nos proporcione llenando esta encuesta, nos permitirá entender sus expectativas y sobre todo, dónde debemos mejorar. <br><br>Gracias por gentil atención.<br><br> <br>Experiencia del Cliente<br>Nacional Seguros</p> {% endif %} </td>
+          <td width="20"> </td>
+        </tr>
+        {% if FirstQuestion %}
+          <tr>[FirstQuestion]</tr>
+        {% else %}
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background:#05467E; border-radius: 4px; border: 1px solid #BBBBBB; color:#FFFFFF; font-size:14px; letter-spacing: 1px; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);">
+              <tr>
+                <td align="center" valign="center">
+                  <a href="[SurveyLink]" target="_blank" style="color:#FFFFFF; text-decoration:none; display: block; padding: 10px 18px;">Comenzar la encuesta</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        {% endif %}
+        <tr valign="top" style="color: #666666;font-size: 10px;">
+          <td> </td>
+          <td valign="top" align="center" colspan="3">
+            <p>No reenvíes este correo electrónico ya que el enlace de la encuesta es exclusivo para ti. <br><a href="[PrivacyLink]" target="_blank" style="color: #333333; text-decoration: underline;">Privacidad</a> | <a href="[OptOutLink]" target="_blank" style="color: #333333; text-decoration: underline;">Cancelar la suscripción</a></p>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        <tr style="color: #999999;font-size: 10px;">
+          <td align="center" colspan="5">[FooterHTML]</td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>, type=invite, recipients=[6733625405], recipient_status=null, embed_first_question=false)
+2024-06-12T00:56:21,080 [INFO]  [SegurosMasivoService]:[228]- SendSurveyResponse(is_scheduled=true, scheduled_date=2024-06-12T04:56:20+00:00, subject=Tu opinión es Importante!, body=<html>
+  <body style="margin:0; padding: 0;">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+        {% if ShowHeader %}
+            {% if ImageURL %}
+                <tr bgcolor="#ffffff">
+                    <td colspan="5" height="24"> </td>
+                </tr>
+                <tr bgcolor="#ffffff" align="{{ ImagePosition }}">
+                    <td width="20"> </td>
+                    <td colspan="3">
+                        {% if ImageSize == "small" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="100"/>
+                        {% elif ImageSize == "medium" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="200"/>
+                        {% elif ImageSize == "large" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="300"/>
+                        {% else %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}"/>
+                        {% endif %}
+                      </td>
+                    <td width="20"> </td>
+                </tr>
+            {% endif %}
+        <tr bgcolor="#ffffff">
+          <td colspan="5" height="24"> </td>
+        </tr>
+                {% if HeaderText %}
+                    <tr bgcolor="#ffffff">
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                      <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;"> <p><br></p> </td>
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td colspan="5" height="24"> </td>
+                    </tr>
+                {% endif %}
+        <tr>
+          <td height="10" colspan="5"> </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td width="20"> </td>
+          <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;"> {% if FirstQuestion %} <p>[EmbeddedBody]</p> {% else %} <p>Estimado(a) cliente:<br><br>La información que nos proporcione llenando esta encuesta, nos permitirá entender sus expectativas y sobre todo, dónde debemos mejorar. <br><br>Gracias por gentil atención.<br><br> <br>Experiencia del Cliente<br>Nacional Seguros</p> {% endif %} </td>
+          <td width="20"> </td>
+        </tr>
+        {% if FirstQuestion %}
+          <tr>[FirstQuestion]</tr>
+        {% else %}
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background:#05467E; border-radius: 4px; border: 1px solid #BBBBBB; color:#FFFFFF; font-size:14px; letter-spacing: 1px; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);">
+              <tr>
+                <td align="center" valign="center">
+                  <a href="[SurveyLink]" target="_blank" style="color:#FFFFFF; text-decoration:none; display: block; padding: 10px 18px;">Comenzar la encuesta</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        {% endif %}
+        <tr valign="top" style="color: #666666;font-size: 10px;">
+          <td> </td>
+          <td valign="top" align="center" colspan="3">
+            <p>No reenvíes este correo electrónico ya que el enlace de la encuesta es exclusivo para ti. <br><a href="[PrivacyLink]" target="_blank" style="color: #333333; text-decoration: underline;">Privacidad</a> | <a href="[OptOutLink]" target="_blank" style="color: #333333; text-decoration: underline;">Cancelar la suscripción</a></p>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        <tr style="color: #999999;font-size: 10px;">
+          <td align="center" colspan="5">[FooterHTML]</td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>, type=invite, recipients=[6733625405], recipient_status=null, embed_first_question=false)
+2024-06-12T00:56:21,835 [INFO]  [CsvProcessor]:[781]- ____________________FIN DE ARCHIVO_______________________________
+2024-06-12T01:00:00,008 [INFO]  [CsvFileMoverService]:[35]- El directorio de origen /home/jsebastian/in no existe o no es un directorio válido.
+2024-06-12T01:00:04,430 [INFO]  [route1]:[166]-   022_SEGUROS MASIVOS_abr_2024.csv 
+2024-06-12T01:00:04,430 [INFO]  [CsvProcessor]:[803]- ===========================================init=========================================
+2024-06-12T01:00:04,432 [INFO]  [CsvProcessor]:[752]- {ID CIUDAD=3, FF HH USO DEL SERVICIO=8, EMAIL=12, SERVICIO=6, ID_DOCUMENTO=9, PROVEEDOR DE ASISTENCIA=5, PRODUCTO=4, ID RUBRO=1, TELEFONO=11, ID PROCESO=0, NOMBRE SOLICITANTE=10, SPONSOR=2, FF HH CONTACTO CON CC=7}
+2024-06-12T01:00:04,679 [INFO]  [CsvProcessor]:[773]- SegurosMasivo(idProceso=22, idRubro=MASIVO, sponsor=Banco Económico, idCiudad=TARIJA, producto=VIDASALUD PLUS, proveedorDeAsistencia=INMEDICAL, servicio=PEDIATRIA, fechaContacto=03/04/2024 06:31, fechaUsoServicio=03/04/2024 09:00, idDocumento=7141820, nombreSolicitante=MARTINEZ AVILA LOURDES , telefono=70710241, email=agile.bolivia.bo@gmail.com, uniqueId=eb1f664d34554bed8e33db29a834509c)
+2024-06-12T01:00:04,679 [INFO]  [SegurosMasivoService]:[66]- ==========SEND-SURVEY==========
+2024-06-12T01:00:04,679 [INFO]  [SurveyMonkeyService]:[95]- contacts: Contacts(contacts=[Contact(firstName=agile.bolivia.bo@gmail.com, lastName=SEGMED.20240403063100.70710241, email=agile.bolivia.bo+20240612010004@gmail.com, customFields=CustomFields(field1=70710241, field2=NA, field3=MASIVO, field4=TARIJA, field5=NA, field6=NA, field7=PEDIATRIA, field8=NA, field9=MARTINEZ AVILA LOURDES , field10=NA, field11=NA, field12=03/04/2024 06:31, field13=NA, field14=NA, field15=NA, field16=7141820, field17=NA, field18=NA, field19=NA, field20=NA, field21=NA, field22=NA, field23=VIDASALUD PLUS, field24=NA, field25=NA, field26=NA, field27=NA, field28=NA, field29=NA, field30=NA, field31=NA, field32=NA, field33=NA, field34=NA, field35=NA, field36=NA, field37=NA, field38=NA, field39=22, field40=NA, field41=INMEDICAL, field42=NA, field43=NA, field44=Banco Económico, field45=03/04/2024 09:00, field46=NA, field47=NA, field48=NA, field49=NA, field50=eb1f664d34554bed8e33db29a834509c), id=null, status=null, href=null, uniqueId=null)])
+2024-06-12T01:00:06,313 [INFO]  [SegurosMasivoService]:[175]- succeeded.getExisting():[]
+2024-06-12T01:00:06,314 [INFO]  [SegurosMasivoService]:[176]- succeeded.getSucceeded(): [Contact(firstName=agile.bolivia.bo@gmail.com, lastName=SEGMED.20240403063100.70710241, email=agile.bolivia.bo+20240612010004@gmail.com, customFields=CustomFields(field1=70710241, field2=NA, field3=MASIVO, field4=TARIJA, field5=NA, field6=NA, field7=PEDIATRIA, field8=NA, field9=MARTINEZ AVILA LOURDES, field10=NA, field11=NA, field12=03/04/2024 06:31, field13=NA, field14=NA, field15=NA, field16=7141820, field17=NA, field18=NA, field19=NA, field20=NA, field21=NA, field22=NA, field23=VIDASALUD PLUS, field24=NA, field25=NA, field26=NA, field27=NA, field28=NA, field29=NA, field30=NA, field31=NA, field32=NA, field33=NA, field34=NA, field35=NA, field36=NA, field37=NA, field38=NA, field39=22, field40=NA, field41=INMEDICAL, field42=NA, field43=NA, field44=Banco Económico, field45=03/04/2024 09:00, field46=NA, field47=NA, field48=NA, field49=NA, field50=eb1f664d34554bed8e33db29a834509c), id=6733625418, status=active, href=https://api.surveymonkey.net/v3/contacts/6733625418, uniqueId=null)]
+2024-06-12T01:00:06,316 [INFO]  [SegurosMasivoService]:[177]- succeeded.getInvalid(): []
+2024-06-12T01:00:06,317 [INFO]  [SurveyMonkeyService]:[294]- MessageRequest(from_collector_id=456745385, from_message_id=117661138, include_recipients=false) : 
+2024-06-12T01:00:07,632 [INFO]  [SurveyMonkeyService]:[180]- recipientRequest: RecipientRequest(contact_list_ids=[], contact_ids=[6733625418])
+2024-06-12T01:00:07,632 [INFO]  [SurveyMonkeyService]:[181]- collectorId: 456745385
+2024-06-12T01:00:07,632 [INFO]  [SurveyMonkeyService]:[182]- messageId: 117685680
+2024-06-12T01:00:08,346 [INFO]  [SurveyMonkeyService]:[193]- recipientResponse: RecipientResponse(succeeded=[Recipient(id=8649469466, email=agile.bolivia.bo+20240612010004@gmail.com, phone_number=null, href=https://api.surveymonkey.net/v3/collectors/456745385/recipients/8649469466)], bounced=[], existing=[], duplicate=[], invalids=[], opted_out=[])
+2024-06-12T01:00:08,346 [INFO]  [SegurosMasivoService]:[220]- RecipientResponse(succeeded=[Recipient(id=8649469466, email=agile.bolivia.bo+20240612010004@gmail.com, phone_number=null, href=https://api.surveymonkey.net/v3/collectors/456745385/recipients/8649469466)], bounced=[], existing=[], duplicate=[], invalids=[], opted_out=[])
+2024-06-12T01:00:08,720 [INFO]  [SurveyMonkeyService]:[210]- sendSurveyRequest: SendSurveyRequest(scheduled_date=2024-06-12T05:00:08+00:00)
+2024-06-12T01:00:08,720 [INFO]  [SurveyMonkeyService]:[211]- collectorId: 456745385
+2024-06-12T01:00:08,721 [INFO]  [SurveyMonkeyService]:[212]- messageId: 117685680
+2024-06-12T01:00:09,561 [INFO]  [SurveyMonkeyService]:[223]- sendSurveyResponse: SendSurveyResponse(is_scheduled=true, scheduled_date=2024-06-12T05:00:08+00:00, subject=Tu opinión es Importante!, body=<html>
+  <body style="margin:0; padding: 0;">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+        {% if ShowHeader %}
+            {% if ImageURL %}
+                <tr bgcolor="#ffffff">
+                    <td colspan="5" height="24"> </td>
+                </tr>
+                <tr bgcolor="#ffffff" align="{{ ImagePosition }}">
+                    <td width="20"> </td>
+                    <td colspan="3">
+                        {% if ImageSize == "small" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="100"/>
+                        {% elif ImageSize == "medium" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="200"/>
+                        {% elif ImageSize == "large" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="300"/>
+                        {% else %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}"/>
+                        {% endif %}
+                      </td>
+                    <td width="20"> </td>
+                </tr>
+            {% endif %}
+        <tr bgcolor="#ffffff">
+          <td colspan="5" height="24"> </td>
+        </tr>
+                {% if HeaderText %}
+                    <tr bgcolor="#ffffff">
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                      <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;"> <p><br></p> </td>
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td colspan="5" height="24"> </td>
+                    </tr>
+                {% endif %}
+        <tr>
+          <td height="10" colspan="5"> </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td width="20"> </td>
+          <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;"> {% if FirstQuestion %} <p>[EmbeddedBody]</p> {% else %} <p>Estimado(a) cliente:<br><br>La información que nos proporcione llenando esta encuesta, nos permitirá entender sus expectativas y sobre todo, dónde debemos mejorar. <br><br>Gracias por gentil atención.<br><br> <br>Experiencia del Cliente<br>Nacional Seguros</p> {% endif %} </td>
+          <td width="20"> </td>
+        </tr>
+        {% if FirstQuestion %}
+          <tr>[FirstQuestion]</tr>
+        {% else %}
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background:#05467E; border-radius: 4px; border: 1px solid #BBBBBB; color:#FFFFFF; font-size:14px; letter-spacing: 1px; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);">
+              <tr>
+                <td align="center" valign="center">
+                  <a href="[SurveyLink]" target="_blank" style="color:#FFFFFF; text-decoration:none; display: block; padding: 10px 18px;">Comenzar la encuesta</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        {% endif %}
+        <tr valign="top" style="color: #666666;font-size: 10px;">
+          <td> </td>
+          <td valign="top" align="center" colspan="3">
+            <p>No reenvíes este correo electrónico ya que el enlace de la encuesta es exclusivo para ti. <br><a href="[PrivacyLink]" target="_blank" style="color: #333333; text-decoration: underline;">Privacidad</a> | <a href="[OptOutLink]" target="_blank" style="color: #333333; text-decoration: underline;">Cancelar la suscripción</a></p>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        <tr style="color: #999999;font-size: 10px;">
+          <td align="center" colspan="5">[FooterHTML]</td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>, type=invite, recipients=[6733625418], recipient_status=null, embed_first_question=false)
+2024-06-12T01:00:09,562 [INFO]  [SegurosMasivoService]:[228]- SendSurveyResponse(is_scheduled=true, scheduled_date=2024-06-12T05:00:08+00:00, subject=Tu opinión es Importante!, body=<html>
+  <body style="margin:0; padding: 0;">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+        {% if ShowHeader %}
+            {% if ImageURL %}
+                <tr bgcolor="#ffffff">
+                    <td colspan="5" height="24"> </td>
+                </tr>
+                <tr bgcolor="#ffffff" align="{{ ImagePosition }}">
+                    <td width="20"> </td>
+                    <td colspan="3">
+                        {% if ImageSize == "small" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="100"/>
+                        {% elif ImageSize == "medium" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="200"/>
+                        {% elif ImageSize == "large" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="300"/>
+                        {% else %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}"/>
+                        {% endif %}
+                      </td>
+                    <td width="20"> </td>
+                </tr>
+            {% endif %}
+        <tr bgcolor="#ffffff">
+          <td colspan="5" height="24"> </td>
+        </tr>
+                {% if HeaderText %}
+                    <tr bgcolor="#ffffff">
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                      <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;"> <p><br></p> </td>
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td colspan="5" height="24"> </td>
+                    </tr>
+                {% endif %}
+        <tr>
+          <td height="10" colspan="5"> </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td width="20"> </td>
+          <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;"> {% if FirstQuestion %} <p>[EmbeddedBody]</p> {% else %} <p>Estimado(a) cliente:<br><br>La información que nos proporcione llenando esta encuesta, nos permitirá entender sus expectativas y sobre todo, dónde debemos mejorar. <br><br>Gracias por gentil atención.<br><br> <br>Experiencia del Cliente<br>Nacional Seguros</p> {% endif %} </td>
+          <td width="20"> </td>
+        </tr>
+        {% if FirstQuestion %}
+          <tr>[FirstQuestion]</tr>
+        {% else %}
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background:#05467E; border-radius: 4px; border: 1px solid #BBBBBB; color:#FFFFFF; font-size:14px; letter-spacing: 1px; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);">
+              <tr>
+                <td align="center" valign="center">
+                  <a href="[SurveyLink]" target="_blank" style="color:#FFFFFF; text-decoration:none; display: block; padding: 10px 18px;">Comenzar la encuesta</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        {% endif %}
+        <tr valign="top" style="color: #666666;font-size: 10px;">
+          <td> </td>
+          <td valign="top" align="center" colspan="3">
+            <p>No reenvíes este correo electrónico ya que el enlace de la encuesta es exclusivo para ti. <br><a href="[PrivacyLink]" target="_blank" style="color: #333333; text-decoration: underline;">Privacidad</a> | <a href="[OptOutLink]" target="_blank" style="color: #333333; text-decoration: underline;">Cancelar la suscripción</a></p>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        <tr style="color: #999999;font-size: 10px;">
+          <td align="center" colspan="5">[FooterHTML]</td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>, type=invite, recipients=[6733625418], recipient_status=null, embed_first_question=false)
+2024-06-12T01:00:10,318 [INFO]  [CsvProcessor]:[781]- ____________________FIN DE ARCHIVO_______________________________
+2024-06-12T01:01:56,574 [INFO]  [route1]:[166]-   022_SEGUROS MASIVOS_abr_2024.csv 
+2024-06-12T01:01:56,575 [INFO]  [CsvProcessor]:[803]- ===========================================init=========================================
+2024-06-12T01:01:56,581 [INFO]  [CsvProcessor]:[752]- {ID CIUDAD=3, FF HH USO DEL SERVICIO=8, EMAIL=12, SERVICIO=6, ID_DOCUMENTO=9, PROVEEDOR DE ASISTENCIA=5, PRODUCTO=4, ID RUBRO=1, TELEFONO=11, ID PROCESO=0, NOMBRE SOLICITANTE=10, SPONSOR=2, FF HH CONTACTO CON CC=7}
+2024-06-12T01:01:56,834 [INFO]  [CsvProcessor]:[773]- SegurosMasivo(idProceso=22, idRubro=MASIVO, sponsor=Banco Económico, idCiudad=TARIJA, producto=VIDASALUD PLUS, proveedorDeAsistencia=INMEDICAL, servicio=PEDIATRIA, fechaContacto=03/04/2024 06:31, fechaUsoServicio=03/04/2024 09:00, idDocumento=7141820, nombreSolicitante=MARTINEZ AVILA LOURDES , telefono=70710241, email=mariana.mogro@gmail.com, uniqueId=c48ac6341ad0458d923d8bfeaf46a750)
+2024-06-12T01:01:56,834 [INFO]  [SegurosMasivoService]:[66]- ==========SEND-SURVEY==========
+2024-06-12T01:01:56,835 [INFO]  [SurveyMonkeyService]:[95]- contacts: Contacts(contacts=[Contact(firstName=mariana.mogro@gmail.com, lastName=SEGMED.20240403063100.70710241, email=mariana.mogro+20240612010156@gmail.com, customFields=CustomFields(field1=70710241, field2=NA, field3=MASIVO, field4=TARIJA, field5=NA, field6=NA, field7=PEDIATRIA, field8=NA, field9=MARTINEZ AVILA LOURDES , field10=NA, field11=NA, field12=03/04/2024 06:31, field13=NA, field14=NA, field15=NA, field16=7141820, field17=NA, field18=NA, field19=NA, field20=NA, field21=NA, field22=NA, field23=VIDASALUD PLUS, field24=NA, field25=NA, field26=NA, field27=NA, field28=NA, field29=NA, field30=NA, field31=NA, field32=NA, field33=NA, field34=NA, field35=NA, field36=NA, field37=NA, field38=NA, field39=22, field40=NA, field41=INMEDICAL, field42=NA, field43=NA, field44=Banco Económico, field45=03/04/2024 09:00, field46=NA, field47=NA, field48=NA, field49=NA, field50=c48ac6341ad0458d923d8bfeaf46a750), id=null, status=null, href=null, uniqueId=null)])
+2024-06-12T01:01:59,303 [INFO]  [SegurosMasivoService]:[175]- succeeded.getExisting():[]
+2024-06-12T01:01:59,304 [INFO]  [SegurosMasivoService]:[176]- succeeded.getSucceeded(): [Contact(firstName=mariana.mogro@gmail.com, lastName=SEGMED.20240403063100.70710241, email=mariana.mogro+20240612010156@gmail.com, customFields=CustomFields(field1=70710241, field2=NA, field3=MASIVO, field4=TARIJA, field5=NA, field6=NA, field7=PEDIATRIA, field8=NA, field9=MARTINEZ AVILA LOURDES, field10=NA, field11=NA, field12=03/04/2024 06:31, field13=NA, field14=NA, field15=NA, field16=7141820, field17=NA, field18=NA, field19=NA, field20=NA, field21=NA, field22=NA, field23=VIDASALUD PLUS, field24=NA, field25=NA, field26=NA, field27=NA, field28=NA, field29=NA, field30=NA, field31=NA, field32=NA, field33=NA, field34=NA, field35=NA, field36=NA, field37=NA, field38=NA, field39=22, field40=NA, field41=INMEDICAL, field42=NA, field43=NA, field44=Banco Económico, field45=03/04/2024 09:00, field46=NA, field47=NA, field48=NA, field49=NA, field50=c48ac6341ad0458d923d8bfeaf46a750), id=6733628124, status=active, href=https://api.surveymonkey.net/v3/contacts/6733628124, uniqueId=null)]
+2024-06-12T01:01:59,305 [INFO]  [SegurosMasivoService]:[177]- succeeded.getInvalid(): []
+2024-06-12T01:01:59,306 [INFO]  [SurveyMonkeyService]:[294]- MessageRequest(from_collector_id=456745385, from_message_id=117661138, include_recipients=false) : 
+2024-06-12T01:02:00,869 [INFO]  [SurveyMonkeyService]:[180]- recipientRequest: RecipientRequest(contact_list_ids=[], contact_ids=[6733628124])
+2024-06-12T01:02:00,870 [INFO]  [SurveyMonkeyService]:[181]- collectorId: 456745385
+2024-06-12T01:02:00,871 [INFO]  [SurveyMonkeyService]:[182]- messageId: 117685779
+2024-06-12T01:02:01,527 [INFO]  [SurveyMonkeyService]:[193]- recipientResponse: RecipientResponse(succeeded=[Recipient(id=8649469487, email=mariana.mogro+20240612010156@gmail.com, phone_number=null, href=https://api.surveymonkey.net/v3/collectors/456745385/recipients/8649469487)], bounced=[], existing=[], duplicate=[], invalids=[], opted_out=[])
+2024-06-12T01:02:01,527 [INFO]  [SegurosMasivoService]:[220]- RecipientResponse(succeeded=[Recipient(id=8649469487, email=mariana.mogro+20240612010156@gmail.com, phone_number=null, href=https://api.surveymonkey.net/v3/collectors/456745385/recipients/8649469487)], bounced=[], existing=[], duplicate=[], invalids=[], opted_out=[])
+2024-06-12T01:02:01,960 [INFO]  [SurveyMonkeyService]:[210]- sendSurveyRequest: SendSurveyRequest(scheduled_date=2024-06-12T05:02:01+00:00)
+2024-06-12T01:02:01,961 [INFO]  [SurveyMonkeyService]:[211]- collectorId: 456745385
+2024-06-12T01:02:01,961 [INFO]  [SurveyMonkeyService]:[212]- messageId: 117685779
+2024-06-12T01:02:02,705 [INFO]  [SurveyMonkeyService]:[223]- sendSurveyResponse: SendSurveyResponse(is_scheduled=true, scheduled_date=2024-06-12T05:02:01+00:00, subject=Tu opinión es Importante!, body=<html>
+  <body style="margin:0; padding: 0;">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+        {% if ShowHeader %}
+            {% if ImageURL %}
+                <tr bgcolor="#ffffff">
+                    <td colspan="5" height="24"> </td>
+                </tr>
+                <tr bgcolor="#ffffff" align="{{ ImagePosition }}">
+                    <td width="20"> </td>
+                    <td colspan="3">
+                        {% if ImageSize == "small" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="100"/>
+                        {% elif ImageSize == "medium" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="200"/>
+                        {% elif ImageSize == "large" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="300"/>
+                        {% else %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}"/>
+                        {% endif %}
+                      </td>
+                    <td width="20"> </td>
+                </tr>
+            {% endif %}
+        <tr bgcolor="#ffffff">
+          <td colspan="5" height="24"> </td>
+        </tr>
+                {% if HeaderText %}
+                    <tr bgcolor="#ffffff">
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                      <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;"> <p><br></p> </td>
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td colspan="5" height="24"> </td>
+                    </tr>
+                {% endif %}
+        <tr>
+          <td height="10" colspan="5"> </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td width="20"> </td>
+          <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;"> {% if FirstQuestion %} <p>[EmbeddedBody]</p> {% else %} <p>Estimado(a) cliente:<br><br>La información que nos proporcione llenando esta encuesta, nos permitirá entender sus expectativas y sobre todo, dónde debemos mejorar. <br><br>Gracias por gentil atención.<br><br> <br>Experiencia del Cliente<br>Nacional Seguros</p> {% endif %} </td>
+          <td width="20"> </td>
+        </tr>
+        {% if FirstQuestion %}
+          <tr>[FirstQuestion]</tr>
+        {% else %}
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background:#05467E; border-radius: 4px; border: 1px solid #BBBBBB; color:#FFFFFF; font-size:14px; letter-spacing: 1px; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);">
+              <tr>
+                <td align="center" valign="center">
+                  <a href="[SurveyLink]" target="_blank" style="color:#FFFFFF; text-decoration:none; display: block; padding: 10px 18px;">Comenzar la encuesta</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        {% endif %}
+        <tr valign="top" style="color: #666666;font-size: 10px;">
+          <td> </td>
+          <td valign="top" align="center" colspan="3">
+            <p>No reenvíes este correo electrónico ya que el enlace de la encuesta es exclusivo para ti. <br><a href="[PrivacyLink]" target="_blank" style="color: #333333; text-decoration: underline;">Privacidad</a> | <a href="[OptOutLink]" target="_blank" style="color: #333333; text-decoration: underline;">Cancelar la suscripción</a></p>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        <tr style="color: #999999;font-size: 10px;">
+          <td align="center" colspan="5">[FooterHTML]</td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>, type=invite, recipients=[6733628124], recipient_status=null, embed_first_question=false)
+2024-06-12T01:02:02,708 [INFO]  [SegurosMasivoService]:[228]- SendSurveyResponse(is_scheduled=true, scheduled_date=2024-06-12T05:02:01+00:00, subject=Tu opinión es Importante!, body=<html>
+  <body style="margin:0; padding: 0;">
+    <div align="center">
+      <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+        {% if ShowHeader %}
+            {% if ImageURL %}
+                <tr bgcolor="#ffffff">
+                    <td colspan="5" height="24"> </td>
+                </tr>
+                <tr bgcolor="#ffffff" align="{{ ImagePosition }}">
+                    <td width="20"> </td>
+                    <td colspan="3">
+                        {% if ImageSize == "small" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="100"/>
+                        {% elif ImageSize == "medium" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="200"/>
+                        {% elif ImageSize == "large" %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}" width="300"/>
+                        {% else %}
+                            <img src="{{ ImageURL }}" alt="{{ ImageAltText }}"/>
+                        {% endif %}
+                      </td>
+                    <td width="20"> </td>
+                </tr>
+            {% endif %}
+        <tr bgcolor="#ffffff">
+          <td colspan="5" height="24"> </td>
+        </tr>
+                {% if HeaderText %}
+                    <tr bgcolor="#ffffff">
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                      <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;"> <p><br></p> </td>
+                      <td width="20"> </td>
+                      <td width="20"> </td>
+                    </tr>
+                    <tr bgcolor="#ffffff">
+                      <td colspan="5" height="24"> </td>
+                    </tr>
+                {% endif %}
+        <tr>
+          <td height="10" colspan="5"> </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td width="20"> </td>
+          <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;"> {% if FirstQuestion %} <p>[EmbeddedBody]</p> {% else %} <p>Estimado(a) cliente:<br><br>La información que nos proporcione llenando esta encuesta, nos permitirá entender sus expectativas y sobre todo, dónde debemos mejorar. <br><br>Gracias por gentil atención.<br><br> <br>Experiencia del Cliente<br>Nacional Seguros</p> {% endif %} </td>
+          <td width="20"> </td>
+        </tr>
+        {% if FirstQuestion %}
+          <tr>[FirstQuestion]</tr>
+        {% else %}
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td colspan="3">
+            <table border="0" cellpadding="0" cellspacing="0" align="center" style="background:#05467E; border-radius: 4px; border: 1px solid #BBBBBB; color:#FFFFFF; font-size:14px; letter-spacing: 1px; text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.8);">
+              <tr>
+                <td align="center" valign="center">
+                  <a href="[SurveyLink]" target="_blank" style="color:#FFFFFF; text-decoration:none; display: block; padding: 10px 18px;">Comenzar la encuesta</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td colspan="5" height="30"> </td>
+        </tr>
+        {% endif %}
+        <tr valign="top" style="color: #666666;font-size: 10px;">
+          <td> </td>
+          <td valign="top" align="center" colspan="3">
+            <p>No reenvíes este correo electrónico ya que el enlace de la encuesta es exclusivo para ti. <br><a href="[PrivacyLink]" target="_blank" style="color: #333333; text-decoration: underline;">Privacidad</a> | <a href="[OptOutLink]" target="_blank" style="color: #333333; text-decoration: underline;">Cancelar la suscripción</a></p>
+          </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+        <tr style="color: #999999;font-size: 10px;">
+          <td align="center" colspan="5">[FooterHTML]</td>
+        </tr>
+        <tr>
+          <td height="20" colspan="5"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>, type=invite, recipients=[6733628124], recipient_status=null, embed_first_question=false)
+2024-06-12T01:02:03,463 [INFO]  [CsvProcessor]:[781]- ____________________FIN DE ARCHIVO_______________________________
+2024-06-12T01:02:17,670 [INFO]  [AbstractCamelContext]:[3461]- Apache Camel 4.0.0-M1 (camel-1) is shutting down (timeout:45s)
+2024-06-12T01:02:17,685 [INFO]  [AbstractCamelContext]:[166]- Routes stopped (stopped:1)
+2024-06-12T01:02:17,685 [INFO]  [AbstractCamelContext]:[166]-     Stopped route1 (file://in)
+2024-06-12T01:02:17,688 [INFO]  [AbstractCamelContext]:[3600]- Apache Camel 4.0.0-M1 (camel-1) shutdown in 19ms (uptime:10m55s)
+2024-06-12T01:02:19,844 [INFO]  [HikariDataSource]:[350]- HikariPool-1 - Shutdown initiated...
+2024-06-12T01:02:21,089 [INFO]  [HikariDataSource]:[352]- HikariPool-1 - Shutdown completed.

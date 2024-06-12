@@ -367,8 +367,21 @@ public class ManageLog {
         } catch (Exception ex) {
             log.error("recordVagonetaSegura db exception", ex);
         }
-
-
+    }
+    public void recordSegurosMasivo(SegurosMasivoDb segurosMasivoDb) {
+        log.debug(">>>>>>>: {}", segurosMasivoDb);
+        String insert = "INSERT INTO deaxs_record.ns_seguros_masivo (seguros_masivo_id, id_proceso, id_rubro, sponsor, id_ciudad, "+
+        " producto, proveedor_asistencia, servicio, fecha_contacto, fecha_uso_servicio, id_documento, nombre_solicitante, telefono, "+
+        "email, nombre_archivo) "+
+                " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+        try {
+            jdbcTemplate.update(insert,segurosMasivoDb.getSegurosMasivoId(),segurosMasivoDb.getIdProceso(),segurosMasivoDb.getIdRubro(),segurosMasivoDb.getSponsor(),segurosMasivoDb.getIdCiudad(),
+                    segurosMasivoDb.getProducto(),segurosMasivoDb.getProveedorDeAsistencia(),segurosMasivoDb.getServicio(),segurosMasivoDb.getFechaContacto(),segurosMasivoDb.getFechaUsoServicio(),segurosMasivoDb.getIdDocumento(),
+                    segurosMasivoDb.getNombreSolicitante(),segurosMasivoDb.getTelefono(),segurosMasivoDb.getEmail(),
+                    segurosMasivoDb.getNombreArchivo());
+        } catch (Exception ex) {
+            log.error("recordSegurosMasivo db exception", ex);
+        }
     }
 
     //===============

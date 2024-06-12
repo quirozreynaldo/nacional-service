@@ -22,6 +22,7 @@ public class Constant {
     public static final String CONFIG_ORIENTACION_MED_TELEF="ORIENTA_MED_TELEFONO";
     public static final String CONFIG_ATEN_ASIS_PROD_VIDA_PLUS="ATEN_ASIS_PROD_VIDA_PLUS";
     public static final String CONFIG_VAGONETA_SEGURA="VAGONETA_SEGURA";
+    public static final String CONFIG_SEGUROS_MASIVO="SEGUROS_MASIVO";
 
     public static final String NAME_ASISTENCIA_VIAL="ASISTENCIA VIAL";
     public static final String NAME_NSVS_800="NSVS 800";
@@ -41,6 +42,7 @@ public class Constant {
     public static final String NAME_ORIENTACION_MED_TELEF="ORIENTACION MEDICA TELEFONICA";
     public static final String  NAME_ATEN_ASIS_PROD_VIDA_PLUS="ATENCION DE ASISTENCIAS PRODEM VIDA PLUS";
     public static final String  NAME_VAGONETA_SEGURA="VAGONETA SEGURA";
+    public static final String  NAME_SERVICIOS_MASIVO="SEGUROS MASIVO";
 
     public static final String ACTIVE_STATUS="A";
     public static final String SENT_YES="Yes";
@@ -68,6 +70,8 @@ public class Constant {
     public static final String ORIENTACION_MED_TELEF_CODE="ORIMEDTEL";
     public static final String ATEN_ASIS_PROD_VIDA_PLUS_CODE="ATTEPROPLU";
     public static final String VAGONETA_SEGURA_CODE="VAGSEG";
+    public static final String SEGUROS_MASIVO_CODE="SEGMED";
+
     public static final String EMAIL_INVALID ="INVALID";
     public static final String EMAIL_REPETED="REPETED";
    

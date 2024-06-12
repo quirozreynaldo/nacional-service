@@ -64,6 +64,8 @@ public class CsvProcessor {
     private AtenAsisProdemVidaPlusService atenAsisProdemVidaPlusService;
     @Autowired
     private VagonetaSeguraService vagonetaSeguraService;
+    @Autowired
+    private SegurosMasivoService segurosMasivoService;
     //===========================================
     @PostConstruct
    public void excutionMode(){
@@ -739,6 +741,43 @@ public class CsvProcessor {
                 vagonetaSeguraService.createJiraSurvey();
             }
             manageLog.recorArchivoCargado(additionalParam,totalRows-1,Constant.CONFIG_VAGONETA_SEGURA);
+            log.info("____________________FIN DE ARCHIVO_______________________________");
+        }
+    }
+
+    public void segurosMasivoProcess(List<List<String>> csvRows, @Header("additionalParam") String additionalParam,@Header("totalRows") int totalRows) {
+        if (isfirstTime) {
+            headerToIndexMap = createHeaderToIndexMap(csvRows.get(0));
+            isfirstTime = false;
+            log.info("{}" , headerToIndexMap);
+        } else {
+            SegurosMasivo segurosMasivo = new SegurosMasivo();
+            segurosMasivo.setIdProceso(csvRows.get(0).get(headerToIndexMap.get("ID PROCESO")));
+            segurosMasivo.setIdRubro(csvRows.get(0).get(headerToIndexMap.get("ID RUBRO")));
+            segurosMasivo.setSponsor(csvRows.get(0).get(headerToIndexMap.get("SPONSOR")));
+            segurosMasivo.setIdCiudad(csvRows.get(0).get(headerToIndexMap.get("ID CIUDAD")));
+            segurosMasivo.setProducto(csvRows.get(0).get(headerToIndexMap.get("PRODUCTO")));
+            segurosMasivo.setProveedorDeAsistencia(csvRows.get(0).get(headerToIndexMap.get("PROVEEDOR DE ASISTENCIA")));
+            segurosMasivo.setServicio(csvRows.get(0).get(headerToIndexMap.get("SERVICIO")));
+            segurosMasivo.setFechaContacto(csvRows.get(0).get(headerToIndexMap.get("FF HH CONTACTO CON CC")));
+            segurosMasivo.setFechaUsoServicio(csvRows.get(0).get(headerToIndexMap.get("FF HH USO DEL SERVICIO")));
+            segurosMasivo.setIdDocumento(csvRows.get(0).get(headerToIndexMap.get("ID_DOCUMENTO")));
+            segurosMasivo.setNombreSolicitante(csvRows.get(0).get(headerToIndexMap.get("NOMBRE SOLICITANTE")));
+            segurosMasivo.setTelefono(csvRows.get(0).get(headerToIndexMap.get("TELEFONO")));
+            segurosMasivo.setEmail(csvRows.get(0).get(headerToIndexMap.get("EMAIL")));
+            manageLog.recordSegurosMasivo(Utils.convertSegurosMasivo(segurosMasivo, additionalParam));
+            if (!testMode){
+                segurosMasivoService.addSegurosMasivo(segurosMasivo);
+                segurosMasivoService.setFileName(additionalParam);
+            }
+            log.info("{}" , segurosMasivo);
+        }
+        timesInvoked++;
+        if (timesInvoked==totalRows){
+            if (!testMode){
+                segurosMasivoService.createJiraSurvey();
+            }
+            manageLog.recorArchivoCargado(additionalParam,totalRows-1,Constant.CONFIG_SEGUROS_MASIVO);
             log.info("____________________FIN DE ARCHIVO_______________________________");
         }
     }
