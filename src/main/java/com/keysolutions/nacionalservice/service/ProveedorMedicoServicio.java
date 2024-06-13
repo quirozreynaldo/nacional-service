@@ -111,7 +111,7 @@ public class ProveedorMedicoServicio {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2("NA");
@@ -325,8 +325,11 @@ public class ProveedorMedicoServicio {
         replacements.put("pro_value", Utils.valueOrNA(proveedorMedico.getProducto()));
         replacements.put("iprv_value", Utils.valueOrNA(proveedorMedico.getIdProveedor()));
         replacements.put("pol_value", Utils.valueOrNA(proveedorMedico.getPoliza()));
-
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.PROVEEDOR_MEDICO_CODE, proveedorMedico.getFechaContacto(), proveedorMedico.getTelefono())));
+        if(proveedorMedico.getUniqueId()!=null && proveedorMedico.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",proveedorMedico.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.PROVEEDOR_MEDICO_CODE, proveedorMedico.getFechaContacto(), proveedorMedico.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

@@ -109,7 +109,7 @@ public class CentroRehaOdontoService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2( "NA");
@@ -300,7 +300,11 @@ public class CentroRehaOdontoService {
         replacements.put("pln_value", Utils.valueOrNA(centroRehaOdonto.getPlan()));
         replacements.put("pac_value", Utils.valueOrNA(centroRehaOdonto.getPaciente()));
         replacements.put("tadi_value", Utils.valueOrNA(centroRehaOdonto.getTelefonoAdicional()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.CENTRO_REHA_ODONTOLOGICA_CODE,centroRehaOdonto.getFechaContacto(),centroRehaOdonto.getTelefono())));
+        if(centroRehaOdonto.getUniqueId()!=null && centroRehaOdonto.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",centroRehaOdonto.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.CENTRO_REHA_ODONTOLOGICA_CODE,centroRehaOdonto.getFechaContacto(),centroRehaOdonto.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

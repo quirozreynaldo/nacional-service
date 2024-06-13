@@ -123,7 +123,7 @@ public class ConsultasReclamosService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");   
                     customFields.setField2("NA");                
@@ -326,7 +326,11 @@ public class ConsultasReclamosService {
         replacements.put("isin_value", Utils.valueOrNA(""));
         replacements.put("icli_value", Utils.valueOrNA(""));
         replacements.put("talt_value", Utils.valueOrNA(""));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.CONSULTAS_RECLAMOS_CODE,consultasReclamos.getFechaContacto(),consultasReclamos.getTelefono())));
+        if(consultasReclamos.getUniqueId()!=null && consultasReclamos.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",consultasReclamos.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.CONSULTAS_RECLAMOS_CODE,consultasReclamos.getFechaContacto(),consultasReclamos.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

@@ -127,9 +127,12 @@ public class VagonetaSeguraService {
         replacements.put("pla_value", Utils.valueOrNA(Utils.convertCharset(vagonetaSegura.getPlaca())));
         replacements.put("talt_value", Utils.valueOrNA(vagonetaSegura.getTelefonoAlternativo()));
         replacements.put("fser_value", Utils.valueOrNA(vagonetaSegura.getFechaServicio()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.VAGONETA_SEGURA_CODE,vagonetaSegura.getFechaContacto(),vagonetaSegura.getTelefono())));
-
-        descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
+        if(vagonetaSegura.getUniqueId()!=null && vagonetaSegura.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",vagonetaSegura.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.VAGONETA_SEGURA_CODE,vagonetaSegura.getFechaContacto(),vagonetaSegura.getTelefono())));
+        }
+         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();
     }

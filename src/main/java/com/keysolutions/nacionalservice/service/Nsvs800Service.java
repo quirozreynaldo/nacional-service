@@ -118,7 +118,7 @@ public class Nsvs800Service {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2("NA");
@@ -317,7 +317,11 @@ public class Nsvs800Service {
         replacements.put("t_value", Utils.valueOrNA(nsvs800.getTelefono()));
         replacements.put("e_value", Utils.valueOrNA(nsvs800.getEmail()));
         replacements.put("ipol_value", Utils.valueOrNA(nsvs800.getIdPoliza()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.NSVS800_CODE, nsvs800.getFechaContacto(), nsvs800.getTelefono())));
+        if(nsvs800.getUniqueId()!=null && nsvs800.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",nsvs800.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.NSVS800_CODE, nsvs800.getFechaContacto(), nsvs800.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

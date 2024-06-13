@@ -128,8 +128,11 @@ public class AtenAsisProdemVidaPlusService {
         replacements.put("prv_value", Utils.valueOrNA(atenAsisProdemVidaPlus.getProveedor()));
         replacements.put("idoc_value", Utils.valueOrNA(atenAsisProdemVidaPlus.getIdDocumento()));
         replacements.put("esp_value", Utils.valueOrNA(atenAsisProdemVidaPlus.getEspecialidad()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ATEN_ASIS_PROD_VIDA_PLUS_CODE,atenAsisProdemVidaPlus.getFechaContacto(),atenAsisProdemVidaPlus.getTelefono())));
-
+        if(atenAsisProdemVidaPlus.getUniqueId()!=null && atenAsisProdemVidaPlus.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",atenAsisProdemVidaPlus.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ATEN_ASIS_PROD_VIDA_PLUS_CODE,atenAsisProdemVidaPlus.getFechaContacto(),atenAsisProdemVidaPlus.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

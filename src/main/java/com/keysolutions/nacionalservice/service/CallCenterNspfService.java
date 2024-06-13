@@ -111,8 +111,11 @@ public class CallCenterNspfService {
         replacements.put("fcon_value", Utils.valueOrNA(callCenterNspf.getFechaContacto() ));
         replacements.put("isin_value", Utils.valueOrNA(Utils.convertCharset(callCenterNspf.getIdSiniestro())));
         replacements.put("icli_value", Utils.valueOrNA(callCenterNspf.getIdCliente()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.CALLCENTER_NSPF_CODE,callCenterNspf.getFechaContacto(),callCenterNspf.getIdCliente())));
-   
+        if(callCenterNspf.getUniqueId()!=null && callCenterNspf.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",callCenterNspf.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.CALLCENTER_NSPF_CODE,callCenterNspf.getFechaContacto(),callCenterNspf.getIdCliente())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

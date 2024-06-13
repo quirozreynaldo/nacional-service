@@ -470,4 +470,59 @@ public class ManageReminder {
         }
         return result;
     }
+
+    public List<SegurosMasivoDb> retrieveSegurosMasivoReminder(){
+        String sqlSelect="select DISTINCT cr.seguros_masivo_id   , " +
+                " cr.id_proceso  , " +
+                " cr.id_rubro    , " +
+                " cr.sponsor     , " +
+                " cr.id_ciudad   , " +
+                " cr.producto    , " +
+                " cr.proveedor_asistencia, " +
+                " cr.servicio    , " +
+                " cr.fecha_contacto      , " +
+                " cr.fecha_uso_servicio  , " +
+                " cr.id_documento, " +
+                " cr.nombre_solicitante  , " +
+                " cr.telefono    , " +
+                " cr.email       , " +
+                " cr.nombre_archivo      , " +
+                " cr.status      , " +
+                " cr.record_date from deaxs_record.ns_recipient_log nrl,deaxs_record.ns_contact_log ncl  ,deaxs_record.ns_seguros_masivo cr  " +
+                " where nrl.responded is null  " +
+                "   and nrl.service_complain ='SEGUROS_MASIVO'  " +
+                "   and ncl.service_complain ='SEGUROS_MASIVO'  " +
+                "   and nrl.recipient_id = ncl.recipient_id   " +
+                "   and ncl.first_name =cr.email  " +
+                "   and ncl.nombre_archivo =cr.nombre_archivo  " +
+                "   and cr.seguros_masivo_id =ncl.unique_id  " +
+                "   and cr.record_date BETWEEN CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 00:00:00')  " +
+                "   and CONCAT(DATE_SUB(CURDATE(), INTERVAL 2 DAY), ' 23:59:59') ";
+        List<SegurosMasivoDb> result = new ArrayList<>();
+        try {
+            result = jdbcTemplate.query(sqlSelect, (rs, row) ->
+                    new SegurosMasivoDb(rs.getString("seguros_masivo_id"),
+                            rs.getString("id_proceso"),
+                            rs.getString("id_rubro"),
+                            rs.getString("sponsor"),
+                            rs.getString("id_ciudad"),
+                            rs.getString("producto"),
+                            rs.getString("proveedor_asistencia"),
+                            rs.getString("servicio"),
+                            rs.getString("fecha_contacto"),
+                            rs.getString("fecha_uso_servicio"),
+                            rs.getString("id_documento"),
+                            rs.getString("nombre_solicitante"),
+                            rs.getString("telefono"),
+                            rs.getString("email"),
+                            rs.getString("seguros_masivo_id"),//uniqueId
+                            rs.getString("nombre_archivo"),
+                            rs.getString("status"),
+                            rs.getTimestamp("record_date")
+                    ), new String[]{});
+        } catch (Exception ex) {
+            log.error("retrieveSegurosMasivoReminder fail", ex);
+        }
+        return result;
+    }
 }

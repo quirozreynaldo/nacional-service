@@ -119,7 +119,7 @@ public class AtencionInicialService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2(data.getPlaca() != null ? data.getPlaca() : "NA");
@@ -325,8 +325,11 @@ public class AtencionInicialService {
         replacements.put("ipol_value", Utils.valueOrNA(atencionInicial.getIdPoliza()));
         replacements.put("pla_value", Utils.valueOrNA(atencionInicial.getPlaca()));
         replacements.put("ieje_value", Utils.valueOrNA(atencionInicial.getIdEjecutivo()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ATENCION_INICIAL_CODE, atencionInicial.getFechaContacto(), atencionInicial.getTelefono())));
-
+        if(atencionInicial.getUniqueId()!=null && atencionInicial.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",atencionInicial.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ATENCION_INICIAL_CODE, atencionInicial.getFechaContacto(), atencionInicial.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

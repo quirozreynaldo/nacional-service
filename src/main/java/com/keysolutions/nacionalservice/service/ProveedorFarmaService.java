@@ -110,7 +110,7 @@ public class ProveedorFarmaService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2("NA");
@@ -324,7 +324,11 @@ public class ProveedorFarmaService {
         replacements.put("pro_value", Utils.valueOrNA(proveedorFarma.getProducto()));
         replacements.put("iprv_value", Utils.valueOrNA(proveedorFarma.getIdProveedor()));
         replacements.put("pol_value", Utils.valueOrNA(proveedorFarma.getPoliza()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.PROVEEDOR_FARMA_CODE,proveedorFarma.getFechaContacto(),proveedorFarma.getTelefono())));
+        if(proveedorFarma.getUniqueId()!=null && proveedorFarma.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",proveedorFarma.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.PROVEEDOR_FARMA_CODE,proveedorFarma.getFechaContacto(),proveedorFarma.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

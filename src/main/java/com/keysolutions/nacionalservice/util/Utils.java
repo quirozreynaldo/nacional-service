@@ -1,8 +1,13 @@
 package com.keysolutions.nacionalservice.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.keysolutions.nacionalservice.model.*;
+import com.keysolutions.nacionalservice.model.jira.RequestFieldValues;
+import com.keysolutions.nacionalservice.model.jira.TicketRequest;
+import com.keysolutions.nacionalservice.model.log.*;
+import com.keysolutions.nacionalservice.model.survey.Contact;
+
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
@@ -11,13 +16,6 @@ import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.keysolutions.nacionalservice.model.*;
-import com.keysolutions.nacionalservice.model.jira.RequestFieldValues;
-import com.keysolutions.nacionalservice.model.jira.TicketRequest;
-import com.keysolutions.nacionalservice.model.log.*;
-import com.keysolutions.nacionalservice.model.survey.Contact;
 
 public class Utils {
     public static AsistenciaVialDb convertAsistenciaVialDb(AsistenciaVial asistenciaVial, String nombreArchivo) {
@@ -30,7 +28,11 @@ public class Utils {
         asistenciaVialDb.setIdCiudad(asistenciaVial.getIdCiudad());
         asistenciaVialDb.setIdOperador(asistenciaVial.getIdOperador());
         asistenciaVialDb.setIdSiniestro(asistenciaVial.getIdSiniestro());
-        asistenciaVialDb.setFechaContacto(stringToDate(asistenciaVial.getFechaContacto()));
+        if (asistenciaVial.getFechaContacto()!=null && asistenciaVial.getFechaContacto().trim().length() > 0) {
+            asistenciaVialDb.setFechaContacto(stringToDate(asistenciaVial.getFechaContacto()));
+        }else{
+            asistenciaVialDb.setFechaContacto(getCurrentDate());
+        }
         asistenciaVialDb.setNombreTitular(convertCharset(asistenciaVial.getNombreTitular()));
         asistenciaVialDb.setNombreSolicitante(convertCharset(asistenciaVial.getNombreSolicitante()));
         asistenciaVialDb.setTelefono(asistenciaVial.getTelefono());
@@ -50,7 +52,11 @@ public class Utils {
         nsvs800Db.setIdCiudad(nsvs800.getIdCiudad());
         nsvs800Db.setIdOperador(convertCharset(nsvs800.getIdOperador()));
         nsvs800Db.setServicio(convertCharset(nsvs800.getServicio()));
-        nsvs800Db.setFechaContacto(stringToDate(nsvs800.getFechaContacto()));
+        if (nsvs800Db.getFechaContacto()!=null && nsvs800Db.getFechaContacto().trim().length() > 0) {
+            nsvs800Db.setFechaContacto(stringToDate(nsvs800.getFechaContacto()));
+        }else{
+            nsvs800Db.setFechaContacto(getCurrentDate());
+        }
         nsvs800Db.setIdObjeto(nsvs800.getIdObjeto());
         nsvs800Db.setNombreTitular(convertCharset(nsvs800.getNombreTitular()));
         nsvs800Db.setNombreSolicitante(convertCharset(nsvs800.getNombreSolicitante()));
@@ -71,7 +77,11 @@ public class Utils {
         consultasReclamosDb.setIdCiudad(consultasReclamos.getIdCiudad());
         consultasReclamosDb.setIdOperador(convertCharset(consultasReclamos.getIdOperador()));
         consultasReclamosDb.setServicio(convertCharset(consultasReclamos.getServicio()));
-        consultasReclamosDb.setFechaContacto(stringToDate(consultasReclamos.getFechaContacto()));
+        if (consultasReclamosDb.getFechaContacto()!=null && consultasReclamosDb.getFechaContacto().trim().length() > 0) {
+            consultasReclamosDb.setFechaContacto(stringToDate(consultasReclamos.getFechaContacto()));
+        }else{
+            consultasReclamosDb.setFechaContacto(getCurrentDate());
+        }
         consultasReclamosDb.setFechaCierreFreshDesk(stringToDate(consultasReclamos.getFechaCierreFreshDesk()));
         consultasReclamosDb.setIdObjeto(consultasReclamos.getIdObjeto());
         consultasReclamosDb.setNombreTitular(convertCharset(consultasReclamos.getNombreTitular()));
@@ -113,7 +123,11 @@ public class Utils {
         atencionInicialDb.setIdCiudad(atencionInicial.getIdCiudad());
         atencionInicialDb.setIdOperador(convertCharset(atencionInicial.getIdOperador()));
         atencionInicialDb.setIdEjecutivo(convertCharset(atencionInicial.getIdEjecutivo()));
-        atencionInicialDb.setFechaContacto(stringToDate(atencionInicial.getFechaContacto()));
+        if (atencionInicialDb.getFechaContacto()!=null && atencionInicialDb.getFechaContacto().trim().length() > 0) {
+            atencionInicialDb.setFechaContacto(stringToDate(atencionInicial.getFechaContacto()));
+        }else{
+            atencionInicialDb.setFechaContacto(getCurrentDate());
+        }
         atencionInicialDb.setPlaca(atencionInicial.getPlaca());
         atencionInicialDb.setNombreTitular(convertCharset(atencionInicial.getNombreTitular()));
         atencionInicialDb.setNombreSolicitante(atencionInicial.getNombreSolicitante());
@@ -152,7 +166,11 @@ public class Utils {
         accidentesPersonalesDb.setIdCiudad(accidentesPersonales.getIdCiudad());
         accidentesPersonalesDb.setIdOperador(convertCharset(accidentesPersonales.getIdOperador()));
         accidentesPersonalesDb.setServicio(convertCharset(accidentesPersonales.getServicio()));
-        accidentesPersonalesDb.setFechaContacto(stringToDate(accidentesPersonales.getFechaContacto()));
+        if (accidentesPersonalesDb.getFechaContacto()!=null && accidentesPersonalesDb.getFechaContacto().trim().length() > 0) {
+            accidentesPersonalesDb.setFechaContacto(stringToDate(accidentesPersonales.getFechaContacto()));
+        }else{
+            accidentesPersonalesDb.setFechaContacto(getCurrentDate());
+        }
         accidentesPersonalesDb.setPlaca(accidentesPersonales.getPlaca());
         accidentesPersonalesDb.setNombreTitular(convertCharset(accidentesPersonales.getNombreTitular()));
         accidentesPersonalesDb.setNombreSolicitante(convertCharset(accidentesPersonales.getNombreSolicitante()));
@@ -172,7 +190,11 @@ public class Utils {
         callCenterNspfDb.setIdCiudad(callCenterNspf.getIdCiudad());
         callCenterNspfDb.setIdSiniestro(convertCharset(callCenterNspf.getIdSiniestro()));
         callCenterNspfDb.setIdOperador(convertCharset(callCenterNspf.getIdOperador()));
-        callCenterNspfDb.setFechaContacto(stringToDate(callCenterNspf.getFechaContacto()));
+        if (callCenterNspfDb.getFechaContacto()!=null && callCenterNspfDb.getFechaContacto().trim().length() > 0) {
+            callCenterNspfDb.setFechaContacto(stringToDate(callCenterNspf.getFechaContacto()));
+        }else{
+            callCenterNspfDb.setFechaContacto(getCurrentDate());
+        }
         callCenterNspfDb.setIdCliente(callCenterNspf.getIdCliente());
         callCenterNspfDb.setNombreArchivo(nombreArchivo);
         return callCenterNspfDb;
@@ -188,7 +210,11 @@ public class Utils {
         inmedicalAtuMedidaDb.setProveedor(convertCharset(inmedicalAtuMedida.getProveedor()));
         inmedicalAtuMedidaDb.setIdCentro(convertCharset(inmedicalAtuMedida.getIdCentro()));
         inmedicalAtuMedidaDb.setServicio(convertCharset(inmedicalAtuMedida.getServicio()));
-        inmedicalAtuMedidaDb.setFechaContacto(stringToDate(inmedicalAtuMedida.getFechaContacto()));
+        if (inmedicalAtuMedidaDb.getFechaContacto()!=null && inmedicalAtuMedidaDb.getFechaContacto().trim().length() > 0) {
+            inmedicalAtuMedidaDb.setFechaContacto(stringToDate(inmedicalAtuMedida.getFechaContacto()));
+        }else{
+            inmedicalAtuMedidaDb.setFechaContacto(getCurrentDate());
+        }
         inmedicalAtuMedidaDb.setIdDocumento(inmedicalAtuMedida.getIdDocumento());
         inmedicalAtuMedidaDb.setNombreTitular(convertCharset(inmedicalAtuMedida.getNombreTitular()));
         inmedicalAtuMedidaDb.setNombreSolicitante(convertCharset(inmedicalAtuMedida.getNombreSolicitante()));
@@ -225,7 +251,11 @@ public class Utils {
         inmedicalBancoGanaderoDb.setProveedor(convertCharset(inmedicalBancoGanadero.getProveedor()));
         inmedicalBancoGanaderoDb.setIdCentro(convertCharset(inmedicalBancoGanadero.getIdCentro()));
         inmedicalBancoGanaderoDb.setServicio(convertCharset(inmedicalBancoGanadero.getServicio()));
-        inmedicalBancoGanaderoDb.setFechaContacto(stringToDate(inmedicalBancoGanadero.getFechaContacto()));
+        if (inmedicalBancoGanaderoDb.getFechaContacto()!=null && inmedicalBancoGanaderoDb.getFechaContacto().trim().length() > 0) {
+            inmedicalBancoGanaderoDb.setFechaContacto(stringToDate(inmedicalBancoGanadero.getFechaContacto()));
+        }else{
+            inmedicalBancoGanaderoDb.setFechaContacto(getCurrentDate());
+        }
         inmedicalBancoGanaderoDb.setIdDocumento(inmedicalBancoGanadero.getIdDocumento());
         inmedicalBancoGanaderoDb.setNombreTitular(convertCharset(inmedicalBancoGanadero.getNombreTitular()));
         inmedicalBancoGanaderoDb.setNombreSolicitante(convertCharset(inmedicalBancoGanadero.getNombreSolicitante()));
@@ -244,7 +274,11 @@ public class Utils {
         tallersE2eDb.setIdCiudad(tallersE2e.getIdCiudad());
         tallersE2eDb.setIdOperador(convertCharset(tallersE2e.getIdOperador()));
         tallersE2eDb.setServicio(convertCharset(tallersE2e.getServicio()));
-        tallersE2eDb.setFechaContacto(stringToDate(tallersE2e.getFechaContacto()));
+        if (tallersE2eDb.getFechaContacto()!=null && tallersE2eDb.getFechaContacto().trim().length() > 0) {
+            tallersE2eDb.setFechaContacto(stringToDate(tallersE2e.getFechaContacto()));
+        }else{
+            tallersE2eDb.setFechaContacto(getCurrentDate());
+        }
         tallersE2eDb.setPeriodo(convertCharset(tallersE2e.getPeriodo()));
         tallersE2eDb.setNombreTitular(convertCharset(tallersE2e.getNombreTitular()));
         tallersE2eDb.setNombreSolicitante(convertCharset(tallersE2e.getNombreSolicitante()));
@@ -291,7 +325,11 @@ public class Utils {
         centroRehaOdontoDb.setIdCiudad(centroRehaOdonto.getIdCiudad());
         centroRehaOdontoDb.setIdOperador(convertCharset(centroRehaOdonto.getIdOperador()));
         centroRehaOdontoDb.setCentroMedico(convertCharset(centroRehaOdonto.getCentroMedico()));
-        centroRehaOdontoDb.setFechaContacto(stringToDate(centroRehaOdonto.getFechaContacto()));
+        if (centroRehaOdontoDb.getFechaContacto()!=null && centroRehaOdontoDb.getFechaContacto().trim().length() > 0) {
+            centroRehaOdontoDb.setFechaContacto(stringToDate(centroRehaOdonto.getFechaContacto()));
+        }else{
+            centroRehaOdontoDb.setFechaContacto(getCurrentDate());
+        }
         centroRehaOdontoDb.setFechaSalida(stringToDate(centroRehaOdonto.getFechaSalida()));
         centroRehaOdontoDb.setPaciente(convertCharset(centroRehaOdonto.getPaciente()));
         centroRehaOdontoDb.setPlan(convertCharset(centroRehaOdonto.getPlan()));
@@ -329,7 +367,11 @@ public class Utils {
         provServicioMedicoDb.setProducto(convertCharset(provServicioMedico.getProducto()));
         provServicioMedicoDb.setServicio(convertCharset(provServicioMedico.getServicio()));
         provServicioMedicoDb.setFechaDenuncia(stringToDate(provServicioMedico.getFechaDenuncia()));
-        provServicioMedicoDb.setFechaContacto(stringToDate(provServicioMedico.getFechaContacto()));
+        if (provServicioMedicoDb.getFechaContacto()!=null && provServicioMedicoDb.getFechaContacto().trim().length() > 0) {
+            provServicioMedicoDb.setFechaContacto(stringToDate(provServicioMedico.getFechaContacto()));
+        }else{
+            provServicioMedicoDb.setFechaContacto(getCurrentDate());
+        }
         provServicioMedicoDb.setIdEjecutivo(convertCharset(provServicioMedico.getIdEjecutivo()));
         provServicioMedicoDb.setNombreAsegurado(convertCharset(provServicioMedico.getNombreAsegurado()));
         provServicioMedicoDb.setNombreSolicitante(convertCharset(provServicioMedico.getNombreSolicitante()));
@@ -372,7 +414,11 @@ public class Utils {
         proveedorMedicoDb.setProducto(convertCharset(proveedorMedico.getProducto()));
         proveedorMedicoDb.setServicio(convertCharset(proveedorMedico.getServicio()));
         proveedorMedicoDb.setFechaDenuncia(stringToDate(proveedorMedico.getFechaDenuncia()));
-        proveedorMedicoDb.setFechaContacto(stringToDate(proveedorMedico.getFechaContacto()));
+        if (proveedorMedicoDb.getFechaContacto()!=null && proveedorMedicoDb.getFechaContacto().trim().length() > 0) {
+            proveedorMedicoDb.setFechaContacto(stringToDate(proveedorMedico.getFechaContacto()));
+        }else{
+            proveedorMedicoDb.setFechaContacto(getCurrentDate());
+        }
         proveedorMedicoDb.setIdEjecutivo(convertCharset(proveedorMedico.getIdEjecutivo()));
         proveedorMedicoDb.setNombreAsegurado(convertCharset(proveedorMedico.getNombreAsegurado()));
         proveedorMedicoDb.setNombreSolicitante(convertCharset(proveedorMedico.getNombreSolicitante()));
@@ -415,7 +461,11 @@ public class Utils {
         proveedorFarmaDb.setProducto(convertCharset(proveedorFarma.getProducto()));
         proveedorFarmaDb.setServicio(convertCharset(proveedorFarma.getServicio()));
         proveedorFarmaDb.setFechaDenuncia(stringToDate(proveedorFarma.getFechaDenuncia()));
-        proveedorFarmaDb.setFechaContacto(stringToDate(proveedorFarma.getFechaContacto()));
+        if (proveedorFarmaDb.getFechaContacto()!=null && proveedorFarmaDb.getFechaContacto().trim().length() > 0) {
+            proveedorFarmaDb.setFechaContacto(stringToDate(proveedorFarma.getFechaContacto()));
+        }else{
+            proveedorFarmaDb.setFechaContacto(getCurrentDate());
+        }
         proveedorFarmaDb.setIdEjecutivo(convertCharset(proveedorFarma.getIdEjecutivo()));
         proveedorFarmaDb.setNombreAsegurado(convertCharset(proveedorFarma.getNombreAsegurado()));
         proveedorFarmaDb.setNombreSolicitante(convertCharset(proveedorFarma.getNombreSolicitante()));
@@ -460,7 +510,11 @@ public class Utils {
         asistenciaMedDomiDb.setProducto(asistenciaMedDomi.getProducto());
         asistenciaMedDomiDb.setServicio(convertCharset(asistenciaMedDomi.getServicio()));
         asistenciaMedDomiDb.setDesenlace(convertCharset(asistenciaMedDomi.getDesenlace()));
-        asistenciaMedDomiDb.setFechaContacto(stringToDate(asistenciaMedDomi.getFechaContacto()));
+        if (asistenciaMedDomiDb.getFechaContacto()!=null && asistenciaMedDomiDb.getFechaContacto().trim().length() > 0) {
+            asistenciaMedDomiDb.setFechaContacto(stringToDate(asistenciaMedDomi.getFechaContacto()));
+        }else{
+            asistenciaMedDomiDb.setFechaContacto(getCurrentDate());
+        }
         asistenciaMedDomiDb.setFechaArribo(stringToDate(asistenciaMedDomi.getFechaArribo()));
         asistenciaMedDomiDb.setIncidencia(asistenciaMedDomi.getIncidencia());
         asistenciaMedDomiDb.setUnidadAsignada(convertCharset(asistenciaMedDomi.getUnidadAsignada()));
@@ -485,7 +539,11 @@ public class Utils {
         asistenciaMedDomiAmbuDb.setProducto(asistenciaMedDomiAmbu.getProducto());
         asistenciaMedDomiAmbuDb.setServicio(convertCharset(asistenciaMedDomiAmbu.getServicio()));
         asistenciaMedDomiAmbuDb.setDesenlace(convertCharset(asistenciaMedDomiAmbu.getDesenlace()));
-        asistenciaMedDomiAmbuDb.setFechaContacto(stringToDate(asistenciaMedDomiAmbu.getFechaContacto()));
+        if (asistenciaMedDomiAmbuDb.getFechaContacto()!=null && asistenciaMedDomiAmbuDb.getFechaContacto().trim().length() > 0) {
+            asistenciaMedDomiAmbuDb.setFechaContacto(stringToDate(asistenciaMedDomiAmbu.getFechaContacto()));
+        }else{
+            asistenciaMedDomiAmbuDb.setFechaContacto(getCurrentDate());
+        }
         asistenciaMedDomiAmbuDb.setFechaArribo(stringToDate(asistenciaMedDomiAmbu.getFechaArribo()));
         asistenciaMedDomiAmbuDb.setIncidencia(asistenciaMedDomiAmbu.getIncidencia());
         asistenciaMedDomiAmbuDb.setUnidadAsignada(convertCharset(asistenciaMedDomiAmbu.getUnidadAsignada()));
@@ -511,7 +569,11 @@ public class Utils {
         orientacionMedTelefDb.setContactoCovid(orientacionMedTelef.getContactoCovid());
         orientacionMedTelefDb.setDiagnosticoPresuntivo(convertCharset(orientacionMedTelef.getDiagnosticoPresuntivo()));
         orientacionMedTelefDb.setConducta(convertCharset(orientacionMedTelef.getConducta()));
-        orientacionMedTelefDb.setFechaContacto(stringToDate(orientacionMedTelef.getFechaContacto()));
+        if (orientacionMedTelefDb.getFechaContacto()!=null && orientacionMedTelefDb.getFechaContacto().trim().length() > 0) {
+            orientacionMedTelefDb.setFechaContacto(stringToDate(orientacionMedTelef.getFechaContacto()));
+        }else{
+            orientacionMedTelefDb.setFechaContacto(getCurrentDate());
+        }
         orientacionMedTelefDb.setMedico(convertCharset(orientacionMedTelef.getMedico()));
         orientacionMedTelefDb.setPaciente(orientacionMedTelef.getPaciente());
         orientacionMedTelefDb.setTelefono(orientacionMedTelef.getTelefono());
@@ -534,7 +596,11 @@ public class Utils {
         atenAsisProdemVidaPlusDb.setIdCiudad(atenAsisProdemVidaPlus.getIdCiudad());
         atenAsisProdemVidaPlusDb.setIdOperador(convertCharset(atenAsisProdemVidaPlus.getIdOperador()));
         atenAsisProdemVidaPlusDb.setServicio(convertCharset(atenAsisProdemVidaPlus.getServicio()));
-        atenAsisProdemVidaPlusDb.setFechaContacto(stringToDate(atenAsisProdemVidaPlus.getFechaContacto()));
+        if (atenAsisProdemVidaPlusDb.getFechaContacto()!=null && atenAsisProdemVidaPlusDb.getFechaContacto().trim().length() > 0) {
+            atenAsisProdemVidaPlusDb.setFechaContacto(stringToDate(atenAsisProdemVidaPlus.getFechaContacto()));
+        }else{
+            atenAsisProdemVidaPlusDb.setFechaContacto(getCurrentDate());
+        }
         atenAsisProdemVidaPlusDb.setNombreTitular(convertCharset(atenAsisProdemVidaPlus.getNombreTitular()));
         atenAsisProdemVidaPlusDb.setTelefono(atenAsisProdemVidaPlus.getTelefono());
         atenAsisProdemVidaPlusDb.setIdDocumento(convertCharset(atenAsisProdemVidaPlus.getIdDocumento()));
@@ -553,7 +619,11 @@ public class Utils {
         vagonetaSeguraDb.setIdCiudad(vagonetaSegura.getIdCiudad());
         vagonetaSeguraDb.setIdOperador(convertCharset(vagonetaSegura.getIdOperador()));
         vagonetaSeguraDb.setServicio(convertCharset(vagonetaSegura.getServicio()));
-        vagonetaSeguraDb.setFechaContacto(stringToDate(vagonetaSegura.getFechaContacto()));
+        if (vagonetaSeguraDb.getFechaContacto()!=null && vagonetaSeguraDb.getFechaContacto().trim().length() > 0) {
+            vagonetaSeguraDb.setFechaContacto(stringToDate(vagonetaSegura.getFechaContacto()));
+        }else{
+            vagonetaSeguraDb.setFechaContacto(getCurrentDate());
+        }
         vagonetaSeguraDb.setFechaServicio(stringToDate(vagonetaSegura.getFechaServicio()));
         vagonetaSeguraDb.setNombreTitular(convertCharset(vagonetaSegura.getNombreTitular()));
         vagonetaSeguraDb.setTelefono(vagonetaSegura.getTelefono());
@@ -575,7 +645,11 @@ public class Utils {
         segurosMasivoDb.setProducto(convertCharset(segurosMasivo.getProducto()));
         segurosMasivoDb.setProveedorDeAsistencia(convertCharset(segurosMasivo.getProveedorDeAsistencia()));
         segurosMasivoDb.setServicio(convertCharset(segurosMasivo.getServicio()));
-        segurosMasivoDb.setFechaContacto(stringToDate(segurosMasivo.getFechaContacto()));
+        if (segurosMasivoDb.getFechaContacto()!=null && segurosMasivoDb.getFechaContacto().trim().length() > 0) {
+            segurosMasivoDb.setFechaContacto(stringToDate(segurosMasivo.getFechaContacto()));
+        }else{
+            segurosMasivoDb.setFechaContacto(getCurrentDate());
+        }
         segurosMasivoDb.setFechaUsoServicio(stringToDate(segurosMasivo.getFechaUsoServicio()));
         segurosMasivoDb.setIdDocumento(convertCharset(segurosMasivo.getIdDocumento()));
         segurosMasivoDb.setNombreSolicitante(convertCharset(segurosMasivo.getNombreSolicitante()));
@@ -583,6 +657,24 @@ public class Utils {
         segurosMasivoDb.setEmail(segurosMasivo.getEmail());
         segurosMasivoDb.setNombreArchivo(nombreArchivo);
         return segurosMasivoDb;
+    }
+    public static SegurosMasivo convertSegurosMasivoReminder(SegurosMasivoDb segurosMasivoDb) {
+        SegurosMasivo segurosMasivo = new SegurosMasivo();
+        segurosMasivo.setUniqueId(segurosMasivoDb.getSegurosMasivoId());
+        segurosMasivo.setIdProceso(segurosMasivoDb.getIdProceso());
+        segurosMasivo.setIdRubro(segurosMasivoDb.getIdRubro());
+        segurosMasivo.setSponsor(convertCharset(segurosMasivoDb.getSponsor()));
+        segurosMasivo.setIdCiudad(segurosMasivoDb.getIdCiudad());
+        segurosMasivo.setProducto(convertCharset(segurosMasivoDb.getProducto()));
+        segurosMasivo.setProveedorDeAsistencia(convertCharset(segurosMasivoDb.getProveedorDeAsistencia()));
+        segurosMasivo.setServicio(convertCharset(segurosMasivoDb.getServicio()));
+        segurosMasivo.setFechaContacto(segurosMasivoDb.getFechaContacto());
+        segurosMasivo.setFechaUsoServicio(stringToDate(segurosMasivoDb.getFechaUsoServicio()));
+        segurosMasivo.setIdDocumento(convertCharset(segurosMasivoDb.getIdDocumento()));
+        segurosMasivo.setNombreSolicitante(convertCharset(segurosMasivoDb.getNombreSolicitante()));
+        segurosMasivo.setTelefono(segurosMasivoDb.getTelefono());
+        segurosMasivo.setEmail(segurosMasivoDb.getEmail());
+        return segurosMasivo;
     }
     public static String convertirFecha(String fechaOriginal) {
         System.out.println("fecha: " + fechaOriginal);
@@ -681,6 +773,13 @@ public class Utils {
     public static String getCurrentDateTimeFormatted() {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+        String formattedDateTime = now.format(formatter);
+        return formattedDateTime;
+    }
+
+    public static String getCurrentDate() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String formattedDateTime = now.format(formatter);
         return formattedDateTime;
     }

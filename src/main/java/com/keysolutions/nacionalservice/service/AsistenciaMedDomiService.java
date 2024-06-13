@@ -146,8 +146,11 @@ public class AsistenciaMedDomiService {
         replacements.put("acl_value", Utils.valueOrNA(asistenciaMedDomi.getAclaraciones()));
         replacements.put("dat_value", Utils.valueOrNA(asistenciaMedDomi.getDireccionAtencion()));
 
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ASISTENCIA_MED_DOMI_CODE,asistenciaMedDomi.getFechaContacto(),asistenciaMedDomi.getTelefono())));
-
+        if(asistenciaMedDomi.getUniqueId()!=null && asistenciaMedDomi.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",asistenciaMedDomi.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ASISTENCIA_MED_DOMI_CODE,asistenciaMedDomi.getFechaContacto(),asistenciaMedDomi.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

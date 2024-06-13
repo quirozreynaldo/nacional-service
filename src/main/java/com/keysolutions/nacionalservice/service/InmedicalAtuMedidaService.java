@@ -109,7 +109,7 @@ public class InmedicalAtuMedidaService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2("NA");
@@ -299,7 +299,11 @@ public class InmedicalAtuMedidaService {
         replacements.put("prv_value", Utils.valueOrNA(inmedicalAtuMedida.getProveedor()));
         replacements.put("icen_value", Utils.valueOrNA(inmedicalAtuMedida.getIdCentro()));
         replacements.put("idoc_value", Utils.valueOrNA(inmedicalAtuMedida.getIdDocumento()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.INMEDICAL_ATU_MEDIDA_CODE,inmedicalAtuMedida.getFechaContacto(),inmedicalAtuMedida.getTelefono())));
+        if(inmedicalAtuMedida.getUniqueId()!=null && inmedicalAtuMedida.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",inmedicalAtuMedida.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.INMEDICAL_ATU_MEDIDA_CODE,inmedicalAtuMedida.getFechaContacto(),inmedicalAtuMedida.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

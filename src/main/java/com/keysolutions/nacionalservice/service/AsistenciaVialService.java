@@ -129,8 +129,11 @@ public class AsistenciaVialService {
         replacements.put("pla_value", Utils.valueOrNA(Utils.convertCharset(asistenciaVial.getPlaca())));
         replacements.put("isin_value", Utils.valueOrNA(""));
         replacements.put("talt_value", Utils.valueOrNA(""));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ASISTENCIA_VIAL_CODE,asistenciaVial.getFechaContacto(),asistenciaVial.getTelefono())));
-
+        if(asistenciaVial.getUniqueId()!=null && asistenciaVial.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",asistenciaVial.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ASISTENCIA_VIAL_CODE,asistenciaVial.getFechaContacto(),asistenciaVial.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

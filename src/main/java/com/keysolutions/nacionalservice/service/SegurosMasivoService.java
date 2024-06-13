@@ -110,7 +110,7 @@ public class SegurosMasivoService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2("NA");
@@ -166,7 +166,12 @@ public class SegurosMasivoService {
                     contactsList.add(contact);
                 }
             }
-            contacts.setContacts(contactsList);
+            // Dividir la lista de contactos en lotes de 100 y procesar cada lote
+            int batchSize = 100;
+            for (int i = 0; i < contactsList.size(); i += batchSize) {
+                try {
+                    List<Contact> batch = contactsList.subList(i, Math.min(i + batchSize, contactsList.size()));
+                    contacts.setContacts(batch);
             Succeeded succeeded = surveyMonkeyService.createMultiContacts(contacts, contactListId);
             log.debug("succeeded:{}", succeeded);
             Utils.waitMilliSeconds(500);
@@ -227,7 +232,19 @@ public class SegurosMasivoService {
             SendSurveyResponse sendSurveyResponse =surveyMonkeyService.sendSurvey(sendSurveyRequest, collectorId,messageId);
             log.info("{}", sendSurveyResponse);
             Utils.waitMilliSeconds(500);
-
+                } catch (WebClientResponseException e) {
+                    // Capturar errores relacionados con la respuesta del servidor
+                    log.error("Error al consumir el servicio SurveyMonkey. Código de error: {}", e.getRawStatusCode());
+                    log.error("Respuesta del servidor: {}", e.getResponseBodyAsString());
+                    log.error("{}", segurosMasivoList);
+                    manageLog.recorErrorlog(Utils.createErrorLog("" + e.getRawStatusCode(), e.getResponseBodyAsString(), "sendSurvey", e.getMessage()));
+                } catch (Exception e) {
+                    // Capturar otros errores inesperados
+                    log.error("Error inesperado al consumir el servicio", e);
+                    log.error("{}", segurosMasivoList);
+                    manageLog.recorErrorlog(Utils.createErrorLog(Constant.GENERAL_ERROR_CODE, Constant.GENERAL_ERROR_DESCRIPTION, "sendSurvey", e.getMessage()));
+                }
+            }
 
         } catch (WebClientResponseException e) {
             // Capturar errores relacionados con la respuesta del servidor
@@ -295,7 +312,7 @@ public class SegurosMasivoService {
         replacements.put("irub_value", Utils.valueOrNA(segurosMasivo.getIdRubro()));
         replacements.put("sp_value", Utils.valueOrNA(segurosMasivo.getSponsor()));
         replacements.put("iciu_value", Utils.valueOrNA(segurosMasivo.getIdCiudad()));
-        replacements.put("idprod_value", Utils.valueOrNA(segurosMasivo.getProducto()));
+        replacements.put("prod_value", Utils.valueOrNA(segurosMasivo.getProducto()));
         replacements.put("pa_value", Utils.valueOrNA(segurosMasivo.getProveedorDeAsistencia()));
         replacements.put("ser_value", Utils.valueOrNA(segurosMasivo.getServicio()));
         replacements.put("fcon_value", Utils.valueOrNA(segurosMasivo.getFechaContacto()));
@@ -304,13 +321,17 @@ public class SegurosMasivoService {
         replacements.put("nsol_value", Utils.valueOrNA(segurosMasivo.getNombreSolicitante()));
         replacements.put("t_value", Utils.valueOrNA(segurosMasivo.getTelefono()));
         replacements.put("e_value", Utils.valueOrNA(segurosMasivo.getEmail()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.SEGUROS_MASIVO_CODE,segurosMasivo.getFechaContacto(),segurosMasivo.getTelefono())));
+        if(segurosMasivo.getUniqueId()!=null && segurosMasivo.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",segurosMasivo.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.SEGUROS_MASIVO_CODE,segurosMasivo.getFechaContacto(),segurosMasivo.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/DWVKKNK?ipro=[ipro_value]&irub=[irub_value]&sp=[sp_value]&iciu=[iciu_value]&idprod=[idprod_value]&pa=[pa_value]&ser=[ser_value]&fcon=[fcon_value]&fus=[fus_value]&Idoc=[Idoc_value]&nsol=[nsol_value]&t=[t_value]&e=[e_value]&idT=[idT_value]";
+        return "https://es.research.net/r/DWVKKNK?ipro=[ipro_value]&irub=[irub_value]&sp=[sp_value]&iciu=[iciu_value]&pro=[prod_value]&pa=[pa_value]&ser=[ser_value]&fcon=[fcon_value]&fus=[fus_value]&Idoc=[Idoc_value]&nsol=[nsol_value]&t=[t_value]&e=[e_value]&idT=[idT_value]";
     }
 }

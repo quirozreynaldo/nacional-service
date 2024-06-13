@@ -110,7 +110,7 @@ public class TallersE2eService {
                     Contact contact = new Contact();
                     contact.setEmail(getAliasEmail(data, currentDateTime));
                     contact.setFirstName(data.getEmail());
-                    contact.setLastName(getCodigo(data, currentDateTime));
+                    contact.setLastName(data.getUniqueId()!=null && data.getUniqueId().trim().length() > 0 ? data.getUniqueId(): getCodigo(data, currentDateTime));
                     CustomFields customFields = new CustomFields();
                     customFields.setField1(data.getTelefono() != null ? data.getTelefono() : "NA");
                     customFields.setField2(data.getPlaca() != null ? data.getPlaca() : "NA");
@@ -314,7 +314,12 @@ public class TallersE2eService {
         replacements.put("mar_value", Utils.valueOrNA(tallersE2e.getMarca()));
         replacements.put("mod_value", Utils.valueOrNA(tallersE2e.getModelo()));
         replacements.put("col_value", Utils.valueOrNA(tallersE2e.getColor()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.TALLER_E2E_CODE,tallersE2e.getFechaContacto(),tallersE2e.getTelefono())));
+        if(tallersE2e.getUniqueId()!=null && tallersE2e.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",tallersE2e.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.TALLER_E2E_CODE,tallersE2e.getFechaContacto(),tallersE2e.getTelefono())));
+        }
+
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

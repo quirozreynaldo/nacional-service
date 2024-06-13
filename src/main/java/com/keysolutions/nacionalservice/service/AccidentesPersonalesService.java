@@ -136,9 +136,11 @@ public class AccidentesPersonalesService {
         replacements.put("t_value", Utils.valueOrNA(accidentesPersonales.getTelefono()));
         replacements.put("e_value", Utils.valueOrNA(accidentesPersonales.getEmail()));
         replacements.put("pla_value", Utils.valueOrNA(Utils.convertCharset(accidentesPersonales.getPlaca())));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ACCIDENTES_PERSONALES_CODE,accidentesPersonales.getFechaContacto(),accidentesPersonales.getTelefono())));
-
-
+        if(accidentesPersonales.getUniqueId()!=null && accidentesPersonales.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",accidentesPersonales.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ACCIDENTES_PERSONALES_CODE, accidentesPersonales.getFechaContacto(), accidentesPersonales.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

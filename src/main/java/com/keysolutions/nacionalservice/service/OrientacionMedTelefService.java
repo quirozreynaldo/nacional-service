@@ -143,8 +143,11 @@ public class OrientacionMedTelefService {
         replacements.put("pac_value", Utils.valueOrNA(orientacionMedTelef.getPaciente()));
         replacements.put("obs_value", Utils.valueOrNA(orientacionMedTelef.getObservaciones()));
         replacements.put("acl_value", Utils.valueOrNA(orientacionMedTelef.getAclaraciones()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ORIENTACION_MED_TELEF_CODE,orientacionMedTelef.getFechaContacto(),orientacionMedTelef.getTelefono())));
-
+        if(orientacionMedTelef.getUniqueId()!=null && orientacionMedTelef.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",orientacionMedTelef.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ORIENTACION_MED_TELEF_CODE,orientacionMedTelef.getFechaContacto(),orientacionMedTelef.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

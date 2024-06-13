@@ -146,9 +146,11 @@ public class AsistenciaMedDomiAmbuService {
         replacements.put("uasi_value", Utils.valueOrNA(asistenciaMedAmbuDomi.getUnidadAsignada()));
         replacements.put("acl_value", Utils.valueOrNA(asistenciaMedAmbuDomi.getAclaraciones()));
         replacements.put("dat_value", Utils.valueOrNA(asistenciaMedAmbuDomi.getDireccionAtencion()));
-
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ASISTENCIA_MED_DOMI_AMBU_CODE,asistenciaMedAmbuDomi.getFechaContacto(),asistenciaMedAmbuDomi.getTelefono())));
-
+        if(asistenciaMedAmbuDomi.getUniqueId()!=null && asistenciaMedAmbuDomi.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",asistenciaMedAmbuDomi.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.ASISTENCIA_MED_DOMI_AMBU_CODE,asistenciaMedAmbuDomi.getFechaContacto(),asistenciaMedAmbuDomi.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

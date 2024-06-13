@@ -140,7 +140,11 @@ public class InmedicalBancoGanaderoService {
         replacements.put("prv_value", Utils.valueOrNA(inmedicalBancoGanadero.getProveedor()));
         replacements.put("icen_value", Utils.valueOrNA(inmedicalBancoGanadero.getIdCentro()));
         replacements.put("idoc_value", Utils.valueOrNA(inmedicalBancoGanadero.getIdDocumento()));
-        replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.INMEDICAL_BANCO_GANADERO_CODE,inmedicalBancoGanadero.getFechaContacto(),inmedicalBancoGanadero.getTelefono())));
+        if(inmedicalBancoGanadero.getUniqueId()!=null && inmedicalBancoGanadero.getUniqueId().trim().length() > 0){
+            replacements.put("idT_value",inmedicalBancoGanadero.getUniqueId());
+        }else {
+            replacements.put("idT_value", Utils.valueOrNA(Utils.getCodigoLink(Constant.INMEDICAL_BANCO_GANADERO_CODE,inmedicalBancoGanadero.getFechaContacto(),inmedicalBancoGanadero.getTelefono())));
+        }
         descripcion.append(Utils.replaceURLParameters(getWebLink(), replacements));
 
         return descripcion.toString();

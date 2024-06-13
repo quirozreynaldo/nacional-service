@@ -36,6 +36,8 @@ public class ReminderService {
     @Autowired
     private ProveedorFarmaService proveedorFarmaService;
     @Autowired
+    private SegurosMasivoService segurosMasivoService;
+    @Autowired
     private ManageNacionalData manageNacionalData;
 
     public void executeReminder() {
@@ -151,5 +153,21 @@ public class ReminderService {
        }catch (Exception ex){
            log.info("retrieveProveedorFarmaReminder: {}",ex.getMessage());
        }
+      /*  try {
+            log.info("===================8=====================");
+            manageReminder.retrieveSegurosMasivoReminder().stream().forEach(registro -> {
+                List<SegurosMasivo> lista = new ArrayList<>();
+                SegurosMasivo segurosMasivo = Utils.convertSegurosMasivoReminder(registro);
+                log.info(registro.toString());
+                log.info(segurosMasivo.toString());
+                segurosMasivoService.setFileName("REENVIADO");
+                lista.add(segurosMasivo);
+                segurosMasivoService.sendJira(lista);
+            });
+        }catch (Exception ex){
+            log.info("retrieveSegurosMasivoReminder: {}",ex.getMessage());
+        }
+
+       */
     }
 }
