@@ -153,7 +153,7 @@ public class ReminderService {
        }catch (Exception ex){
            log.info("retrieveProveedorFarmaReminder: {}",ex.getMessage());
        }
-      /*  try {
+        try {
             log.info("===================8=====================");
             manageReminder.retrieveSegurosMasivoReminder().stream().forEach(registro -> {
                 List<SegurosMasivo> lista = new ArrayList<>();
@@ -168,6 +168,6 @@ public class ReminderService {
             log.info("retrieveSegurosMasivoReminder: {}",ex.getMessage());
         }
 
-       */
+
     }
 }
