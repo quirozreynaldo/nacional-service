@@ -138,6 +138,6 @@ public class VagonetaSeguraService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/9Z72QZQ?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&t=[t_value]&pla=[pla_value]&talt=[talt_value]&fser=[fser_value]&idT=[idT_value]";
+        return "https://es.research.net/r/9Z72QZQ?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&pla=[pla_value]&talt=[talt_value]&fser=[fser_value]&idT=[idT_value]";
     }
 }

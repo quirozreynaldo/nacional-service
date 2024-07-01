@@ -724,7 +724,7 @@ public class Utils {
     }
 
     public static boolean containsSpecialCharacters(String input) {
-        String specialCharacters = "áéíóúñÁÉÍÓÚÑº";
+        String specialCharacters = "áéíóúñÁÉÍÓÚÑº\u00A0";
         for (int i = 0; i < input.length(); i++) {
             if (specialCharacters.contains(String.valueOf(input.charAt(i)))) {
                 return true;

@@ -139,6 +139,6 @@ public class AtenAsisProdemVidaPlusService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/N7YZTDV?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&t=[t_value]&prv=[prv_value]&idoc=[idoc_value]&esp=[esp_value]&idT=[idT_value]";
+        return "https://es.research.net/r/N7YZTDV?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&prv=[prv_value]&idoc=[idoc_value]&esp=[esp_value]&idT=[idT_value]";
     }
 }

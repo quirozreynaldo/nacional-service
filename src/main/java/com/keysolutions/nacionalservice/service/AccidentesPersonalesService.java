@@ -147,7 +147,7 @@ public class AccidentesPersonalesService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/XVRYTMT?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&t=[t_value]&e=[e_value]&pla=[pla_value]&idT=[idT_value]";
+        return "https://es.research.net/r/XVRYTMT?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&e=[e_value]&pla=[pla_value]&idT=[idT_value]";
     }
 
     public void setFileName(String fileName) {

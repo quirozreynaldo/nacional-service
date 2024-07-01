@@ -336,7 +336,7 @@ public class ProveedorMedicoServicio {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/XJ3NVP2?irub=[irub_value]&iciu=[iciu_value]&ser=[ser_value]&fcon=[fcon_value]&nsol=[nsol_value]&t=[t_value]&e=[e_value]&ieje=[ieje_value]&nase=[nase_value]&fden=[fden_value]&dia=[dia_value]&int=[int_value]&pro=[pro_value]&iprv=[iprv_value]&pol=[pol_value]&idT=[idT_value]";
+        return "https://es.research.net/r/XJ3NVP2?irub=[irub_value]&t=[t_value]&iciu=[iciu_value]&ser=[ser_value]&fcon=[fcon_value]&nsol=[nsol_value]&e=[e_value]&ieje=[ieje_value]&nase=[nase_value]&fden=[fden_value]&dia=[dia_value]&int=[int_value]&pro=[pro_value]&iprv=[iprv_value]&pol=[pol_value]&idT=[idT_value]";
     }
 
 }

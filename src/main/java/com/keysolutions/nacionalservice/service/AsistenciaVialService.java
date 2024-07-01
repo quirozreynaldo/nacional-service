@@ -140,6 +140,6 @@ public class AsistenciaVialService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/XLCHNDB?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&t=[t_value]&pla=[pla_value]&isin=[isin_value]&talt=[talt_value]&idT=[idT_value]";
+        return "https://es.research.net/r/XLCHNDB?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&pla=[pla_value]&isin=[isin_value]&talt=[talt_value]&idT=[idT_value]";
     }
 }

@@ -336,7 +336,7 @@ public class AtencionInicialService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/M5H3YKC?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&t=[t_value]&e=[e_value]&ipol=[ipol_value]&pla=[pla_value]&ieje=[ieje_value]&idT=[idT_value]";
+        return "https://es.research.net/r/M5H3YKC?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&e=[e_value]&ipol=[ipol_value]&pla=[pla_value]&ieje=[ieje_value]&idT=[idT_value]";
     }
 
     public void setFileName(String fileName) {

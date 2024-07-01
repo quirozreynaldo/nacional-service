@@ -157,6 +157,6 @@ public class AsistenciaMedDomiAmbuService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/D6QND8P?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&ser=[ser_value]&fcon=[fcon_value]&t=[t_value]&talt=[talt_value]&pro=[pro_value]&eda=[eda_value]&mlla=[mlla_value]&pac=[pac_value]&des=[des_value]&fari=[fari_value]&inc=[inc_value]&uasi=[uasi_value]&acl=[acl_value]&dat=[dat_value]&idT=[idT_value]";
+        return "https://es.research.net/r/D6QND8P?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&ser=[ser_value]&fcon=[fcon_value]&talt=[talt_value]&pro=[pro_value]&eda=[eda_value]&mlla=[mlla_value]&pac=[pac_value]&des=[des_value]&fari=[fari_value]&inc=[inc_value]&uasi=[uasi_value]&acl=[acl_value]&dat=[dat_value]&idT=[idT_value]";
     }
 }

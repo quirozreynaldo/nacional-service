@@ -311,7 +311,7 @@ public class CentroRehaOdontoService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/X5R3RBS?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&fcon=[fcon_value]&t=[t_value]&e=[e_value]&cmed=[cmed_value]&fsal=[fsal_value]&pln=[pln_value]&pac=[pac_value]&tadi=[tadi_value]&idT=[idT_value]";
+        return "https://es.research.net/r/X5R3RBS?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&iope=[iope_value]&fcon=[fcon_value]&e=[e_value]&cmed=[cmed_value]&fsal=[fsal_value]&pln=[pln_value]&pac=[pac_value]&tadi=[tadi_value]&idT=[idT_value]";
     }
     public void setFileName(String fileName) {
         this.fileName = fileName;

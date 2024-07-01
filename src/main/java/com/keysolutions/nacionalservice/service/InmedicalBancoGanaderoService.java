@@ -151,6 +151,6 @@ public class InmedicalBancoGanaderoService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/DXHF2LT?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&t=[t_value]&e=[e_value]&prv=[prv_value]&icen=[icen_value]&idoc=[idoc_value]&idT=[idT_value]";
+        return "https://es.research.net/r/DXHF2LT?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&ser=[ser_value]&fcon=[fcon_value]&ntit=[ntit_value]&nsol=[nsol_value]&e=[e_value]&prv=[prv_value]&icen=[icen_value]&idoc=[idoc_value]&idT=[idT_value]";
     }
 }

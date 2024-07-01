@@ -154,6 +154,6 @@ public class OrientacionMedTelefService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/XPCGJXN?ipro=[ipro_value]&irub=[irub_value]&iciu=[iciu_value]&fcon=[fcon_value]&t=[t_value]&e=[e_value]&talt=[talt_value]&eda=[eda_value]&mlla=[mlla_value]&cco=[cco_value]&dpr=[dpr_value]&con=[con_value]&med=[med_value]&pac=[pac_value]&obs=[obs_value]&acl=[acl_value]&idT=[idT_value]";
+        return "https://es.research.net/r/XPCGJXN?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&iciu=[iciu_value]&fcon=[fcon_value]&e=[e_value]&talt=[talt_value]&eda=[eda_value]&mlla=[mlla_value]&cco=[cco_value]&dpr=[dpr_value]&con=[con_value]&med=[med_value]&pac=[pac_value]&obs=[obs_value]&acl=[acl_value]&idT=[idT_value]";
     }
 }
