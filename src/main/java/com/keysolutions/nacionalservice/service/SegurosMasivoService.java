@@ -332,6 +332,7 @@ public class SegurosMasivoService {
     }
 
     private String getWebLink() {
-        return "https://es.research.net/r/DWVKKNK?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&sp=[sp_value]&iciu=[iciu_value]&pro=[prod_value]&pa=[pa_value]&ser=[ser_value]&fcon=[fcon_value]&fus=[fus_value]&Idoc=[Idoc_value]&nsol=[nsol_value]&e=[e_value]&idT=[idT_value]";
+        //return "https://es.research.net/r/DWVKKNK?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&sp=[sp_value]&iciu=[iciu_value]&pro=[prod_value]&pa=[pa_value]&ser=[ser_value]&fcon=[fcon_value]&fus=[fus_value]&Idoc=[Idoc_value]&nsol=[nsol_value]&e=[e_value]&idT=[idT_value]";
+        return "https://es.research.net/r/SYVLYV3?ipro=[ipro_value]&t=[t_value]&irub=[irub_value]&sp=[sp_value]&iciu=[iciu_value]&pro=[prod_value]&pa=[pa_value]&ser=[ser_value]&fcon=[fcon_value]&fus=[fus_value]&Idoc=[Idoc_value]&nsol=[nsol_value]&e=[e_value]&idT=[idT_value]";
     }
 }
