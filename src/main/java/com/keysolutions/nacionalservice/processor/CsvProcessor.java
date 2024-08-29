@@ -671,7 +671,7 @@ public class CsvProcessor {
             if (!testMode){
                 orientacionMedTelefService.createJiraSurvey();
             }
-            manageLog.recorArchivoCargado(additionalParam,totalRows-1,Constant.CONFIG_ASISTENCIA_MED_DOM_AMBU);
+            manageLog.recorArchivoCargado(additionalParam,totalRows-1,Constant.CONFIG_ORIENTACION_MED_TELEF);
             log.info("____________________FIN DE ARCHIVO_______________________________");
         }
     }
