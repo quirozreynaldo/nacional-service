@@ -789,7 +789,8 @@ public class Utils {
             return null;
         }
         input=input.replace("%", "%25");
-        input=input.replace("º", "%B0");
+        input=input.replace("º", "");
+        input=input.replace("Â", "");
         return input
                 .replace('á', 'a')
                 .replace('é', 'e')
